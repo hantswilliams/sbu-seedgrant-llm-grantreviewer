@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Rosie",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "iteration": 3,
+    "timestamp": "2025-09-16T12:04:47.061688"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 27,
+        "Rationale": "The project is highly innovative, introducing a mobile health app that integrates real-time passenger input and naturalistic driving data to augment traditional clinic-based assessments. This dyadic, technology-driven approach has strong potential to significantly improve clinical decision-making and driver rehabilitation for older adults, addressing an important unmet regional need."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 25,
+        "Rationale": "The proposed methodology is rigorous and aligns well with the specific aims, combining clinical assessment, mobile technology, and dyadic data collection with a clear timeline. While the approach is feasible and supported by preliminary work, details on data analysis plans and contingency for technical or recruitment challenges could be further elaborated."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 10,
+        "Rationale": "The research team is strong, with the PI having expertise in mobile health technology and rehabilitation research, and the Co-PI uniquely qualified as the sole Driving Rehabilitation Professional with a healthcare background on Long Island. Their complementary expertise and established collaborations position the team well to execute the project successfully."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 9,
+        "Rationale": "The project clearly aligns with priorities of key external funders such as AOTF, Mother Cabrini Health Foundation, and ASAHP, with detailed plans for future grant submissions. The seed data generated will provide a strong pilot foundation for competitive national and foundation grants."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 7,
+        "Rationale": "The budget is concise and well-justified, requesting funds solely for a critical specialized assessment tool. However, the narrow budget limits other essential costs such as participant incentives or platform support, which could affect study implementation."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 8,
+        "Rationale": "The proposal is well-written, logically organized, and presents a clear rationale and plan. Some sections could be made more concise, and readability would be improved with clearer distinction between background, aims, and methods."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 27,\n      \"Rationale\": \"The project is highly innovative, introducing a mobile health app that integrates real-time passenger input and naturalistic driving data to augment traditional clinic-based assessments. This dyadic, technology-driven approach has strong potential to significantly improve clinical decision-making and driver rehabilitation for older adults, addressing an important unmet regional need.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 25,\n      \"Rationale\": \"The proposed methodology is rigorous and aligns well with the specific aims, combining clinical assessment, mobile technology, and dyadic data collection with a clear timeline. While the approach is feasible and supported by preliminary work, details on data analysis plans and contingency for technical or recruitment challenges could be further elaborated.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 10,\n      \"Rationale\": \"The research team is strong, with the PI having expertise in mobile health technology and rehabilitation research, and the Co-PI uniquely qualified as the sole Driving Rehabilitation Professional with a healthcare background on Long Island. Their complementary expertise and established collaborations position the team well to execute the project successfully.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 9,\n      \"Rationale\": \"The project clearly aligns with priorities of key external funders such as AOTF, Mother Cabrini Health Foundation, and ASAHP, with detailed plans for future grant submissions. The seed data generated will provide a strong pilot foundation for competitive national and foundation grants.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 7,\n      \"Rationale\": \"The budget is concise and well-justified, requesting funds solely for a critical specialized assessment tool. However, the narrow budget limits other essential costs such as participant incentives or platform support, which could affect study implementation.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 8,\n      \"Rationale\": \"The proposal is well-written, logically organized, and presents a clear rationale and plan. Some sections could be made more concise, and readability would be improved with clearer distinction between background, aims, and methods.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

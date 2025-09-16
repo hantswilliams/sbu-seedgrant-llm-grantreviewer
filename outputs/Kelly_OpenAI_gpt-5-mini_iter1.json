@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Kelly",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-5-mini",
+    "iteration": 1,
+    "timestamp": "2025-09-16T12:27:18.467935"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 24,
+        "Rationale": "The proposal combines wearable-tracked physical activity with immersive VR mindfulness during chemotherapy, which is a promising and timely integration of technologies to address psychological and cardiometabolic outcomes. While the approach is relevant and could be scalable, similar PA and mindfulness interventions exist in the literature so the novelty is moderate and the small feasibility sample limits immediate impact."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 17,
+        "Rationale": "The 12-week, single-arm feasibility design with two timepoints is straightforward and likely doable for a small pilot, but the protocol lacks important methodological details (e.g., safety monitoring for exercise/VR during chemo, rationale for sample size, inconsistent timing references for blood draws, no control/comparison condition). Statistical planning is simplistic for the aims (paired t-tests only) and no biostatistician or contingency plans for recruitment/retention are described, increasing risk to feasibility and interpretability."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The interdisciplinary team (physiologist PI, physical therapist, oncologist, behavioral health psychologist) has relevant clinical and methodological expertise to run a feasibility study and to recruit participants. The package would be strengthened by inclusion of a biostatistician and a dedicated VR/technical support specialist for device management and data integration."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 7,
+        "Rationale": "The project aligns well with NIH/NCI/NCCIH priorities and could provide preliminary data for an R21 or similar mechanism, particularly around feasibility and acceptability. However, the very small sample, limited statistical rigor, and some missing procedural details will constrain the strength of preliminary efficacy signals and may reduce competitiveness for major external grants without additional data or methodological refinements."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 5,
+        "Rationale": "The requested $5,000 appears generally cost-conscious (VR units, app subscription, exercise equipment, incentives), but the budget has notable omissions and inconsistencies (the narrative states FitBit devices will be provided but they are not budgeted, no lab assay or clinical testing costs are included, and personnel/time costs are absent). These gaps require clarification and reworking to ensure all essential expenses are covered and justified."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The application communicates the aims and intervention clearly enough and includes relevant background literature, but suffers from formatting problems, typos, inconsistent timepoint descriptions (e.g., 10 vs 12 weeks), a missing timeline figure, and some disorganized sections that impede readability. Polishing the document and resolving inconsistencies would improve clarity substantially."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 24,\n      \"Rationale\": \"The proposal combines wearable-tracked physical activity with immersive VR mindfulness during chemotherapy, which is a promising and timely integration of technologies to address psychological and cardiometabolic outcomes. While the approach is relevant and could be scalable, similar PA and mindfulness interventions exist in the literature so the novelty is moderate and the small feasibility sample limits immediate impact.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 17,\n      \"Rationale\": \"The 12-week, single-arm feasibility design with two timepoints is straightforward and likely doable for a small pilot, but the protocol lacks important methodological details (e.g., safety monitoring for exercise/VR during chemo, rationale for sample size, inconsistent timing references for blood draws, no control/comparison condition). Statistical planning is simplistic for the aims (paired t-tests only) and no biostatistician or contingency plans for recruitment/retention are described, increasing risk to feasibility and interpretability.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The interdisciplinary team (physiologist PI, physical therapist, oncologist, behavioral health psychologist) has relevant clinical and methodological expertise to run a feasibility study and to recruit participants. The package would be strengthened by inclusion of a biostatistician and a dedicated VR/technical support specialist for device management and data integration.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 7,\n      \"Rationale\": \"The project aligns well with NIH/NCI/NCCIH priorities and could provide preliminary data for an R21 or similar mechanism, particularly around feasibility and acceptability. However, the very small sample, limited statistical rigor, and some missing procedural details will constrain the strength of preliminary efficacy signals and may reduce competitiveness for major external grants without additional data or methodological refinements.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 5,\n      \"Rationale\": \"The requested $5,000 appears generally cost-conscious (VR units, app subscription, exercise equipment, incentives), but the budget has notable omissions and inconsistencies (the narrative states FitBit devices will be provided but they are not budgeted, no lab assay or clinical testing costs are included, and personnel/time costs are absent). These gaps require clarification and reworking to ensure all essential expenses are covered and justified.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The application communicates the aims and intervention clearly enough and includes relevant background literature, but suffers from formatting problems, typos, inconsistent timepoint descriptions (e.g., 10 vs 12 weeks), a missing timeline figure, and some disorganized sections that impede readability. Polishing the document and resolving inconsistencies would improve clarity substantially.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

@@ -1,0 +1,13 @@
+python-dotenv
+pandas
+flask
+flask_sqlalchemy
+psycopg2-binary
+sqlalchemy
+openai
+anthropic
+supabase
+google-generativeai
+anthropic
+markitdown[pdf, docx, doc, pptx, xlsx]
+requests

@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Kelly",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "iteration": 5,
+    "timestamp": "2025-09-16T12:04:08.613663"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 27,
+        "Rationale": "The study proposes a novel combination of physical activity with wearable trackers and VR-based mindfulness in breast cancer patients undergoing chemotherapy, addressing both psychological distress and cardiometabolic health. This interdisciplinary approach is innovative and has clear potential for meaningful clinical impact and scalability if successful."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 24,
+        "Rationale": "The 12-week feasibility study is well-structured with clearly defined inclusion/exclusion criteria, appropriate outcome measures, and a reasonable sample size for a feasibility study. However, the small sample size limits power, and risk mitigation plans for participant adherence and technological challenges could be more fully articulated."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The research team is interdisciplinary and well-qualified, including expertise in physiology, physical therapy, oncology, and behavioral health, appropriate for addressing the multifaceted study aims. The PI has a strong publication record and relevant experience leading related studies."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 8,
+        "Rationale": "The project aligns well with NIH and NCI priorities and has a clear future plan for submission of larger grant proposals. While promising, the preliminary nature of feasibility data means external funders may want to see initial outcomes before full support."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 8,
+        "Rationale": "The budget is well-aligned with project activities, focusing on necessary equipment and participant incentives for the small cohort. Given the ambitious scope of deliverables for 10 participants, the budget is appropriate but some minor efficiencies or justification for supply quantities could be improved."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The application is generally well-written and organized with thorough background and rationale. However, some sections contain formatting issues and typographical errors that slightly hinder readability and professional polish."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 27,\n      \"Rationale\": \"The study proposes a novel combination of physical activity with wearable trackers and VR-based mindfulness in breast cancer patients undergoing chemotherapy, addressing both psychological distress and cardiometabolic health. This interdisciplinary approach is innovative and has clear potential for meaningful clinical impact and scalability if successful.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 24,\n      \"Rationale\": \"The 12-week feasibility study is well-structured with clearly defined inclusion/exclusion criteria, appropriate outcome measures, and a reasonable sample size for a feasibility study. However, the small sample size limits power, and risk mitigation plans for participant adherence and technological challenges could be more fully articulated.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The research team is interdisciplinary and well-qualified, including expertise in physiology, physical therapy, oncology, and behavioral health, appropriate for addressing the multifaceted study aims. The PI has a strong publication record and relevant experience leading related studies.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 8,\n      \"Rationale\": \"The project aligns well with NIH and NCI priorities and has a clear future plan for submission of larger grant proposals. While promising, the preliminary nature of feasibility data means external funders may want to see initial outcomes before full support.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 8,\n      \"Rationale\": \"The budget is well-aligned with project activities, focusing on necessary equipment and participant incentives for the small cohort. Given the ambitious scope of deliverables for 10 participants, the budget is appropriate but some minor efficiencies or justification for supply quantities could be improved.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The application is generally well-written and organized with thorough background and rationale. However, some sections contain formatting issues and typographical errors that slightly hinder readability and professional polish.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

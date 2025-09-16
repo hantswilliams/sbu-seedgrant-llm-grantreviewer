@@ -1,0 +1,57 @@
+applicant_name,reviewer_id,reviewer_type,vendor,model,model_version,iteration,timestamp,innovation_impact,methodological_approach,research_team_strength,external_funding_potential,budget_clarity,presentation_quality,total_score,overall_recommendation,processing_time
+DANIEL,AM,Human,,,,,,27,14,8,6,6,5,66,Do Not Fund,
+DANIEL,SW,Human,,,,,,25,24,9,7,9,6,80,Fund with Revisions,
+DANIEL,HW,Human,,,,,,25,20,10,7,8,7,77,Do Not Fund,
+DANIEL,Y,Human,,,,,,20,17,6,5,6,7,61,Do Not Fund,
+ROSIE,AM,Human,,,,,,29,21,6,8,5,8,77,Do Not Fund,
+ROSIE,SW,Human,,,,,,30,30,10,9,10,10,99,Fund,
+ROSIE,HW,Human,,,,,,28,25,8,9,5,7,82,Fund with Revisions,
+ROSIE,Y,Human,,,,,,26,26,8,9,9,8,86,Fund,
+KELLY,AM,Human,,,,,,27,26,10,9,10,8,90,Fund with Revisions,
+KELLY,SW,Human,,,,,,29,30,10,10,10,10,99,Fund,
+KELLY,HW,Human,,,,,,27,27,10,9,9,9,91,Fund,
+KELLY,Y,Human,,,,,,22,25,7,7,9,7,77,Fund with Revisions,
+CHRISTINA,AM,Human,,,,,,25,14,6,6,8,6,65,Do Not Fund,
+CHRISTINA,SW,Human,,,,,,28,30,10,10,10,10,98,Fund,
+CHRISTINA,HW,Human,,,,,,25,25,8,8,8,7,81,Do Not Fund,
+CHRISTINA,Y,Human,,,,,,25,8,9,8,7,7,64,Fund,
+CHRISTINA,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:01:14.994085,27,25,9,8,7,9,85,Fund with Revisions,9.676369190216064
+CHRISTINA,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:22:21.389350,24,22,8,8,6,8,76,Fund with Revisions,30.046059131622314
+CHRISTINA,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:01:34.486793,27,26,9,8,8,9,87,Fund with Revisions,17.4815731048584
+CHRISTINA,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:22:48.633836,25,22,8,8,5,7,75,Fund with Revisions,25.233361959457397
+CHRISTINA,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:01:49.001953,27,26,9,8,7,8,85,Fund with Revisions,12.499531984329224
+CHRISTINA,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:23:19.112371,25,23,8,7,7,8,78,Fund with Revisions,28.460932970046997
+CHRISTINA,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:01:58.940999,27,27,9,8,7,8,86,Fund with Revisions,7.919785022735596
+CHRISTINA,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:23:45.500556,24,22,8,8,5,7,74,Fund with Revisions,24.3715181350708
+CHRISTINA,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:02:15.942800,27,26,9,8,8,9,87,Fund with Revisions,14.985615015029907
+CHRISTINA,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:24:11.988541,24,23,8,8,6,8,77,Fund with Revisions,24.47608208656311
+DANIEL,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:02:33.009791,27,24,9,8,9,8,85,Fund,15.045857906341553
+DANIEL,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:24:43.594145,24,18,8,8,8,7,73,Fund with Revisions,29.587276220321655
+DANIEL,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:02:44.396377,27,24,9,8,9,8,85,Fund with Revisions,9.369599103927612
+DANIEL,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:25:13.275837,24,22,8,8,6,7,75,Fund with Revisions,27.67018485069275
+DANIEL,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:02:55.229524,25,23,9,8,9,8,82,Fund with Revisions,8.821277141571045
+DANIEL,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:25:42.269667,24,18,8,8,8,7,73,Fund with Revisions,26.982971906661987
+DANIEL,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:03:05.981538,26,24,9,8,8,8,83,Fund with Revisions,8.740857124328613
+DANIEL,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:26:16.406642,24,18,8,7,7,6,70,Fund with Revisions,32.1219699382782
+DANIEL,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:03:16.898071,27,25,9,8,9,8,86,Fund,8.898393154144287
+DANIEL,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:26:43.295159,25,22,8,8,8,7,78,Fund with Revisions,24.87191891670227
+KELLY,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:03:27.894555,27,25,9,9,8,7,85,Fund with Revisions,8.979427099227905
+KELLY,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:27:18.463788,24,17,9,7,5,7,69,Fund with Revisions,33.15231800079346
+KELLY,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:03:37.378900,27,23,9,9,9,8,85,Fund with Revisions,7.47235894203186
+KELLY,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:27:58.772958,24,18,8,7,6,6,69,Fund with Revisions,38.29792261123657
+KELLY,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:03:47.556084,27,24,9,8,9,7,84,Fund with Revisions,8.161988735198975
+KELLY,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:28:38.400221,24,18,8,8,5,6,69,Fund with Revisions,37.612037897109985
+KELLY,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:03:58.615522,27,24,9,8,9,7,84,Fund with Revisions,9.042963027954102
+KELLY,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:29:08.808120,24,18,8,7,5,7,69,Fund with Revisions,28.386066198349
+KELLY,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:04:08.603624,27,24,9,8,8,7,83,Fund with Revisions,7.974123954772949
+KELLY,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:29:34.511961,24,17,9,7,9,7,73,Fund with Revisions,23.69331121444702
+ROSIE,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:04:21.956267,27,24,9,8,7,8,83,Fund with Revisions,11.334928750991821
+ROSIE,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:30:16.167553,24,18,8,8,3,7,68,Fund with Revisions,39.63957381248474
+ROSIE,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:04:32.611957,28,24,10,9,7,8,86,Fund with Revisions,8.642530918121338
+ROSIE,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:30:45.866019,25,18,8,8,5,8,72,Fund with Revisions,27.68626308441162
+ROSIE,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:04:47.054377,27,25,10,9,7,8,86,Fund with Revisions,12.425516843795776
+ROSIE,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:31:06.712181,25,18,8,8,3,8,70,Fund with Revisions,18.83090305328369
+ROSIE,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:04:56.161913,27,24,10,9,7,8,85,Fund with Revisions,7.093344211578369
+ROSIE,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:31:32.167641,26,21,9,8,5,8,77,Fund with Revisions,23.443477153778076
+ROSIE,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:05:05.920674,28,25,9,9,7,8,86,Fund with Revisions,7.745558977127075
+ROSIE,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:31:55.368931,25,22,9,8,5,8,77,Fund with Revisions,21.188014030456543

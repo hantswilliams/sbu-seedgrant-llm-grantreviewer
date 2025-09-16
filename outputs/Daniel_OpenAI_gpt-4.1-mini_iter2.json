@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Daniel",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "iteration": 2,
+    "timestamp": "2025-09-16T12:02:44.405185"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 27,
+        "Rationale": "The proposal addresses an important and underexplored area in physical therapy education and practice regarding Lyme Disease (LD) differential diagnosis. It has clear potential to influence curricular reform and clinical practice, thereby potentially improving early diagnosis and patient outcomes. The focus on an underrecognized issue in PT is novel and significant."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 24,
+        "Rationale": "The approach is well-defined with clear aims, content validated surveys, and mixed recruitment strategies to maximize reach. The use of case scenarios for differential diagnosis assessment is appropriate. However, the timeline is somewhat extended (surveys to be collected in Feb 2026), and recruitment challenges or response biases inherent to survey research are not fully addressed."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The research team includes the PI with relevant expertise and strong publication record, supported by co-investigators with complementary expertise in physical therapy education and physician assistant knowledge. The roles are clearly defined, and the team has experience in survey design and recruitment."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 8,
+        "Rationale": "The proposal outlines a clear path to future grant submissions, including educational intervention studies and aligns well with funders like ILADEF. The focus on a recognized public health problem and plan for dissemination improves competitiveness, although securing larger federal grants might require more preliminary data."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 9,
+        "Rationale": "The budget is modest and well justified given the scope, focusing primarily on participant incentives, in-person data collection, and research assistant support. The budget aligns efficiently with the aims and is cost-effective for a seed grant."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 8,
+        "Rationale": "The application is clearly written, logically organized, and easy to follow. The rationale is well explained, although minor formatting issues and some repetition reduce polish slightly."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 27,\n      \"Rationale\": \"The proposal addresses an important and underexplored area in physical therapy education and practice regarding Lyme Disease (LD) differential diagnosis. It has clear potential to influence curricular reform and clinical practice, thereby potentially improving early diagnosis and patient outcomes. The focus on an underrecognized issue in PT is novel and significant.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 24,\n      \"Rationale\": \"The approach is well-defined with clear aims, content validated surveys, and mixed recruitment strategies to maximize reach. The use of case scenarios for differential diagnosis assessment is appropriate. However, the timeline is somewhat extended (surveys to be collected in Feb 2026), and recruitment challenges or response biases inherent to survey research are not fully addressed.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The research team includes the PI with relevant expertise and strong publication record, supported by co-investigators with complementary expertise in physical therapy education and physician assistant knowledge. The roles are clearly defined, and the team has experience in survey design and recruitment.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 8,\n      \"Rationale\": \"The proposal outlines a clear path to future grant submissions, including educational intervention studies and aligns well with funders like ILADEF. The focus on a recognized public health problem and plan for dissemination improves competitiveness, although securing larger federal grants might require more preliminary data.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 9,\n      \"Rationale\": \"The budget is modest and well justified given the scope, focusing primarily on participant incentives, in-person data collection, and research assistant support. The budget aligns efficiently with the aims and is cost-effective for a seed grant.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 8,\n      \"Rationale\": \"The application is clearly written, logically organized, and easy to follow. The rationale is well explained, although minor formatting issues and some repetition reduce polish slightly.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

@@ -1,0 +1,290 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">Grant Review Analytics Dashboard</h1>
+    </div>
+</div>
+
+<!-- Summary Metrics -->
+<div class="row">
+    <div class="col-md-3">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ stats.total_reviews }}</div>
+            <div class="metric-label">Total Reviews</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ stats.unique_applicants }}</div>
+            <div class="metric-label">Applicants</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ stats.human_reviews }}</div>
+            <div class="metric-label">Human Reviews</div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ stats.llm_reviews }}</div>
+            <div class="metric-label">LLM Reviews</div>
+        </div>
+    </div>
+</div>
+
+<!-- Charts Row -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="chart-container">
+            <h5>Score Distribution by Reviewer Type</h5>
+            <canvas id="scoreDistChart"></canvas>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="chart-container">
+            <h5>Overall Recommendations</h5>
+            <canvas id="recommendationChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Model Comparison Chart -->
+<div class="row">
+    <div class="col-12">
+        <div class="chart-container">
+            <h5>Average Scores by Criteria - Human vs GPT-4 vs GPT-5</h5>
+            <canvas id="modelComparisonChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Criteria Comparison Chart (Human vs All LLM) -->
+<div class="row">
+    <div class="col-12">
+        <div class="chart-container">
+            <h5>Average Scores by Criteria - Human vs All LLM Combined</h5>
+            <canvas id="criteriaChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Applicant Coverage Table -->
+<div class="row">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>Review Coverage by Applicant</h5>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Applicant</th>
+                        <th>Total Reviews</th>
+                        <th>Human Reviews</th>
+                        <th>LLM Reviews</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for applicant in stats.applicant_coverage %}
+                    <tr>
+                        <td><strong>{{ applicant.name }}</strong></td>
+                        <td>{{ applicant.total }}</td>
+                        <td>{{ applicant.human }}</td>
+                        <td>{{ applicant.llm }}</td>
+                        <td>
+                            <a href="/applicant/{{ applicant.name }}" class="btn btn-sm btn-outline-primary">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Score Statistics -->
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="table-container">
+            <h5>Human Reviewer Statistics</h5>
+            {% if 'Human' in stats.score_stats %}
+            <table class="table">
+                <tr><td>Average Score:</td><td><strong>{{ stats.score_stats.Human.mean_total }}</strong></td></tr>
+                <tr><td>Score Range:</td><td>{{ stats.score_stats.Human.min_total }} - {{ stats.score_stats.Human.max_total }}</td></tr>
+                <tr><td>Review Count:</td><td>{{ stats.score_stats.Human.count }}</td></tr>
+            </table>
+            {% else %}
+            <p class="text-muted">No human reviews available</p>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="table-container">
+            <h5>LLM Reviewer Statistics</h5>
+            {% if 'LLM' in stats.score_stats %}
+            <table class="table">
+                <tr><td>Average Score:</td><td><strong>{{ stats.score_stats.LLM.mean_total }}</strong></td></tr>
+                <tr><td>Score Range:</td><td>{{ stats.score_stats.LLM.min_total }} - {{ stats.score_stats.LLM.max_total }}</td></tr>
+                <tr><td>Review Count:</td><td>{{ stats.score_stats.LLM.count }}</td></tr>
+            </table>
+            {% else %}
+            <p class="text-muted">No LLM reviews available</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Score Distribution Chart
+fetch('/api/chart_data?type=scores')
+    .then(response => response.json())
+    .then(data => {
+        const ctx = document.getElementById('scoreDistChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Human Reviews', 'LLM Reviews'],
+                datasets: [{
+                    label: 'Average Score',
+                    data: [
+                        data.human_scores.length > 0 ? data.human_scores.reduce((a, b) => a + b, 0) / data.human_scores.length : 0,
+                        data.llm_scores.length > 0 ? data.llm_scores.reduce((a, b) => a + b, 0) / data.llm_scores.length : 0
+                    ],
+                    backgroundColor: ['#36A2EB', '#FF6384']
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+
+// Model Comparison Chart (Human vs GPT-4 vs GPT-5)
+fetch('/api/model_comparison')
+    .then(response => response.json())
+    .then(data => {
+        const ctx = document.getElementById('modelComparisonChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: data.criteria,
+                datasets: [{
+                    label: `Human Reviewers (n=${data.counts.human})`,
+                    data: data.human_means,
+                    backgroundColor: '#36A2EB',
+                    borderColor: '#36A2EB',
+                    borderWidth: 1
+                }, {
+                    label: `GPT-4 (n=${data.counts.gpt4})`,
+                    data: data.gpt4_means,
+                    backgroundColor: '#FF6384',
+                    borderColor: '#FF6384',
+                    borderWidth: 1
+                }, {
+                    label: `GPT-5 (n=${data.counts.gpt5})`,
+                    data: data.gpt5_means,
+                    backgroundColor: '#FFCE56',
+                    borderColor: '#FFCE56',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Evaluation Criteria'
+                        }
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Average Score'
+                        },
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Model Performance Comparison Across Criteria'
+                    }
+                }
+            }
+        });
+    });
+
+// Recommendation Chart
+fetch('/api/chart_data?type=recommendations')
+    .then(response => response.json())
+    .then(data => {
+        const ctx = document.getElementById('recommendationChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: Object.keys(data),
+                datasets: [{
+                    data: Object.values(data),
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    });
+
+// Criteria Comparison Chart
+fetch('/api/criteria_comparison')
+    .then(response => response.json())
+    .then(data => {
+        const ctx = document.getElementById('criteriaChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: data.criteria,
+                datasets: [{
+                    label: 'Human Reviewers',
+                    data: data.human_means,
+                    borderColor: '#36A2EB',
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                }, {
+                    label: 'LLM Reviewers',
+                    data: data.llm_means,
+                    borderColor: '#FF6384',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    r: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block title %}{{ applicant }} - Grant Review Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Dashboard</a></li>
+                <li class="breadcrumb-item active">{{ applicant }}</li>
+            </ol>
+        </nav>
+        <h1 class="mb-4">{{ applicant }} - Detailed Review Analysis</h1>
+    </div>
+</div>
+
+<!-- Summary Cards -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ human_reviews|length + llm_reviews|length }}</div>
+            <div class="metric-label">Total Reviews</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ human_reviews|length }}</div>
+            <div class="metric-label">Human Reviews</div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="metric-card text-center">
+            <div class="metric-value">{{ llm_reviews|length }}</div>
+            <div class="metric-label">LLM Reviews</div>
+        </div>
+    </div>
+</div>
+
+<!-- Criteria Comparison Chart -->
+<div class="row">
+    <div class="col-12">
+        <div class="chart-container">
+            <h5>Score Comparison: Human vs LLM Reviewers</h5>
+            <canvas id="criteriaComparisonChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Human Reviews Section -->
+{% if human_reviews %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>Human Reviews</h5>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Reviewer</th>
+                            <th>Innovation</th>
+                            <th>Methodology</th>
+                            <th>Team</th>
+                            <th>Funding</th>
+                            <th>Budget</th>
+                            <th>Presentation</th>
+                            <th>Total</th>
+                            <th>Recommendation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for review in human_reviews %}
+                        <tr>
+                            <td><strong>{{ review.reviewer_id }}</strong></td>
+                            <td>{{ review.innovation_impact or '-' }}</td>
+                            <td>{{ review.methodological_approach or '-' }}</td>
+                            <td>{{ review.research_team_strength or '-' }}</td>
+                            <td>{{ review.external_funding_potential or '-' }}</td>
+                            <td>{{ review.budget_clarity or '-' }}</td>
+                            <td>{{ review.presentation_quality or '-' }}</td>
+                            <td><strong>{{ review.total_score or '-' }}</strong></td>
+                            <td>
+                                {% if review.overall_recommendation == 'Fund' %}
+                                <span class="badge bg-success">Fund</span>
+                                {% elif review.overall_recommendation == 'Fund with Revisions' %}
+                                <span class="badge bg-warning">Fund w/ Revisions</span>
+                                {% elif review.overall_recommendation == 'Do Not Fund' %}
+                                <span class="badge bg-danger">Do Not Fund</span>
+                                {% else %}
+                                <span class="badge bg-secondary">{{ review.overall_recommendation }}</span>
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- LLM Reviews Section -->
+{% if llm_reviews %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>LLM Reviews</h5>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Iteration</th>
+                            <th>Innovation</th>
+                            <th>Methodology</th>
+                            <th>Team</th>
+                            <th>Funding</th>
+                            <th>Budget</th>
+                            <th>Presentation</th>
+                            <th>Total</th>
+                            <th>Recommendation</th>
+                            <th>Time (s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for review in llm_reviews %}
+                        <tr>
+                            <td>
+                                <small class="text-muted">{{ review.vendor }}</small><br>
+                                <strong>{{ review.model }}</strong>
+                            </td>
+                            <td>{{ review.iteration }}</td>
+                            <td>{{ review.innovation_impact or '-' }}</td>
+                            <td>{{ review.methodological_approach or '-' }}</td>
+                            <td>{{ review.research_team_strength or '-' }}</td>
+                            <td>{{ review.external_funding_potential or '-' }}</td>
+                            <td>{{ review.budget_clarity or '-' }}</td>
+                            <td>{{ review.presentation_quality or '-' }}</td>
+                            <td><strong>{{ review.total_score or '-' }}</strong></td>
+                            <td>
+                                {% if review.overall_recommendation == 'Fund' %}
+                                <span class="badge bg-success">Fund</span>
+                                {% elif review.overall_recommendation == 'Fund with Revisions' %}
+                                <span class="badge bg-warning">Fund w/ Revisions</span>
+                                {% elif review.overall_recommendation == 'Do Not Fund' %}
+                                <span class="badge bg-danger">Do Not Fund</span>
+                                {% else %}
+                                <span class="badge bg-secondary">{{ review.overall_recommendation }}</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ "%.2f"|format(review.processing_time or 0) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% if not human_reviews and not llm_reviews %}
+<div class="alert alert-warning" role="alert">
+    No reviews found for this applicant.
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Criteria comparison chart for this specific applicant
+const criteriaData = {{ comparison | tojson }};
+
+const ctx = document.getElementById('criteriaComparisonChart').getContext('2d');
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: criteriaData.criteria,
+        datasets: [{
+            label: 'Human Reviewers (Avg)',
+            data: criteriaData.human_avg,
+            backgroundColor: 'rgba(54, 162, 235, 0.8)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }, {
+            label: 'LLM Reviewers (Avg)',
+            data: criteriaData.llm_avg,
+            backgroundColor: 'rgba(255, 99, 132, 0.8)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        interaction: {
+            mode: 'index',
+            intersect: false,
+        },
+        scales: {
+            x: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Evaluation Criteria'
+                }
+            },
+            y: {
+                display: true,
+                title: {
+                    display: true,
+                    text: 'Score'
+                },
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Average Scores by Criteria'
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}All Reviews - Grant Review Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">All Reviews</h1>
+    </div>
+</div>
+
+<div class="table-container">
+    <div class="mb-3">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search reviews...">
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-striped table-hover" id="reviewsTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>Applicant</th>
+                    <th>Reviewer</th>
+                    <th>Type</th>
+                    <th>Innovation</th>
+                    <th>Methodology</th>
+                    <th>Team</th>
+                    <th>Funding</th>
+                    <th>Budget</th>
+                    <th>Presentation</th>
+                    <th>Total</th>
+                    <th>Recommendation</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for review in reviews %}
+                <tr>
+                    <td>
+                        <a href="/applicant/{{ review.applicant_name }}" class="text-decoration-none">
+                            <strong>{{ review.applicant_name }}</strong>
+                        </a>
+                    </td>
+                    <td>{{ review.reviewer_id }}</td>
+                    <td>
+                        <span class="badge {% if review.reviewer_type == 'Human' %}bg-primary{% else %}bg-success{% endif %}">
+                            {{ review.reviewer_type }}
+                        </span>
+                    </td>
+                    <td>
+                        {% if review.innovation_impact %}
+                        <span class="score-badge {% if review.innovation_impact >= 25 %}score-high{% elif review.innovation_impact >= 15 %}score-medium{% else %}score-low{% endif %}">
+                            {{ review.innovation_impact }}
+                        </span>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.methodological_approach %}
+                        <span class="score-badge {% if review.methodological_approach >= 25 %}score-high{% elif review.methodological_approach >= 15 %}score-medium{% else %}score-low{% endif %}">
+                            {{ review.methodological_approach }}
+                        </span>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.research_team_strength %}
+                        <span class="score-badge {% if review.research_team_strength >= 8 %}score-high{% elif review.research_team_strength >= 6 %}score-medium{% else %}score-low{% endif %}">
+                            {{ review.research_team_strength }}
+                        </span>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.external_funding_potential %}
+                        <span class="score-badge {% if review.external_funding_potential >= 8 %}score-high{% elif review.external_funding_potential >= 6 %}score-medium{% else %}score-low{% endif %}">
+                            {{ review.external_funding_potential }}
+                        </span>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.budget_clarity %}
+                        <span class="score-badge {% if review.budget_clarity >= 8 %}score-high{% elif review.budget_clarity >= 6 %}score-medium{% else %}score-low{% endif %}">
+                            {{ review.budget_clarity }}
+                        </span>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.presentation_quality %}
+                        <span class="score-badge {% if review.presentation_quality >= 8 %}score-high{% elif review.presentation_quality >= 6 %}score-medium{% else %}score-low{% endif %}">
+                            {{ review.presentation_quality }}
+                        </span>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.total_score %}
+                        <strong class="{% if review.total_score >= 80 %}text-success{% elif review.total_score >= 60 %}text-warning{% else %}text-danger{% endif %}">
+                            {{ review.total_score }}
+                        </strong>
+                        {% else %}
+                        <span class="text-muted">-</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if review.overall_recommendation == 'Fund' %}
+                        <span class="badge bg-success">Fund</span>
+                        {% elif review.overall_recommendation == 'Fund with Revisions' %}
+                        <span class="badge bg-warning">Fund w/ Revisions</span>
+                        {% elif review.overall_recommendation == 'Do Not Fund' %}
+                        <span class="badge bg-danger">Do Not Fund</span>
+                        {% else %}
+                        <span class="badge bg-secondary">{{ review.overall_recommendation }}</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Simple search functionality
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    const searchTerm = this.value.toLowerCase();
+    const tableRows = document.querySelectorAll('#reviewsTable tbody tr');
+    
+    tableRows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
+});
+
+// Add some interactivity
+document.querySelectorAll('#reviewsTable tbody tr').forEach(row => {
+    row.addEventListener('click', function() {
+        const applicantName = this.querySelector('td:first-child a').textContent.trim();
+        // Could navigate to applicant detail page
+    });
+});
+</script>
+{% endblock %}

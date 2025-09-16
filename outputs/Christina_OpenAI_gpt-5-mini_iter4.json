@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Christina",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-5-mini",
+    "iteration": 4,
+    "timestamp": "2025-09-16T12:23:45.510441"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 24,
+        "Rationale": "The proposal addresses a clear, high-impact public health need (falls among older adults) and couples community benefit with interprofessional student training, which is likely to produce meaningful local change. While valuable, the approach is an adaptation of existing evidence-based falls programs rather than a highly novel intervention, limiting the innovation score."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 22,
+        "Rationale": "The mixed-methods pilot design, validated outcome measures, IRB approval, and established community partnerships support feasibility and timely completion. However, the proposal lacks detail on statistical analysis/power considerations, specific inclusion/exclusion criteria, and contingency plans for recruitment or safety for higher-risk participants."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 8,
+        "Rationale": "Investigators have relevant clinical and educational experience in OT/PT and community partnerships, and institutional support (space, outreach) is in place. The application would be strengthened by inclusion of a biostatistician or methods expert and more complete biosketches for all key personnel."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 8,
+        "Rationale": "The pilot aligns well with funding priorities of agencies/foundations listed and will likely generate preliminary data useful for competitive applications. The small sample size and limited analytic detail may weaken the competitiveness unless addressed prior to external submissions."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 5,
+        "Rationale": "Line items for equipment and participant refreshments are appropriate, but a large portion of funds is allocated to conference travel/registration, which reduces direct program support; some budget entries (e.g., publication costs) lack justification. The budget table contains formatting/placeholder issues that need clarification and reallocation to better support program implementation."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The application is generally well written, logically organized, and presents a clear timeline and aims. Formatting glitches (budget table NaNs), an incomplete set of biosketches, and some missing methodological specifics slightly detract from clarity."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 24,\n      \"Rationale\": \"The proposal addresses a clear, high-impact public health need (falls among older adults) and couples community benefit with interprofessional student training, which is likely to produce meaningful local change. While valuable, the approach is an adaptation of existing evidence-based falls programs rather than a highly novel intervention, limiting the innovation score.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 22,\n      \"Rationale\": \"The mixed-methods pilot design, validated outcome measures, IRB approval, and established community partnerships support feasibility and timely completion. However, the proposal lacks detail on statistical analysis/power considerations, specific inclusion/exclusion criteria, and contingency plans for recruitment or safety for higher-risk participants.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 8,\n      \"Rationale\": \"Investigators have relevant clinical and educational experience in OT/PT and community partnerships, and institutional support (space, outreach) is in place. The application would be strengthened by inclusion of a biostatistician or methods expert and more complete biosketches for all key personnel.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 8,\n      \"Rationale\": \"The pilot aligns well with funding priorities of agencies/foundations listed and will likely generate preliminary data useful for competitive applications. The small sample size and limited analytic detail may weaken the competitiveness unless addressed prior to external submissions.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 5,\n      \"Rationale\": \"Line items for equipment and participant refreshments are appropriate, but a large portion of funds is allocated to conference travel/registration, which reduces direct program support; some budget entries (e.g., publication costs) lack justification. The budget table contains formatting/placeholder issues that need clarification and reallocation to better support program implementation.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The application is generally well written, logically organized, and presents a clear timeline and aims. Formatting glitches (budget table NaNs), an incomplete set of biosketches, and some missing methodological specifics slightly detract from clarity.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

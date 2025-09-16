@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Christina",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "iteration": 5,
+    "timestamp": "2025-09-16T12:02:15.954475"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 27,
+        "Rationale": "The proposal addresses a critical and prevalent public health issue: fall risk among older adults in an underserved community. It combines interprofessional education with community health impact, offering a sustainable, scalable model that has potential for meaningful change in both clinical education and population health."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 26,
+        "Rationale": "The methods are thorough and appropriate, featuring well-defined assessment tools and a clear timeline. The involvement of faculty supervision and IRB approval enhances feasibility, though contingency planning for potential recruitment or retention challenges could be more detailed."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The team includes experienced faculty with strong clinical and educational backgrounds relevant to fall prevention and interprofessional collaboration. The PI and co-investigators have substantial expertise and appropriate leadership roles that align well with project needs."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 8,
+        "Rationale": "The proposal outlines several aligned funding sources with relevant missions and has a clear plan for expanding the project to multi-site grants. While promising, the preliminary data and competitive positioning for major funders could be strengthened."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 8,
+        "Rationale": "The budget is modest and mostly well justified, focused on necessary equipment and dissemination costs. However, the relatively high travel and conference expenses compared to direct program costs raise minor concerns about efficiency."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 9,
+        "Rationale": "The application is clearly written, logically organized, and easy to follow. The rationale, methods, and goals are presented with precision and professional tone, though minor formatting artifacts slightly detract from overall polish."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 27,\n      \"Rationale\": \"The proposal addresses a critical and prevalent public health issue: fall risk among older adults in an underserved community. It combines interprofessional education with community health impact, offering a sustainable, scalable model that has potential for meaningful change in both clinical education and population health.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 26,\n      \"Rationale\": \"The methods are thorough and appropriate, featuring well-defined assessment tools and a clear timeline. The involvement of faculty supervision and IRB approval enhances feasibility, though contingency planning for potential recruitment or retention challenges could be more detailed.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The team includes experienced faculty with strong clinical and educational backgrounds relevant to fall prevention and interprofessional collaboration. The PI and co-investigators have substantial expertise and appropriate leadership roles that align well with project needs.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 8,\n      \"Rationale\": \"The proposal outlines several aligned funding sources with relevant missions and has a clear plan for expanding the project to multi-site grants. While promising, the preliminary data and competitive positioning for major funders could be strengthened.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 8,\n      \"Rationale\": \"The budget is modest and mostly well justified, focused on necessary equipment and dissemination costs. However, the relatively high travel and conference expenses compared to direct program costs raise minor concerns about efficiency.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 9,\n      \"Rationale\": \"The application is clearly written, logically organized, and easy to follow. The rationale, methods, and goals are presented with precision and professional tone, though minor formatting artifacts slightly detract from overall polish.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

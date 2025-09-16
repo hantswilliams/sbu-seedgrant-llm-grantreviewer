@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  grant-reviewer-app:
+    build: .
+    ports:
+      - "5003:5003"
+    volumes:
+      # Mount data directory for persistence
+      - ./data:/app/data
+      # Mount any additional files you might want to update
+      - ./inputs:/app/inputs:ro
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=app.py
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5003/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

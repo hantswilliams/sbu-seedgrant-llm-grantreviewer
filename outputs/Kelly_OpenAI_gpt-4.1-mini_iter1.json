@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Kelly",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "iteration": 1,
+    "timestamp": "2025-09-16T12:03:27.902404"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 27,
+        "Rationale": "This proposal addresses a significant clinical gap by integrating physical activity with VR-based mindfulness to improve stress and cardiometabolic health in breast cancer patients. The combined use of wearable technology and immersive VR is innovative and has strong potential to meaningfully enhance survivorship care and quality of life."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 25,
+        "Rationale": "The study design is appropriate and rigorous for a feasibility trial with clear inclusion/exclusion criteria and relevant outcome measures. The small sample size limits statistical power, but this is acceptable for feasibility. The timeline is realistic, though details on managing potential risks (e.g., adherence challenges) could be strengthened."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The interdisciplinary team includes experienced investigators from related fields (physiology, physical therapy, oncology, psychiatry) well suited to the aims. The PI has demonstrated relevant research productivity and leadership. The team's diverse expertise aligns well with the complexity of the intervention and measurements."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 9,
+        "Rationale": "The project has a clear and well-articulated plan to pursue further funding from NIH and related agencies with alignment to national health priorities. The feasibility data will provide critical preliminary results to support competitive R21 and other grant applications."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 8,
+        "Rationale": "The budget is clearly justified with equipment and incentives directly supporting the study aims. While cost-effective for a pilot, some allocations (e.g., multiple VR units, subscriptions) could be seen as higher given the small sample size; however, these costs are reasonable for the intervention components."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The application is generally well-written and organized with comprehensive background and rationale. Some formatting issues and minor language inconsistencies are present but do not impede understanding."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 27,\n      \"Rationale\": \"This proposal addresses a significant clinical gap by integrating physical activity with VR-based mindfulness to improve stress and cardiometabolic health in breast cancer patients. The combined use of wearable technology and immersive VR is innovative and has strong potential to meaningfully enhance survivorship care and quality of life.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 25,\n      \"Rationale\": \"The study design is appropriate and rigorous for a feasibility trial with clear inclusion/exclusion criteria and relevant outcome measures. The small sample size limits statistical power, but this is acceptable for feasibility. The timeline is realistic, though details on managing potential risks (e.g., adherence challenges) could be strengthened.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The interdisciplinary team includes experienced investigators from related fields (physiology, physical therapy, oncology, psychiatry) well suited to the aims. The PI has demonstrated relevant research productivity and leadership. The team's diverse expertise aligns well with the complexity of the intervention and measurements.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 9,\n      \"Rationale\": \"The project has a clear and well-articulated plan to pursue further funding from NIH and related agencies with alignment to national health priorities. The feasibility data will provide critical preliminary results to support competitive R21 and other grant applications.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 8,\n      \"Rationale\": \"The budget is clearly justified with equipment and incentives directly supporting the study aims. While cost-effective for a pilot, some allocations (e.g., multiple VR units, subscriptions) could be seen as higher given the small sample size; however, these costs are reasonable for the intervention components.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The application is generally well-written and organized with comprehensive background and rationale. Some formatting issues and minor language inconsistencies are present but do not impede understanding.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

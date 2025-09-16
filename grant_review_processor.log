@@ -1,0 +1,1072 @@
+2025-09-15 12:13:30,398 - grant_reviewer - WARNING - OpenAI API key not found. OpenAI functionality will be disabled.
+2025-09-15 12:13:30,398 - grant_reviewer - WARNING - Google Gemini package not installed. Gemini functionality will be disabled.
+2025-09-15 12:13:30,398 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:13:30,398 - grant_reviewer - WARNING - GROK API key not found. GROK functionality will be disabled.
+2025-09-15 12:13:30,398 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:13:30,399 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:13:30,399 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:15:25,658 - grant_reviewer - WARNING - OpenAI API key not found. OpenAI functionality will be disabled.
+2025-09-15 12:15:25,658 - grant_reviewer - WARNING - Google Gemini API key not found. Gemini functionality will be disabled.
+2025-09-15 12:15:25,658 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:15:25,658 - grant_reviewer - WARNING - GROK API key not found. GROK functionality will be disabled.
+2025-09-15 12:15:25,658 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:15:25,659 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:15:25,659 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:15:46,609 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 12:15:46,609 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 12:15:46,610 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:15:46,610 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 12:15:46,610 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:15:46,612 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:15:46,613 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:15:46,613 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:15:46,613 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:15:46,613 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:15:46,613 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:15:46,613 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:15:46,614 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:15:46,615 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 12:15:46,615 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 12:15:55,743 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:15:55,771 - grant_reviewer - INFO - No valid JSON found, attempting manual extraction
+2025-09-15 12:15:55,778 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:15:55,778 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:15:57,784 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 12:15:57,784 - grant_reviewer - INFO - Total reviews: 0
+2025-09-15 12:15:57,785 - grant_reviewer - INFO - By vendor: {}
+2025-09-15 12:15:57,785 - grant_reviewer - INFO - By model: []
+2025-09-15 12:15:57,785 - grant_reviewer - INFO - By applicant: {}
+2025-09-15 12:15:57,786 - grant_reviewer - INFO - Average processing times by vendor: {}
+2025-09-15 12:15:57,786 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 12:17:32,055 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 12:17:32,055 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 12:17:32,055 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:17:32,055 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 12:17:32,055 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:17:32,059 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:17:32,059 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:17:32,060 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:17:32,060 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:17:32,060 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:17:32,060 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:17:32,060 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:17:32,060 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:17:32,061 - grant_reviewer - INFO - Processing grant application for Christina with model(s): openai
+2025-09-15 12:17:32,061 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Christina
+2025-09-15 12:17:42,549 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:17:42,562 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:17:42,562 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - Total reviews: 5
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - By vendor: {'OpenAI': 2, 'TestVendor': 3}
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x10b538610>, <sqlite3.Row object at 0x10b538790>]
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - By applicant: {'Christina': 1, 'Daniel': 1, 'TestApplicant': 3}
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 9.82568073272705, 'TestVendor': 1.5}
+2025-09-15 12:17:44,567 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 12:18:12,956 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 12:18:12,957 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 12:18:12,957 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:18:12,957 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 12:18:12,957 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:18:12,961 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:18:12,961 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:18:12,961 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:18:12,961 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:18:12,961 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:18:12,961 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:18:12,962 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:18:12,962 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:18:12,962 - grant_reviewer - INFO - Starting processing of 4 grant applications with openai model(s), 1 iteration(s) each
+2025-09-15 12:18:12,962 - grant_reviewer - INFO - Processing grant application for Christina with model(s): openai
+2025-09-15 12:18:12,963 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Christina
+2025-09-15 12:18:23,296 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:18:23,369 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:18:23,369 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:18:25,373 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 12:18:25,373 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 12:18:33,777 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:18:33,786 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:18:33,786 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:18:35,793 - grant_reviewer - INFO - Processing grant application for Kelly with model(s): openai
+2025-09-15 12:18:35,793 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Kelly
+2025-09-15 12:18:45,052 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:18:45,080 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:18:45,080 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:18:47,086 - grant_reviewer - INFO - Processing grant application for Rosie with model(s): openai
+2025-09-15 12:18:47,087 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Rosie
+2025-09-15 12:18:55,063 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:18:55,073 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:18:55,073 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:18:57,074 - grant_reviewer - INFO - Completed processing all grant applications
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - Total reviews: 9
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - By vendor: {'OpenAI': 6, 'TestVendor': 3}
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x109e34250>, <sqlite3.Row object at 0x109e34280>]
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - By applicant: {'Christina': 2, 'Daniel': 2, 'Kelly': 1, 'Rosie': 1, 'TestApplicant': 3}
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 9.285723249117533, 'TestVendor': 1.5}
+2025-09-15 12:18:57,077 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 12:19:58,809 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 12:19:58,811 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 12:19:58,811 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:19:58,811 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 12:19:58,811 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:19:58,814 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:19:58,814 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:19:58,814 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:19:58,815 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:19:58,815 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:19:58,815 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:19:58,815 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:19:58,815 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:19:58,816 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 12:19:58,816 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 12:20:06,199 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:20:06,221 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:20:06,221 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:20:08,225 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 12:20:08,226 - grant_reviewer - INFO - Total reviews: 10
+2025-09-15 12:20:08,226 - grant_reviewer - INFO - By vendor: {'OpenAI': 7, 'TestVendor': 3}
+2025-09-15 12:20:08,226 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x109fdc640>, <sqlite3.Row object at 0x109fdc7c0>]
+2025-09-15 12:20:08,226 - grant_reviewer - INFO - By applicant: {'Christina': 2, 'Daniel': 3, 'Kelly': 1, 'Rosie': 1, 'TestApplicant': 3}
+2025-09-15 12:20:08,226 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 9.016010693141393, 'TestVendor': 1.5}
+2025-09-15 12:20:08,226 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 12:23:11,539 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 12:23:11,540 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 12:23:11,540 - grant_reviewer - ERROR - Anthropic package not installed. Please install with 'pip install anthropic'
+2025-09-15 12:23:11,540 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 12:23:11,541 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:23:11,544 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:23:11,544 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:23:11,544 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:23:11,544 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:23:11,544 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:23:11,544 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:23:11,545 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:23:11,545 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:23:11,546 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 12:23:11,546 - grant_reviewer - INFO - Running OpenAI iteration 1/3 for Daniel
+2025-09-15 12:23:18,134 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:23:18,203 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:23:18,203 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:23:20,207 - grant_reviewer - INFO - Running OpenAI iteration 2/3 for Daniel
+2025-09-15 12:23:26,735 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:23:26,760 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter2.json
+2025-09-15 12:23:26,760 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 2
+2025-09-15 12:23:28,765 - grant_reviewer - INFO - Running OpenAI iteration 3/3 for Daniel
+2025-09-15 12:23:36,543 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:23:36,559 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter3.json
+2025-09-15 12:23:36,559 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 3
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - Total reviews: 13
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - By vendor: {'OpenAI': 10, 'TestVendor': 3}
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x10a7aebf0>, <sqlite3.Row object at 0x10a7aece0>]
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - By applicant: {'Christina': 2, 'Daniel': 6, 'Kelly': 1, 'Rosie': 1, 'TestApplicant': 3}
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 8.408315587043763, 'TestVendor': 1.5}
+2025-09-15 12:23:38,561 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 12:43:28,829 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 12:43:28,830 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 12:43:28,923 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 12:43:28,923 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 12:43:28,923 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 12:43:28,926 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 12:43:28,926 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 12:43:28,926 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 12:43:28,927 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 12:43:28,927 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 12:43:28,927 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 12:43:28,927 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 12:43:28,927 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 12:43:28,928 - grant_reviewer - INFO - Starting processing of 4 grant applications with all model(s), 1 iteration(s) each
+2025-09-15 12:43:28,928 - grant_reviewer - INFO - Processing grant application for Christina with model(s): all
+2025-09-15 12:43:28,928 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Christina
+2025-09-15 12:43:35,429 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 12:43:35,447 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 12:43:35,447 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 12:43:37,451 - grant_reviewer - INFO - Running Gemini iteration 1/1 for Christina
+2025-09-15 12:43:47,475 - grant_reviewer - WARNING - Failed to parse JSON from response: Extra data: line 32 column 2 (char 2110)
+2025-09-15 12:43:47,475 - grant_reviewer - INFO - No valid JSON found, attempting manual extraction
+2025-09-15 12:43:47,486 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_Google_gemini-1.5-pro_iter1.json
+2025-09-15 12:43:47,486 - grant_reviewer - INFO - Saved review for Christina, Google gemini-1.5-pro (gemini-1.5-pro), iteration 1
+2025-09-15 12:43:49,489 - grant_reviewer - INFO - Running Claude iteration 1/1 for Christina
+2025-09-15 12:43:49,593 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-09-15 12:43:49,594 - grant_reviewer - ERROR - Error querying Claude: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CTAXF398fDU4hfHocz6yY'}
+2025-09-15 12:43:49,594 - grant_reviewer - ERROR - Error in Claude processing for Christina: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CTAXF398fDU4hfHocz6yY'}
+2025-09-15 12:43:49,595 - grant_reviewer - INFO - Running GROK iteration 1/1 for Christina
+2025-09-15 12:44:19,773 - grant_reviewer - ERROR - Error querying GROK: HTTPSConnectionPool(host='api.x.ai', port=443): Read timed out. (read timeout=30)
+2025-09-15 12:44:19,774 - grant_reviewer - ERROR - Error in GROK processing for Christina: HTTPSConnectionPool(host='api.x.ai', port=443): Read timed out. (read timeout=30)
+2025-09-15 12:44:19,776 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): all
+2025-09-15 12:44:19,776 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 12:44:46,863 - openai._base_client - INFO - Retrying request to /chat/completions in 0.443723 seconds
+2025-09-15 12:45:02,587 - openai._base_client - INFO - Retrying request to /chat/completions in 0.794051 seconds
+2025-09-15 12:45:12,123 - grant_reviewer - ERROR - Error querying OpenAI: Request timed out.
+2025-09-15 12:45:12,124 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Request timed out.
+2025-09-15 12:45:12,125 - grant_reviewer - INFO - Running Gemini iteration 1/1 for Daniel
+2025-09-15 12:45:50,696 - grant_reviewer - WARNING - Failed to parse JSON from response: Extra data: line 32 column 2 (char 2113)
+2025-09-15 12:45:50,696 - grant_reviewer - INFO - No valid JSON found, attempting manual extraction
+2025-09-15 12:45:50,702 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-1.5-pro_iter1.json
+2025-09-15 12:45:50,702 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-1.5-pro (gemini-1.5-pro), iteration 1
+2025-09-15 12:45:52,703 - grant_reviewer - INFO - Running Claude iteration 1/1 for Daniel
+2025-09-15 13:13:06,123 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 13:13:06,123 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 13:13:06,213 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 13:13:06,213 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 13:13:06,213 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 13:13:06,217 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 13:13:06,217 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 13:13:06,218 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 13:13:06,218 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 13:13:06,218 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 13:13:06,218 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 13:13:06,218 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 13:13:06,218 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 13:13:06,219 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 13:13:06,219 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-15 13:13:13,571 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 13:13:13,594 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter1.json
+2025-09-15 13:13:13,594 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 1
+2025-09-15 13:13:15,600 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-15 13:13:24,640 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 13:13:24,652 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter2.json
+2025-09-15 13:13:24,652 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 2
+2025-09-15 13:13:26,657 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-15 13:13:26,875 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:13:26,876 - openai._base_client - INFO - Retrying request to /chat/completions in 0.403846 seconds
+2025-09-15 13:13:36,805 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 13:13:36,821 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-nano_iter3.json
+2025-09-15 13:13:36,821 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-nano (gpt-4.1-nano-2025-04-14), iteration 3
+2025-09-15 13:13:38,822 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-15 13:13:39,031 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:13:39,032 - openai._base_client - INFO - Retrying request to /chat/completions in 20.000000 seconds
+2025-09-15 13:13:59,303 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:13:59,304 - openai._base_client - INFO - Retrying request to /chat/completions in 0.982770 seconds
+2025-09-15 13:14:00,984 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:14:00,985 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:14:00,986 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:14:00,986 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-15 13:14:01,120 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:14:01,121 - openai._base_client - INFO - Retrying request to /chat/completions in 20.000000 seconds
+2025-09-15 13:17:43,776 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 13:17:43,776 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 13:17:43,868 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 13:17:43,868 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 13:17:43,868 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 13:17:43,871 - ai_ethics.db - INFO - Adding applicant_name column to grant_review_criteria table
+2025-09-15 13:17:43,872 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 13:17:43,872 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 13:17:43,873 - grant_reviewer - INFO - Processing grant application for Kelly with model(s): openai
+2025-09-15 13:17:43,873 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Kelly
+2025-09-15 13:17:44,205 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:17:44,206 - openai._base_client - INFO - Retrying request to /chat/completions in 0.446834 seconds
+2025-09-15 13:17:44,827 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:17:44,828 - openai._base_client - INFO - Retrying request to /chat/completions in 0.923418 seconds
+2025-09-15 13:17:45,914 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:17:45,917 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on tokens per min (TPM): Limit 100000, Used 100000, Requested 7950. Please try again in 57h14m24s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:17:45,917 - grant_reviewer - ERROR - Error in OpenAI processing for Kelly: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on tokens per min (TPM): Limit 100000, Used 100000, Requested 7950. Please try again in 57h14m24s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:17:45,918 - grant_reviewer - WARNING - Error querying grant_reviews table, falling back to responses: no such table: grant_reviews
+2025-09-15 13:17:45,918 - grant_reviewer - ERROR - Error in main execution: no such table: responses
+2025-09-15 13:18:09,100 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 13:18:09,100 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 13:18:09,191 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 13:18:09,191 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 13:18:09,191 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 13:18:09,191 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 13:18:09,191 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 13:18:09,192 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 13:18:09,192 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 13:18:09,192 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 13:18:09,192 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 13:18:09,192 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 13:18:09,192 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 13:18:09,193 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 13:18:09,193 - grant_reviewer - INFO - Running OpenAI iteration 1/3 for Daniel
+2025-09-15 13:18:09,491 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:18:09,492 - openai._base_client - INFO - Retrying request to /chat/completions in 0.389446 seconds
+2025-09-15 13:18:10,010 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:18:10,011 - openai._base_client - INFO - Retrying request to /chat/completions in 20.000000 seconds
+2025-09-15 13:20:58,819 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 13:20:58,819 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 13:20:58,918 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 13:20:58,918 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 13:20:58,918 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 13:20:58,922 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 13:20:58,922 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 13:20:58,923 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 13:20:58,923 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 13:20:58,923 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 13:20:58,924 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 13:20:58,924 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 13:20:58,924 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 13:20:58,925 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 13:20:58,925 - grant_reviewer - INFO - Running OpenAI iteration 1/3 for Daniel
+2025-09-15 13:20:59,258 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:20:59,258 - openai._base_client - INFO - Retrying request to /chat/completions in 0.426284 seconds
+2025-09-15 13:20:59,785 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:20:59,786 - openai._base_client - INFO - Retrying request to /chat/completions in 0.837391 seconds
+2025-09-15 13:21:00,770 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:21:00,772 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on tokens per min (TPM): Limit 100000, Used 100000, Requested 7585. Please try again in 54h36m43.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:21:00,772 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on tokens per min (TPM): Limit 100000, Used 100000, Requested 7585. Please try again in 54h36m43.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:21:00,773 - grant_reviewer - INFO - Running OpenAI iteration 2/3 for Daniel
+2025-09-15 13:21:00,907 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:21:00,908 - openai._base_client - INFO - Retrying request to /chat/completions in 0.493171 seconds
+2025-09-15 13:21:01,579 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:21:01,580 - openai._base_client - INFO - Retrying request to /chat/completions in 0.780253 seconds
+2025-09-15 13:21:02,473 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:21:02,473 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:21:02,474 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on requests per min (RPM): Limit 3, Used 3, Requested 1. Please try again in 20s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'requests', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 13:21:02,474 - grant_reviewer - INFO - Running OpenAI iteration 3/3 for Daniel
+2025-09-15 13:21:02,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 13:21:02,648 - openai._base_client - INFO - Retrying request to /chat/completions in 20.000000 seconds
+2025-09-15 16:45:35,198 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-nano
+2025-09-15 16:45:35,198 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 16:45:35,318 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 16:45:35,319 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 16:45:35,320 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 16:45:35,331 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 16:45:35,331 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 16:45:35,332 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 16:45:35,332 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 16:45:35,332 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 16:45:35,332 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 16:45:35,333 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 16:45:35,333 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 16:45:35,335 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 16:45:35,336 - grant_reviewer - INFO - Running OpenAI iteration 1/3 for Daniel
+2025-09-15 16:45:36,026 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:45:36,026 - openai._base_client - INFO - Retrying request to /chat/completions in 0.483448 seconds
+2025-09-15 16:45:36,660 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:45:36,661 - openai._base_client - INFO - Retrying request to /chat/completions in 0.862955 seconds
+2025-09-15 16:45:37,996 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:45:37,998 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on tokens per min (TPM): Limit 100000, Used 100000, Requested 7585. Please try again in 54h36m43.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 16:45:37,998 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'Rate limit reached for gpt-4.1-nano in organization org-c0zonY1A608IGxfFZtVUIa0X on tokens per min (TPM): Limit 100000, Used 100000, Requested 7585. Please try again in 54h36m43.2s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.', 'type': 'tokens', 'param': None, 'code': 'rate_limit_exceeded'}}
+2025-09-15 16:45:37,999 - grant_reviewer - INFO - Running OpenAI iteration 2/3 for Daniel
+2025-09-15 16:45:38,151 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:45:38,151 - openai._base_client - INFO - Retrying request to /chat/completions in 20.000000 seconds
+2025-09-15 16:48:03,888 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 16:48:03,889 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 16:48:03,989 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 16:48:03,989 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 16:48:03,990 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 16:48:03,993 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 16:48:03,993 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 16:48:03,993 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 16:48:03,993 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 16:48:03,993 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 16:48:03,994 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 16:48:03,994 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 16:48:03,994 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 16:48:03,995 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 16:48:03,995 - grant_reviewer - INFO - Running OpenAI iteration 1/3 for Daniel
+2025-09-15 16:48:05,239 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:05,240 - openai._base_client - INFO - Retrying request to /chat/completions in 0.460052 seconds
+2025-09-15 16:48:06,134 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:06,135 - openai._base_client - INFO - Retrying request to /chat/completions in 0.982080 seconds
+2025-09-15 16:48:07,333 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:07,337 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:48:07,337 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:48:07,337 - grant_reviewer - INFO - Running OpenAI iteration 2/3 for Daniel
+2025-09-15 16:48:07,491 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:07,491 - openai._base_client - INFO - Retrying request to /chat/completions in 0.488385 seconds
+2025-09-15 16:48:08,408 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:08,408 - openai._base_client - INFO - Retrying request to /chat/completions in 0.930032 seconds
+2025-09-15 16:48:09,554 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:09,555 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:48:09,555 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:48:09,555 - grant_reviewer - INFO - Running OpenAI iteration 3/3 for Daniel
+2025-09-15 16:48:10,329 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:48:10,329 - openai._base_client - INFO - Retrying request to /chat/completions in 0.497015 seconds
+2025-09-15 16:49:54,932 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 16:49:54,933 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 16:49:55,021 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 16:49:55,021 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 16:49:55,021 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 16:49:55,024 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 16:49:55,024 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 16:49:55,025 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 16:49:55,025 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 16:49:55,025 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 16:49:55,026 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 16:49:55,026 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 16:49:55,026 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 16:49:55,027 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 16:49:55,027 - grant_reviewer - INFO - Running OpenAI iteration 1/3 for Daniel
+2025-09-15 16:49:55,895 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:49:55,896 - openai._base_client - INFO - Retrying request to /chat/completions in 0.464577 seconds
+2025-09-15 16:49:56,656 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:49:56,657 - openai._base_client - INFO - Retrying request to /chat/completions in 0.804640 seconds
+2025-09-15 16:49:57,902 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:49:57,905 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:49:57,906 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:49:57,906 - grant_reviewer - INFO - Running OpenAI iteration 2/3 for Daniel
+2025-09-15 16:49:58,078 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:49:58,078 - openai._base_client - INFO - Retrying request to /chat/completions in 0.428026 seconds
+2025-09-15 16:49:59,284 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:49:59,285 - openai._base_client - INFO - Retrying request to /chat/completions in 0.908766 seconds
+2025-09-15 16:50:00,658 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:50:00,659 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:50:00,659 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:50:00,659 - grant_reviewer - INFO - Running OpenAI iteration 3/3 for Daniel
+2025-09-15 16:50:00,868 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:50:00,868 - openai._base_client - INFO - Retrying request to /chat/completions in 0.490772 seconds
+2025-09-15 16:50:01,513 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:50:01,514 - openai._base_client - INFO - Retrying request to /chat/completions in 0.774669 seconds
+2025-09-15 16:50:02,442 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-09-15 16:50:02,443 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:50:02,443 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-15 16:50:02,444 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 16:50:02,444 - grant_reviewer - INFO - Total reviews: 0
+2025-09-15 16:50:02,444 - grant_reviewer - INFO - By vendor: {}
+2025-09-15 16:50:02,444 - grant_reviewer - INFO - By model: []
+2025-09-15 16:50:02,444 - grant_reviewer - INFO - By applicant: {}
+2025-09-15 16:50:02,445 - grant_reviewer - INFO - Average processing times by vendor: {}
+2025-09-15 16:50:02,445 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 16:57:40,257 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 16:57:40,257 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 16:57:40,348 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 16:57:40,348 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 16:57:40,348 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 16:57:40,351 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 16:57:40,351 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 16:57:40,352 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 16:57:40,352 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 16:57:40,352 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 16:57:40,352 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 16:57:40,352 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 16:57:40,352 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 16:57:40,353 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 16:57:40,353 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-15 16:57:41,131 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 16:57:41,133 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:41,134 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:41,134 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-15 16:57:41,547 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 16:57:41,548 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:41,548 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:41,548 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-15 16:57:43,781 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 16:57:43,782 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:43,782 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:43,783 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-15 16:57:44,478 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 16:57:44,479 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:44,479 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:44,480 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-15 16:57:44,887 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 16:57:44,888 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:44,888 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 16:57:44,889 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 16:57:44,889 - grant_reviewer - INFO - Total reviews: 0
+2025-09-15 16:57:44,889 - grant_reviewer - INFO - By vendor: {}
+2025-09-15 16:57:44,889 - grant_reviewer - INFO - By model: []
+2025-09-15 16:57:44,889 - grant_reviewer - INFO - By applicant: {}
+2025-09-15 16:57:44,890 - grant_reviewer - INFO - Average processing times by vendor: {}
+2025-09-15 16:57:44,890 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:03:13,179 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:03:13,180 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:03:13,279 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:03:13,279 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:03:13,279 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:03:13,283 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:03:13,283 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:03:13,283 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:03:13,284 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:03:13,284 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:03:13,284 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:03:13,285 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:03:13,285 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:03:13,286 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:03:13,286 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-15 17:03:13,969 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:03:13,972 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:13,972 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:13,972 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-15 17:03:14,261 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:03:14,262 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:14,262 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:14,262 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-15 17:03:14,968 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:03:14,969 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:14,969 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:14,969 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-15 17:03:15,282 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:03:15,283 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:15,283 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:15,283 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-15 17:03:15,516 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:03:15,517 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:15,517 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:03:15,517 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:03:15,517 - grant_reviewer - INFO - Total reviews: 0
+2025-09-15 17:03:15,517 - grant_reviewer - INFO - By vendor: {}
+2025-09-15 17:03:15,517 - grant_reviewer - INFO - By model: []
+2025-09-15 17:03:15,517 - grant_reviewer - INFO - By applicant: {}
+2025-09-15 17:03:15,517 - grant_reviewer - INFO - Average processing times by vendor: {}
+2025-09-15 17:03:15,518 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:05:23,381 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:05:23,382 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:05:23,479 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:05:23,480 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:05:23,480 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:05:23,482 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:05:23,482 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:05:23,483 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:05:23,483 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:05:23,483 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:05:23,483 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:05:23,483 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:05:23,483 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:05:23,484 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:05:23,484 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 17:05:23,950 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:05:23,953 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:05:23,953 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported parameter: 'max_tokens' is not supported with this model. Use 'max_completion_tokens' instead.", 'type': 'invalid_request_error', 'param': 'max_tokens', 'code': 'unsupported_parameter'}}
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - Total reviews: 0
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - By vendor: {}
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - By model: []
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - By applicant: {}
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - Average processing times by vendor: {}
+2025-09-15 17:05:23,954 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:06:16,645 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:06:16,645 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:06:16,726 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:06:16,726 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:06:16,727 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:06:16,727 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:06:16,727 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:06:16,727 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:06:16,727 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:06:16,727 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:06:16,727 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:06:16,728 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:06:16,728 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:06:16,728 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:06:16,728 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 17:06:17,635 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-09-15 17:06:17,637 - grant_reviewer - ERROR - Error querying OpenAI: Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0.3 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+2025-09-15 17:06:17,637 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 400 - {'error': {'message': "Unsupported value: 'temperature' does not support 0.3 with this model. Only the default (1) value is supported.", 'type': 'invalid_request_error', 'param': 'temperature', 'code': 'unsupported_value'}}
+2025-09-15 17:06:17,638 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:06:17,638 - grant_reviewer - INFO - Total reviews: 0
+2025-09-15 17:06:17,638 - grant_reviewer - INFO - By vendor: {}
+2025-09-15 17:06:17,638 - grant_reviewer - INFO - By model: []
+2025-09-15 17:06:17,638 - grant_reviewer - INFO - By applicant: {}
+2025-09-15 17:06:17,638 - grant_reviewer - INFO - Average processing times by vendor: {}
+2025-09-15 17:06:17,639 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:08:12,819 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:08:12,819 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:08:12,894 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:08:12,894 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:08:12,894 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:08:12,895 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:08:12,895 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:08:12,895 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:08:12,895 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:08:12,895 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:08:12,895 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:08:12,896 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:08:12,896 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:08:12,896 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:08:12,896 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 17:08:36,293 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:08:36,308 - grant_reviewer - INFO - No valid JSON found, attempting manual extraction
+2025-09-15 17:08:36,319 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:08:36,320 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:08:38,326 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:08:38,327 - grant_reviewer - INFO - Total reviews: 1
+2025-09-15 17:08:38,327 - grant_reviewer - INFO - By vendor: {'OpenAI': 1}
+2025-09-15 17:08:38,327 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x114fe7100>]
+2025-09-15 17:08:38,327 - grant_reviewer - INFO - By applicant: {'Daniel': 1}
+2025-09-15 17:08:38,327 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 23.411727905273438}
+2025-09-15 17:08:38,327 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:12:36,271 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:12:36,272 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:12:36,344 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:12:36,344 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:12:36,344 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:12:36,346 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:12:36,346 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:12:36,347 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:12:36,347 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:12:36,347 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:12:36,347 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:12:36,347 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:12:36,347 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:12:36,348 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:12:36,348 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 17:13:04,987 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:13:05,000 - grant_reviewer - INFO - No valid JSON found, attempting manual extraction
+2025-09-15 17:13:05,005 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:13:05,005 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:13:07,011 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:13:07,011 - grant_reviewer - INFO - Total reviews: 2
+2025-09-15 17:13:07,012 - grant_reviewer - INFO - By vendor: {'OpenAI': 2}
+2025-09-15 17:13:07,012 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x1157e2c80>]
+2025-09-15 17:13:07,012 - grant_reviewer - INFO - By applicant: {'Daniel': 2}
+2025-09-15 17:13:07,012 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 26.031603932380676}
+2025-09-15 17:13:07,012 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:14:48,039 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:14:48,040 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:14:48,133 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:14:48,133 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:14:48,134 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:14:48,137 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:14:48,137 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:14:48,138 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:14:48,139 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:14:48,139 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:14:48,139 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:14:48,139 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:14:48,139 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:14:48,140 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:14:48,140 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-15 17:15:07,812 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:15:07,837 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:15:07,837 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:15:09,843 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:15:09,843 - grant_reviewer - INFO - Total reviews: 1
+2025-09-15 17:15:09,843 - grant_reviewer - INFO - By vendor: {'OpenAI': 1}
+2025-09-15 17:15:09,843 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x116a53490>]
+2025-09-15 17:15:09,843 - grant_reviewer - INFO - By applicant: {'Daniel': 1}
+2025-09-15 17:15:09,843 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.690974950790405}
+2025-09-15 17:15:09,844 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:19:15,113 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-15 17:19:15,114 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:19:15,217 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:19:15,217 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:19:15,217 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:19:15,222 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:19:15,222 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:19:15,222 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:19:15,222 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:19:15,223 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:19:15,223 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:19:15,223 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:19:15,223 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:19:15,223 - grant_reviewer - INFO - Starting processing of 4 grant applications with openai model(s), 5 iteration(s) each
+2025-09-15 17:19:15,224 - grant_reviewer - INFO - Processing grant application for Christina with model(s): openai
+2025-09-15 17:19:15,224 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Christina
+2025-09-15 17:19:40,647 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:19:40,666 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:19:40,666 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:19:42,671 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Christina
+2025-09-15 17:20:03,193 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:20:03,209 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter2.json
+2025-09-15 17:20:03,210 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-15 17:20:05,212 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Christina
+2025-09-15 17:20:23,454 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:20:23,467 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter3.json
+2025-09-15 17:20:23,467 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-15 17:20:25,472 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Christina
+2025-09-15 17:20:47,152 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:20:47,172 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter4.json
+2025-09-15 17:20:47,172 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-15 17:20:49,175 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Christina
+2025-09-15 17:21:12,602 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:21:12,623 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter5.json
+2025-09-15 17:21:12,623 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-15 17:21:14,628 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:21:14,629 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-15 17:21:38,202 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:21:38,224 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:21:38,224 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:21:40,229 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-15 17:22:00,875 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:22:00,890 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter2.json
+2025-09-15 17:22:00,890 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-15 17:22:02,891 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-15 17:22:18,752 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:22:18,763 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter3.json
+2025-09-15 17:22:18,763 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-15 17:22:20,766 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-15 17:22:39,896 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:22:39,910 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter4.json
+2025-09-15 17:22:39,911 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-15 17:22:41,916 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-15 17:22:58,832 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:22:58,858 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter5.json
+2025-09-15 17:22:58,858 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-15 17:23:00,866 - grant_reviewer - INFO - Processing grant application for Kelly with model(s): openai
+2025-09-15 17:23:00,866 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Kelly
+2025-09-15 17:23:20,984 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:23:21,003 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:23:21,003 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:23:23,008 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Kelly
+2025-09-15 17:23:48,452 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:23:48,466 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter2.json
+2025-09-15 17:23:48,466 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-15 17:23:50,471 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Kelly
+2025-09-15 17:24:08,319 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:24:08,334 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter3.json
+2025-09-15 17:24:08,334 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-15 17:24:10,339 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Kelly
+2025-09-15 17:24:30,636 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:24:30,651 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter4.json
+2025-09-15 17:24:30,651 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-15 17:24:32,656 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Kelly
+2025-09-15 17:24:58,800 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:24:58,813 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter5.json
+2025-09-15 17:24:58,813 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-15 17:25:00,818 - grant_reviewer - INFO - Processing grant application for Rosie with model(s): openai
+2025-09-15 17:25:00,818 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Rosie
+2025-09-15 17:25:18,973 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:25:18,988 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter1.json
+2025-09-15 17:25:18,988 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-15 17:25:20,988 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Rosie
+2025-09-15 17:25:43,471 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:25:43,491 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter2.json
+2025-09-15 17:25:43,491 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-15 17:25:45,496 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Rosie
+2025-09-15 17:26:09,250 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:26:09,267 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter3.json
+2025-09-15 17:26:09,267 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-15 17:26:11,272 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Rosie
+2025-09-15 17:26:28,500 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:26:28,514 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter4.json
+2025-09-15 17:26:28,514 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-15 17:26:30,516 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Rosie
+2025-09-15 17:26:49,901 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:26:49,914 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter5.json
+2025-09-15 17:26:49,914 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-15 17:26:51,919 - grant_reviewer - INFO - Completed processing all grant applications
+2025-09-15 17:26:51,921 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:26:51,921 - grant_reviewer - INFO - Total reviews: 20
+2025-09-15 17:26:51,921 - grant_reviewer - INFO - By vendor: {'OpenAI': 20}
+2025-09-15 17:26:51,921 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x10a04e320>]
+2025-09-15 17:26:51,922 - grant_reviewer - INFO - By applicant: {'Christina': 5, 'Daniel': 5, 'Kelly': 5, 'Rosie': 5}
+2025-09-15 17:26:51,922 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 20.818001055717467}
+2025-09-15 17:26:51,922 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-15 17:29:08,108 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-mini
+2025-09-15 17:29:08,109 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-15 17:29:08,203 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-15 17:29:08,203 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-15 17:29:08,203 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-15 17:29:08,205 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-15 17:29:08,205 - grant_reviewer - INFO - Using sqlite database
+2025-09-15 17:29:08,205 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-15 17:29:08,206 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-15 17:29:08,206 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-15 17:29:08,206 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-15 17:29:08,206 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-15 17:29:08,206 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-15 17:29:08,206 - grant_reviewer - INFO - Starting processing of 4 grant applications with openai model(s), 5 iteration(s) each
+2025-09-15 17:29:08,207 - grant_reviewer - INFO - Processing grant application for Christina with model(s): openai
+2025-09-15 17:29:08,207 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Christina
+2025-09-15 17:29:17,185 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:29:17,208 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-15 17:29:17,208 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-15 17:29:19,213 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Christina
+2025-09-15 17:29:27,554 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:29:27,570 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-15 17:29:27,570 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-15 17:29:29,572 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Christina
+2025-09-15 17:29:36,363 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:29:36,380 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-15 17:29:36,380 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-15 17:29:38,382 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Christina
+2025-09-15 17:29:46,613 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:29:46,632 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-15 17:29:46,632 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-15 17:29:48,633 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Christina
+2025-09-15 17:29:55,288 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:29:55,299 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-15 17:29:55,299 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-15 17:29:57,303 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-15 17:29:57,303 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-15 17:30:06,790 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:30:06,822 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-15 17:30:06,822 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-15 17:30:08,827 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-15 17:30:19,223 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:30:19,243 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-15 17:30:19,243 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-15 17:30:21,249 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-15 17:30:29,038 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:30:29,059 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-15 17:30:29,059 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-15 17:30:31,065 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-15 17:30:42,129 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:30:42,153 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-15 17:30:42,153 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-15 17:30:44,163 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-15 17:30:52,346 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:30:52,366 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-15 17:30:52,366 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-15 17:30:54,375 - grant_reviewer - INFO - Processing grant application for Kelly with model(s): openai
+2025-09-15 17:30:54,376 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Kelly
+2025-09-15 17:31:03,858 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:31:03,879 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-15 17:31:03,879 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-15 17:31:05,885 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Kelly
+2025-09-15 17:31:15,717 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:31:15,728 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-15 17:31:15,728 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-15 17:31:17,731 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Kelly
+2025-09-15 17:31:25,736 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:31:25,748 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-15 17:31:25,748 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-15 17:31:27,753 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Kelly
+2025-09-15 17:31:36,615 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:31:36,627 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-15 17:31:36,627 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-15 17:31:38,630 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Kelly
+2025-09-15 17:31:47,355 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:31:47,383 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-15 17:31:47,383 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-15 17:31:49,390 - grant_reviewer - INFO - Processing grant application for Rosie with model(s): openai
+2025-09-15 17:31:49,390 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Rosie
+2025-09-15 17:31:59,764 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:31:59,799 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-15 17:31:59,799 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-15 17:32:01,804 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Rosie
+2025-09-15 17:32:10,902 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:32:10,919 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-15 17:32:10,919 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-15 17:32:12,920 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Rosie
+2025-09-15 17:32:22,319 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:32:22,331 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-15 17:32:22,331 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-15 17:32:24,337 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Rosie
+2025-09-15 17:32:31,196 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:32:31,204 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-15 17:32:31,204 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-15 17:32:33,209 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Rosie
+2025-09-15 17:32:39,245 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-15 17:32:39,260 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-15 17:32:39,261 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-15 17:32:41,261 - grant_reviewer - INFO - Completed processing all grant applications
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - Total reviews: 40
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - By vendor: {'OpenAI': 40}
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x11364b4c0>, <sqlite3.Row object at 0x11364a860>]
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 14.72780950665474}
+2025-09-15 17:32:41,275 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-16 12:01:05,216 - grant_reviewer - INFO - OpenAI client initialized with model gpt-4.1-mini
+2025-09-16 12:01:05,217 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-16 12:01:05,313 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-16 12:01:05,313 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-16 12:01:05,313 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-16 12:01:05,315 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-16 12:01:05,315 - grant_reviewer - INFO - Using sqlite database
+2025-09-16 12:01:05,315 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-16 12:01:05,316 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-16 12:01:05,316 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-16 12:01:05,316 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-16 12:01:05,316 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-16 12:01:05,316 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-16 12:01:05,316 - grant_reviewer - INFO - Starting processing of 4 grant applications with openai model(s), 5 iteration(s) each
+2025-09-16 12:01:05,317 - grant_reviewer - INFO - Processing grant application for Christina with model(s): openai
+2025-09-16 12:01:05,317 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Christina
+2025-09-16 12:01:14,979 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:01:14,998 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-16 12:01:14,998 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-16 12:01:17,003 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Christina
+2025-09-16 12:01:34,480 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:01:34,495 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-16 12:01:34,495 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-16 12:01:36,500 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Christina
+2025-09-16 12:01:48,996 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:01:49,012 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-16 12:01:49,012 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-16 12:01:51,018 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Christina
+2025-09-16 12:01:58,923 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:01:58,950 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-16 12:01:58,950 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-16 12:02:00,955 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Christina
+2025-09-16 12:02:15,937 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:02:15,955 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-16 12:02:15,955 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-16 12:02:17,962 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-16 12:02:17,963 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-16 12:02:33,006 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:02:33,020 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-16 12:02:33,020 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-16 12:02:35,025 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-16 12:02:44,378 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:02:44,405 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-16 12:02:44,405 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-16 12:02:46,407 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-16 12:02:55,226 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:02:55,238 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-16 12:02:55,238 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-16 12:02:57,239 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-16 12:03:05,978 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:03:05,992 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-16 12:03:05,992 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-16 12:03:07,997 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-16 12:03:16,881 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:03:16,907 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-16 12:03:16,907 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-16 12:03:18,914 - grant_reviewer - INFO - Processing grant application for Kelly with model(s): openai
+2025-09-16 12:03:18,914 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Kelly
+2025-09-16 12:03:27,891 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:03:27,903 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-16 12:03:27,903 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-16 12:03:29,905 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Kelly
+2025-09-16 12:03:37,372 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:03:37,387 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-16 12:03:37,387 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-16 12:03:39,392 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Kelly
+2025-09-16 12:03:47,553 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:03:47,566 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-16 12:03:47,566 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-16 12:03:49,571 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Kelly
+2025-09-16 12:03:58,612 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:03:58,625 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-16 12:03:58,625 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-16 12:04:00,628 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Kelly
+2025-09-16 12:04:08,591 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:04:08,614 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-16 12:04:08,615 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-16 12:04:10,620 - grant_reviewer - INFO - Processing grant application for Rosie with model(s): openai
+2025-09-16 12:04:10,620 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Rosie
+2025-09-16 12:04:21,931 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:04:21,964 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter1.json
+2025-09-16 12:04:21,964 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 1
+2025-09-16 12:04:23,967 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Rosie
+2025-09-16 12:04:32,607 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:04:32,622 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter2.json
+2025-09-16 12:04:32,622 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 2
+2025-09-16 12:04:34,627 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Rosie
+2025-09-16 12:04:47,049 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:04:47,062 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter3.json
+2025-09-16 12:04:47,062 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 3
+2025-09-16 12:04:49,067 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Rosie
+2025-09-16 12:04:56,159 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:04:56,171 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter4.json
+2025-09-16 12:04:56,171 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 4
+2025-09-16 12:04:58,174 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Rosie
+2025-09-16 12:05:05,667 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:05:05,931 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-4.1-mini_iter5.json
+2025-09-16 12:05:05,931 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-4.1-mini (gpt-4.1-mini-2025-04-14), iteration 5
+2025-09-16 12:05:07,932 - grant_reviewer - INFO - Completed processing all grant applications
+2025-09-16 12:05:07,938 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-16 12:05:07,938 - grant_reviewer - INFO - Total reviews: 20
+2025-09-16 12:05:07,938 - grant_reviewer - INFO - By vendor: {'OpenAI': 20}
+2025-09-16 12:05:07,938 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x115547370>]
+2025-09-16 12:05:07,938 - grant_reviewer - INFO - By applicant: {'Christina': 5, 'Daniel': 5, 'Kelly': 5, 'Rosie': 5}
+2025-09-16 12:05:07,939 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 10.115580010414124}
+2025-09-16 12:05:07,939 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-16 12:21:51,241 - grant_reviewer - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-16 12:21:51,241 - grant_reviewer - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-16 12:21:51,339 - grant_reviewer - INFO - Anthropic Claude client initialized with model claude-3-opus-20240229
+2025-09-16 12:21:51,339 - grant_reviewer - INFO - GROK client initialized with model grok-3-mini
+2025-09-16 12:21:51,339 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-16 12:21:51,340 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-16 12:21:51,340 - grant_reviewer - INFO - Using sqlite database
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-16 12:21:51,341 - grant_reviewer - INFO - Starting processing of 4 grant applications with openai model(s), 5 iteration(s) each
+2025-09-16 12:21:51,342 - grant_reviewer - INFO - Processing grant application for Christina with model(s): openai
+2025-09-16 12:21:51,342 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Christina
+2025-09-16 12:22:21,378 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:22:21,394 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter1.json
+2025-09-16 12:22:21,394 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-16 12:22:23,399 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Christina
+2025-09-16 12:22:48,535 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:22:48,645 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter2.json
+2025-09-16 12:22:48,645 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-16 12:22:50,650 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Christina
+2025-09-16 12:23:19,109 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:23:19,122 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter3.json
+2025-09-16 12:23:19,122 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-16 12:23:21,127 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Christina
+2025-09-16 12:23:45,495 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:23:45,510 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter4.json
+2025-09-16 12:23:45,510 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-16 12:23:47,511 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Christina
+2025-09-16 12:24:11,970 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:24:11,997 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Christina_OpenAI_gpt-5-mini_iter5.json
+2025-09-16 12:24:11,997 - grant_reviewer - INFO - Saved review for Christina, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-16 12:24:14,005 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-16 12:24:14,006 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Daniel
+2025-09-16 12:24:43,591 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:24:43,603 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter1.json
+2025-09-16 12:24:43,603 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-16 12:24:45,604 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Daniel
+2025-09-16 12:25:13,260 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:25:13,280 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter2.json
+2025-09-16 12:25:13,280 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-16 12:25:15,285 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Daniel
+2025-09-16 12:25:42,266 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:25:42,278 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter3.json
+2025-09-16 12:25:42,278 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-16 12:25:44,282 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Daniel
+2025-09-16 12:26:16,398 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:26:16,417 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter4.json
+2025-09-16 12:26:16,417 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-16 12:26:18,422 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Daniel
+2025-09-16 12:26:43,293 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:26:43,303 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_OpenAI_gpt-5-mini_iter5.json
+2025-09-16 12:26:43,303 - grant_reviewer - INFO - Saved review for Daniel, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-16 12:26:45,310 - grant_reviewer - INFO - Processing grant application for Kelly with model(s): openai
+2025-09-16 12:26:45,310 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Kelly
+2025-09-16 12:27:18,461 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:27:18,468 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter1.json
+2025-09-16 12:27:18,468 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-16 12:27:20,473 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Kelly
+2025-09-16 12:27:58,763 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:27:58,785 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter2.json
+2025-09-16 12:27:58,785 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-16 12:28:00,786 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Kelly
+2025-09-16 12:28:38,387 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:28:38,418 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter3.json
+2025-09-16 12:28:38,419 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-16 12:28:40,421 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Kelly
+2025-09-16 12:29:08,806 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:29:08,812 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter4.json
+2025-09-16 12:29:08,812 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-16 12:29:10,817 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Kelly
+2025-09-16 12:29:34,503 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:29:34,519 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Kelly_OpenAI_gpt-5-mini_iter5.json
+2025-09-16 12:29:34,520 - grant_reviewer - INFO - Saved review for Kelly, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-16 12:29:36,527 - grant_reviewer - INFO - Processing grant application for Rosie with model(s): openai
+2025-09-16 12:29:36,527 - grant_reviewer - INFO - Running OpenAI iteration 1/5 for Rosie
+2025-09-16 12:30:16,144 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:30:16,176 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter1.json
+2025-09-16 12:30:16,176 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 1
+2025-09-16 12:30:18,178 - grant_reviewer - INFO - Running OpenAI iteration 2/5 for Rosie
+2025-09-16 12:30:45,843 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:30:45,875 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter2.json
+2025-09-16 12:30:45,875 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 2
+2025-09-16 12:30:47,880 - grant_reviewer - INFO - Running OpenAI iteration 3/5 for Rosie
+2025-09-16 12:31:06,697 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:31:06,717 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter3.json
+2025-09-16 12:31:06,718 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 3
+2025-09-16 12:31:08,723 - grant_reviewer - INFO - Running OpenAI iteration 4/5 for Rosie
+2025-09-16 12:31:32,165 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:31:32,176 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter4.json
+2025-09-16 12:31:32,176 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 4
+2025-09-16 12:31:34,179 - grant_reviewer - INFO - Running OpenAI iteration 5/5 for Rosie
+2025-09-16 12:31:55,365 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-16 12:31:55,378 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Rosie_OpenAI_gpt-5-mini_iter5.json
+2025-09-16 12:31:55,378 - grant_reviewer - INFO - Saved review for Rosie, OpenAI gpt-5-mini (gpt-5-mini-2025-08-07), iteration 5
+2025-09-16 12:31:57,381 - grant_reviewer - INFO - Completed processing all grant applications
+2025-09-16 12:31:57,383 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-16 12:31:57,383 - grant_reviewer - INFO - Total reviews: 40
+2025-09-16 12:31:57,384 - grant_reviewer - INFO - By vendor: {'OpenAI': 40}
+2025-09-16 12:31:57,384 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x12704faf0>, <sqlite3.Row object at 0x12704f880>]
+2025-09-16 12:31:57,384 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
+2025-09-16 12:31:57,384 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.201594084501266}
+2025-09-16 12:31:57,384 - grant_reviewer - INFO - Grant review processing completed successfully

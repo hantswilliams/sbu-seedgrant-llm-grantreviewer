@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Kelly",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-4.1-mini",
+    "iteration": 2,
+    "timestamp": "2025-09-16T12:03:37.386366"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 27,
+        "Rationale": "The proposal integrates physical activity with immersive VR-based mindfulness in breast cancer patients, which is a novel combination targeting both psychological and cardiometabolic health. The focus on a technology-enhanced, patient-centered intervention has strong potential for meaningful improvement in this underserved survivorship area."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 23,
+        "Rationale": "The 12-week feasibility design is appropriate with clear inclusion/exclusion criteria and comprehensive outcome measures. However, the small sample size (n=10) limits statistical power, and risk mitigation strategies for potential technology adherence challenges could be more explicitly described."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The interdisciplinary team has strong complementary expertise spanning physiology, physical therapy, oncology, and behavioral health. The PI has a solid research record relevant to the study aims, indicating capability to successfully conduct the project."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 9,
+        "Rationale": "The project aligns well with NIH priorities, including behavioral medicine and integrative oncology, and has a clear planned pathway for future NIH R21 and NCI/NCCIH submissions. The preliminary data from this feasibility study can serve as strong pilot data."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 9,
+        "Rationale": "The budget is straightforward and well-justified for a small-scale feasibility study, focusing on necessary VR equipment and participant incentives. Costs align with project aims and do not include excessive or unrelated expenses."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 8,
+        "Rationale": "The application is well-written with clear organization and flow. Some formatting issues and minor typographical errors are present but do not significantly hinder comprehension."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 27,\n      \"Rationale\": \"The proposal integrates physical activity with immersive VR-based mindfulness in breast cancer patients, which is a novel combination targeting both psychological and cardiometabolic health. The focus on a technology-enhanced, patient-centered intervention has strong potential for meaningful improvement in this underserved survivorship area.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 23,\n      \"Rationale\": \"The 12-week feasibility design is appropriate with clear inclusion/exclusion criteria and comprehensive outcome measures. However, the small sample size (n=10) limits statistical power, and risk mitigation strategies for potential technology adherence challenges could be more explicitly described.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The interdisciplinary team has strong complementary expertise spanning physiology, physical therapy, oncology, and behavioral health. The PI has a solid research record relevant to the study aims, indicating capability to successfully conduct the project.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 9,\n      \"Rationale\": \"The project aligns well with NIH priorities, including behavioral medicine and integrative oncology, and has a clear planned pathway for future NIH R21 and NCI/NCCIH submissions. The preliminary data from this feasibility study can serve as strong pilot data.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 9,\n      \"Rationale\": \"The budget is straightforward and well-justified for a small-scale feasibility study, focusing on necessary VR equipment and participant incentives. Costs align with project aims and do not include excessive or unrelated expenses.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 8,\n      \"Rationale\": \"The application is well-written with clear organization and flow. Some formatting issues and minor typographical errors are present but do not significantly hinder comprehension.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}
