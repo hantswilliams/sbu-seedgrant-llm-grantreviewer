@@ -8,7 +8,7 @@ Subject: Follow-Up: SHP Seed Grant Award - Next Steps & Research Request
 
 Dear Dr. [Faculty Name],
 
-Congratulations again on receiving seed grant funding. As a follow-up to your acceptance of the award, we have two important requests to follow-up on: 
+Congratulations again on receiving seed grant funding. As a follow-up to your acceptance of the award: 
 
 1. Updated Budget and Protocol Submission
 
