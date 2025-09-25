@@ -33,19 +33,13 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from shared.db_adapter import get_db_adapter
 
-# Third-party packages for API access (import as needed)
+# Import LLM connectors
 try:
-    import openai
+    # Try relative import first (when used as a module)
+    from .connectors import OpenAIConnector, GoogleConnector
 except ImportError:
-    openai = None
-
-try:
-    from google.generativeai import GenerativeModel, configure
-    import google.generativeai as genai
-except ImportError:
-    GenerativeModel = None
-    configure = None
-    genai = None
+    # Fall back to direct import (when run as script)
+    from connectors import OpenAIConnector, GoogleConnector
 
 # Setup logging
 logging.basicConfig(
@@ -77,19 +71,18 @@ class GrantReviewProcessor:
         else:
             self.base_path = Path(base_path)
         
-        # Initialize API clients
-        self._init_openai(openai_api_key)
-        self._init_gemini(gemini_api_key)
-        self._init_claude(claude_api_key)
-        self._init_grok(grok_api_key)
+        # Load grant review instructions first
+        self.review_instructions = self._load_grant_review_instructions()
+
+        # Initialize LLM connectors with the review instructions
+        self.openai_connector = OpenAIConnector(openai_api_key, base_path=self.base_path, instructions=self.review_instructions)
+        self.google_connector = GoogleConnector(gemini_api_key, base_path=self.base_path, instructions=self.review_instructions)
         
         # Setup database
         self.db_adapter = get_db_adapter()
         self.db_adapter.init_db()
         logger.info(f"Using {self.db_adapter.type} database")
         
-        # Load grant review instructions
-        self.review_instructions = self._load_grant_review_instructions()
         
         # Scan for grant applications
         self.grant_applications = self._scan_grant_applications()
@@ -100,81 +93,15 @@ class GrantReviewProcessor:
         self.outputs_dir.mkdir(exist_ok=True)
 
     def _init_openai(self, api_key=None):
-        """Initialize OpenAI client"""
-        if openai is None:
-            self.openai_client = None
-            logger.warning("OpenAI package not installed. OpenAI functionality will be disabled.")
-            return
-            
-        if api_key is None:
-            api_key = os.environ.get("OPENAI_API_KEY")
-        
-        if api_key and api_key != "dummy":
-            self.openai_client = openai.OpenAI(api_key=api_key)
-            model_name = os.environ.get("OPENAI_MODEL", "gpt-4")
-            logger.info(f"OpenAI client initialized with model {model_name}")
-        else:
-            self.openai_client = None
-            logger.warning("OpenAI API key not found. OpenAI functionality will be disabled.")
+        """Legacy method - OpenAI is now handled by OpenAIConnector"""
+        # This method is kept for compatibility but functionality moved to OpenAIConnector
+        self.openai_client = self.openai_connector.client if self.openai_connector.is_available() else None
 
     def _init_gemini(self, api_key=None):
-        """Initialize Google Gemini client"""
-        if GenerativeModel is None or configure is None:
-            self.gemini_model = None
-            logger.warning("Google Gemini package not installed. Gemini functionality will be disabled.")
-            return
-            
-        if api_key is None:
-            api_key = os.environ.get("GEMINI_API_KEY")
-        
-        if api_key and api_key != "dummy":
-            configure(api_key=api_key)
-            # Get model name from environment variable or use default
-            model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-pro")
-            self.gemini_model = GenerativeModel(model_name)
-            logger.info(f"Google Gemini client initialized with model {model_name}")
-        else:
-            self.gemini_model = None
-            logger.warning("Google Gemini API key not found. Gemini functionality will be disabled.")
+        """Legacy method - Gemini is now handled by GoogleConnector"""
+        # This method is kept for compatibility but functionality moved to GoogleConnector
+        self.gemini_model = self.google_connector.client if self.google_connector.is_available() else None
 
-    def _init_claude(self, api_key=None):
-        """Initialize Anthropic Claude client"""
-        try:
-            import anthropic
-            
-            if api_key is None:
-                api_key = os.environ.get("CLAUDE_API_KEY")
-            
-            if api_key and api_key != "dummy":
-                self.claude_client = anthropic.Anthropic(api_key=api_key)
-                # Get model name from environment variable or use default
-                model_name = os.environ.get("CLAUDE_MODEL", "claude-3-opus-20240229")
-                self.claude_model_name = model_name
-                logger.info(f"Anthropic Claude client initialized with model {model_name}")
-            else:
-                self.claude_client = None
-                logger.warning("Claude API key not found. Claude functionality will be disabled.")
-        except ImportError:
-            logger.error("Anthropic package not installed. Please install with 'pip install anthropic'")
-            self.claude_client = None
-
-    def _init_grok(self, api_key=None):
-        """Initialize GROK client"""
-        try:
-            if api_key is None:
-                api_key = os.environ.get("GROK_API_KEY")
-            
-            if api_key and api_key != "dummy":
-                self.grok_api_key = api_key
-                model_name = os.environ.get("GROK_MODEL", "grok-1")
-                self.grok_model_name = model_name
-                logger.info(f"GROK client initialized with model {model_name}")
-            else:
-                self.grok_api_key = None
-                logger.warning("GROK API key not found. GROK functionality will be disabled.")
-        except Exception as e:
-            logger.error(f"Error initializing GROK client: {e}")
-            self.grok_api_key = None
 
     def _load_grant_review_instructions(self):
         """Load the grant review instructions from the prompts directory"""
@@ -245,131 +172,24 @@ class GrantReviewProcessor:
         return combined_content
 
     def _build_full_prompt(self, grant_content):
-        """Build the full prompt by combining the review instructions and grant content"""
-        full_prompt = f"{self.review_instructions}\n\n## Grant Application to Review:\n\n{grant_content}"
+        """Build the full prompt with grant content (instructions are handled by connectors)"""
+        full_prompt = f"## Grant Application to Review:\n\n{grant_content}"
         return full_prompt
 
     def query_openai(self, prompt):
-        """Query the OpenAI API with the given prompt"""
-        if not self.openai_client:
-            raise ValueError("OpenAI client not initialized")
-        
-        # Get model name from environment variable or use default
-        model_name = os.environ.get("OPENAI_MODEL", "gpt-4")
-        
-        start_time = time.time()
-        try:
-            response = self.openai_client.chat.completions.create(
-                model=model_name,
-                messages=[
-                    {"role": "system", "content": "You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."},
-                    {"role": "user", "content": prompt}
-                ],
-                                max_completion_tokens=4000
-            )
-            processing_time = time.time() - start_time
-            
-            # Extract model version from response if available
-            model_version = response.model
-            
-            return response.choices[0].message.content, processing_time, model_name, model_version
-        except Exception as e:
-            logger.error(f"Error querying OpenAI: {e}")
-            raise
+        """Query the OpenAI API using the OpenAI connector"""
+        if not self.openai_connector.is_available():
+            raise ValueError("OpenAI connector not available")
+
+        return self.openai_connector.query(prompt)
 
     def query_gemini(self, prompt):
-        """Query the Google Gemini API with the given prompt"""
-        if not self.gemini_model:
-            raise ValueError("Gemini model not initialized")
-        
-        # Get the model name from environment or use default
-        model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-pro")
-        
-        start_time = time.time()
-        try:
-            response = self.gemini_model.generate_content(prompt)
-            processing_time = time.time() - start_time
-            
-            # Get model version if available, otherwise use the model name
-            try:
-                model_version = response.candidates[0].safety_ratings[0].model_version if hasattr(response, 'candidates') else model_name
-            except (AttributeError, IndexError):
-                model_version = model_name
-                
-            return response.text, processing_time, model_name, model_version
-        except Exception as e:
-            logger.error(f"Error querying Gemini: {e}")
-            raise
+        """Query the Google Gemini API using the Google connector"""
+        if not self.google_connector.is_available():
+            raise ValueError("Google connector not available")
 
-    def query_claude(self, prompt):
-        """Query the Anthropic Claude API with the given prompt"""
-        if not self.claude_client:
-            raise ValueError("Claude client not initialized")
-        
-        model_name = self.claude_model_name
-        
-        start_time = time.time()
-        try:
-            response = self.claude_client.messages.create(
-                model=model_name,
-                max_completion_tokens=4000,
-                                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                system="You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."
-            )
-            processing_time = time.time() - start_time
-            
-            # Extract model version
-            model_version = response.model
-            
-            return response.content[0].text, processing_time, model_name, model_version
-        except Exception as e:
-            logger.error(f"Error querying Claude: {e}")
-            raise
+        return self.google_connector.query(prompt)
 
-    def query_grok(self, prompt):
-        """Query the GROK API with the given prompt"""
-        if not self.grok_api_key:
-            raise ValueError("GROK API key not initialized")
-        
-        import requests
-        
-        model_name = self.grok_model_name
-        
-        # GROK API endpoint
-        url = "https://api.x.ai/v1/chat/completions"
-        
-        headers = {
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {self.grok_api_key}"
-        }
-        
-        data = {
-            "model": model_name,
-            "messages": [
-                {"role": "system", "content": "You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."},
-                {"role": "user", "content": prompt}
-            ],
-                        "max_completion_tokens": 4000
-        }
-        
-        start_time = time.time()
-        try:
-            response = requests.post(url, headers=headers, json=data, verify=True, timeout=30)
-            response.raise_for_status()
-            
-            result = response.json()
-            processing_time = time.time() - start_time
-            
-            # Extract content and model version
-            content = result["choices"][0]["message"]["content"]
-            model_version = result.get("model", model_name)
-            
-            return content, processing_time, model_name, model_version
-        except Exception as e:
-            logger.error(f"Error querying GROK: {e}")
-            raise
 
     def _extract_review_scores(self, response_text):
         """Extract the review scores and recommendation from the response text"""
@@ -617,7 +437,7 @@ class GrantReviewProcessor:
             
         logger.info(f"Processing grant application for {applicant_name} with model(s): {model}")
         
-        if model in ["openai", "all"] and self.openai_client:
+        if model in ["openai", "all"] and self.openai_connector.is_available():
             for i in range(1, iterations + 1):
                 logger.info(f"Running OpenAI iteration {i}/{iterations} for {applicant_name}")
                 try:
@@ -637,7 +457,7 @@ class GrantReviewProcessor:
                 except Exception as e:
                     logger.error(f"Error in OpenAI processing for {applicant_name}: {e}")
         
-        if model in ["gemini", "all"] and self.gemini_model:
+        if model in ["gemini", "all"] and self.google_connector.is_available():
             for i in range(1, iterations + 1):
                 logger.info(f"Running Gemini iteration {i}/{iterations} for {applicant_name}")
                 try:
@@ -657,45 +477,6 @@ class GrantReviewProcessor:
                 except Exception as e:
                     logger.error(f"Error in Gemini processing for {applicant_name}: {e}")
                     
-        if model in ["claude", "all"] and self.claude_client:
-            for i in range(1, iterations + 1):
-                logger.info(f"Running Claude iteration {i}/{iterations} for {applicant_name}")
-                try:
-                    response, processing_time, model_name, model_version = self.query_claude(full_prompt)
-                    self.save_response(
-                        applicant_name=applicant_name,
-                        vendor="Anthropic",
-                        model=model_name,
-                        model_version=model_version,
-                        iteration=i,
-                        prompt=full_prompt,
-                        response=response,
-                        processing_time=processing_time
-                    )
-                    # Add delay to avoid rate limits
-                    time.sleep(2)
-                except Exception as e:
-                    logger.error(f"Error in Claude processing for {applicant_name}: {e}")
-                    
-        if model in ["grok", "all"] and self.grok_api_key:
-            for i in range(1, iterations + 1):
-                logger.info(f"Running GROK iteration {i}/{iterations} for {applicant_name}")
-                try:
-                    response, processing_time, model_name, model_version = self.query_grok(full_prompt)
-                    self.save_response(
-                        applicant_name=applicant_name,
-                        vendor="GROK",
-                        model=model_name,
-                        model_version=model_version,
-                        iteration=i,
-                        prompt=full_prompt,
-                        response=response,
-                        processing_time=processing_time
-                    )
-                    # Add delay to avoid rate limits
-                    time.sleep(2)
-                except Exception as e:
-                    logger.error(f"Error in GROK processing for {applicant_name}: {e}")
 
     def process_all_applications(self, model="all", iterations=1):
         """Process all available grant applications"""
@@ -777,8 +558,8 @@ class GrantReviewProcessor:
 
 def main():
     parser = argparse.ArgumentParser(description='Process grant applications through AI models for review')
-    parser.add_argument('--model', choices=['openai', 'gemini', 'claude', 'grok', 'all'], default='all',
-                        help='Which model provider to use: openai, gemini, claude, grok, or all')
+    parser.add_argument('--model', choices=['openai', 'gemini', 'all'], default='all',
+                        help='Which model provider to use: openai, gemini, or all')
     parser.add_argument('--iterations', type=int, default=1,
                         help='Number of iterations per grant application')
     parser.add_argument('--applicant', type=str, default=None,

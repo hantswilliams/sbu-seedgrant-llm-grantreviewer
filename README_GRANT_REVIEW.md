@@ -36,13 +36,20 @@ cp .env.example .env
 nano .env
 ```
 
-### 2. Test the System
+### 2. Import Human Reviews (Required First Step)
+```bash
+# Import human reviewed grant scores into the database
+# This must be done BEFORE running AI comparisons
+python combine_reviews.py
+```
+
+### 3. Test the System
 ```bash
 # Run the test suite to verify everything works
 python test_grant_processor.py
 ```
 
-### 3. Process Grant Applications
+### 4. Process Grant Applications
 
 #### Review a Single Applicant
 ```bash
@@ -104,26 +111,46 @@ JOIN grant_review_criteria grc ON gr.id = grc.grant_review_id;
 ### Key Components
 1. **GrantReviewProcessor** (`scripts/grant_review_processor.py`)
    - Main processing engine
-   - LLM API integration
+   - Orchestrates LLM connectors
    - Response parsing and storage
 
-2. **Database Adapter** (`shared/db_adapter.py`)
+2. **LLM Connectors** (`scripts/connectors/`)
+   - **BaseConnector**: Abstract base class for all providers
+   - **OpenAIConnector**: OpenAI GPT models integration
+   - **GoogleConnector**: Google Gemini models integration
+   - Modular, extensible architecture
+
+3. **Database Adapter** (`shared/db_adapter.py`)
    - SQLite and Supabase support
    - Grant-specific schema
    - Backward compatibility
 
-3. **Review Instructions** (`llm/prompts/LLM_Grant_Review_Instructions.md`)
+4. **Review Instructions** (`llm/prompts/LLM_Grant_Review_Instructions.md`)
    - Standardized scoring criteria
    - JSON output format specification
+
+5. **Human-AI Comparison** (`combine_reviews.py`)
+   - Imports human reviewer scores from CSV
+   - Creates unified comparison database
+   - Generates summary statistics
+
+6. **Flask Web Interface** (`app.py`)
+   - Web-based result viewing and analysis
+   - Real-time charts and comparisons
+   - Export functionality
 
 ### Key Improvements from Original
 - ✅ **Grant-specific data model** instead of ethics case structure
 - ✅ **Component combination** - merges all 4 grant parts into single review
 - ✅ **JSON score parsing** with fallback to text analysis
 - ✅ **Structured database schema** for grant reviews
+- ✅ **Modular connector architecture** - separate connectors for each LLM provider
 - ✅ **Optional dependencies** - works without all LLM packages installed
 - ✅ **Individual applicant processing** option
 - ✅ **Comprehensive test suite**
+- ✅ **Human-AI comparison workflow** via combine_reviews.py
+- ✅ **Flask web interface** for easy access to results
+- ✅ **Docker containerization** for deployment
 
 ## 📈 Example Usage Workflow
 
@@ -157,14 +184,82 @@ JOIN grant_review_criteria grc ON gr.id = grc.grant_review_id;
    # View logs for summary stats at the end
    ```
 
+## 🌐 Web Interface
+
+A Flask web application provides an easy-to-use interface for viewing grant review results.
+
+### Starting the Web Interface
+```bash
+# Run the Flask application
+python app.py
+
+# Access the interface at http://localhost:5000
+```
+
+### Features
+- View all grant applications and their reviews
+- Compare human vs AI reviewer scores
+- Export results in various formats
+- Interactive charts and statistics
+- Real-time processing status
+
+## 🐳 Docker Deployment
+
+### Build and Run with Docker
+```bash
+# Build the Docker image
+docker build -t grant-reviewer .
+
+# Run the container
+docker run -p 5000:5000 -v $(pwd)/data:/app/data grant-reviewer
+
+# Access the web interface at http://localhost:5000
+```
+
+### Docker Features
+- Self-contained environment with all dependencies
+- Persistent data storage via volume mounts
+- Easy deployment to cloud platforms
+- Consistent runtime across different systems
+
+## 📊 Human-AI Comparison Workflow
+
+### Step 1: Import Human Reviews
+```bash
+# Place human reviewer scores in inputs/human_scores.csv
+# Run the combination script to import into database
+python combine_reviews.py
+```
+
+### Step 2: Generate AI Reviews
+```bash
+# Process applications with AI models
+python scripts/grant_review_processor.py --model all --iterations 3
+```
+
+### Step 3: Compare Results
+```bash
+# Start web interface to view comparisons
+python app.py
+# Or query the combined_reviews table directly
+```
+
+### Data Flow
+1. **Human scores** (CSV) → `inputs/human_scores.csv`
+2. **Import script** → `combine_reviews.py`
+3. **Database storage** → `data/results.db` (`combined_reviews` table)
+4. **AI processing** → `grant_review_processor.py`
+5. **Web visualization** → `app.py` Flask interface
+
 ## 🛠 Troubleshooting
 
 ### Missing Dependencies
 The system gracefully handles missing packages:
 - **OpenAI**: `pip install openai`
-- **Gemini**: `pip install google-generativeai` 
+- **Gemini**: `pip install google-generativeai`
 - **Claude**: `pip install anthropic`
 - **GROK**: Uses standard requests (included)
+- **Flask**: `pip install flask` (for web interface)
 
 ### API Key Issues
 - Check `.env` file exists and has correct keys
@@ -175,6 +270,11 @@ The system gracefully handles missing packages:
 - Database auto-creates on first run
 - Located at `data/results.db` by default
 - Can switch to Supabase by changing `DB_TYPE` in `.env`
+
+### Human Review Import Issues
+- Ensure `inputs/human_scores.csv` exists and has correct format
+- Run `combine_reviews.py` before comparing with AI results
+- Check column names match expected format in the CSV
 
 ## 📝 Next Steps
 
