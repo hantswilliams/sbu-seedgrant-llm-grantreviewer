@@ -36,10 +36,10 @@ from shared.db_adapter import get_db_adapter
 # Import LLM connectors
 try:
     # Try relative import first (when used as a module)
-    from .connectors import OpenAIConnector, GoogleConnector
+    from .connectors import OpenAIConnector, GoogleConnector, GrokConnector, AnthropicConnector
 except ImportError:
     # Fall back to direct import (when run as script)
-    from connectors import OpenAIConnector, GoogleConnector
+    from connectors import OpenAIConnector, GoogleConnector, GrokConnector, AnthropicConnector
 
 # Setup logging
 logging.basicConfig(
@@ -77,6 +77,8 @@ class GrantReviewProcessor:
         # Initialize LLM connectors with the review instructions
         self.openai_connector = OpenAIConnector(openai_api_key, base_path=self.base_path, instructions=self.review_instructions)
         self.google_connector = GoogleConnector(gemini_api_key, base_path=self.base_path, instructions=self.review_instructions)
+        self.grok_connector = GrokConnector(grok_api_key, base_path=self.base_path, instructions=self.review_instructions)
+        self.anthropic_connector = AnthropicConnector(claude_api_key, base_path=self.base_path, instructions=self.review_instructions)
         
         # Setup database
         self.db_adapter = get_db_adapter()
@@ -189,6 +191,20 @@ class GrantReviewProcessor:
             raise ValueError("Google connector not available")
 
         return self.google_connector.query(prompt)
+
+    def query_grok(self, prompt):
+        """Query the Grok API using the Grok connector"""
+        if not self.grok_connector.is_available():
+            raise ValueError("Grok connector not available")
+
+        return self.grok_connector.query(prompt)
+
+    def query_claude(self, prompt):
+        """Query the Anthropic Claude API using the Anthropic connector"""
+        if not self.anthropic_connector.is_available():
+            raise ValueError("Anthropic connector not available")
+
+        return self.anthropic_connector.query(prompt)
 
 
     def _extract_review_scores(self, response_text):
@@ -441,14 +457,14 @@ class GrantReviewProcessor:
             for i in range(1, iterations + 1):
                 logger.info(f"Running OpenAI iteration {i}/{iterations} for {applicant_name}")
                 try:
-                    response, processing_time, model_name, model_version = self.query_openai(full_prompt)
+                    response, processing_time, model_name, model_version, actual_prompt = self.query_openai(full_prompt)
                     self.save_response(
                         applicant_name=applicant_name,
                         vendor="OpenAI",
                         model=model_name,
                         model_version=model_version,
                         iteration=i,
-                        prompt=full_prompt,
+                        prompt=actual_prompt,
                         response=response,
                         processing_time=processing_time
                     )
@@ -461,14 +477,14 @@ class GrantReviewProcessor:
             for i in range(1, iterations + 1):
                 logger.info(f"Running Gemini iteration {i}/{iterations} for {applicant_name}")
                 try:
-                    response, processing_time, model_name, model_version = self.query_gemini(full_prompt)
+                    response, processing_time, model_name, model_version, actual_prompt = self.query_gemini(full_prompt)
                     self.save_response(
                         applicant_name=applicant_name,
                         vendor="Google",
                         model=model_name,
                         model_version=model_version,
                         iteration=i,
-                        prompt=full_prompt,
+                        prompt=actual_prompt,
                         response=response,
                         processing_time=processing_time
                     )
@@ -476,6 +492,46 @@ class GrantReviewProcessor:
                     time.sleep(2)
                 except Exception as e:
                     logger.error(f"Error in Gemini processing for {applicant_name}: {e}")
+
+        if model in ["grok", "all"] and self.grok_connector.is_available():
+            for i in range(1, iterations + 1):
+                logger.info(f"Running Grok iteration {i}/{iterations} for {applicant_name}")
+                try:
+                    response, processing_time, model_name, model_version, actual_prompt = self.query_grok(full_prompt)
+                    self.save_response(
+                        applicant_name=applicant_name,
+                        vendor="xAI",
+                        model=model_name,
+                        model_version=model_version,
+                        iteration=i,
+                        prompt=actual_prompt,
+                        response=response,
+                        processing_time=processing_time
+                    )
+                    # Add delay to avoid rate limits
+                    time.sleep(2)
+                except Exception as e:
+                    logger.error(f"Error in Grok processing for {applicant_name}: {e}")
+
+        if model in ["claude", "all"] and self.anthropic_connector.is_available():
+            for i in range(1, iterations + 1):
+                logger.info(f"Running Claude iteration {i}/{iterations} for {applicant_name}")
+                try:
+                    response, processing_time, model_name, model_version, actual_prompt = self.query_claude(full_prompt)
+                    self.save_response(
+                        applicant_name=applicant_name,
+                        vendor="Anthropic",
+                        model=model_name,
+                        model_version=model_version,
+                        iteration=i,
+                        prompt=actual_prompt,
+                        response=response,
+                        processing_time=processing_time
+                    )
+                    # Add delay to avoid rate limits
+                    time.sleep(2)
+                except Exception as e:
+                    logger.error(f"Error in Claude processing for {applicant_name}: {e}")
                     
 
     def process_all_applications(self, model="all", iterations=1):
@@ -558,8 +614,8 @@ class GrantReviewProcessor:
 
 def main():
     parser = argparse.ArgumentParser(description='Process grant applications through AI models for review')
-    parser.add_argument('--model', choices=['openai', 'gemini', 'all'], default='all',
-                        help='Which model provider to use: openai, gemini, or all')
+    parser.add_argument('--model', choices=['openai', 'gemini', 'grok', 'claude', 'all'], default='all',
+                        help='Which model provider to use: openai, gemini, grok, claude, or all')
     parser.add_argument('--iterations', type=int, default=1,
                         help='Number of iterations per grant application')
     parser.add_argument('--applicant', type=str, default=None,

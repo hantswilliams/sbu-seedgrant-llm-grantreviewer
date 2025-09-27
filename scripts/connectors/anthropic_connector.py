@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-OpenAI LLM Connector
+Anthropic LLM Connector
 
-This module handles connections to OpenAI's API using the Responses API.
+This module handles connections to Anthropic's Claude API.
 """
 
 import os
@@ -10,30 +10,30 @@ import time
 import logging
 from typing import Tuple, Optional
 
-import openai
+import anthropic
 
 from .base_connector import BaseLLMConnector
 
 logger = logging.getLogger("ai_ethics")
 
-class OpenAIConnector(BaseLLMConnector):
-    """OpenAI API connector using the Responses API"""
+class AnthropicConnector(BaseLLMConnector):
+    """Anthropic Claude API connector"""
 
     def __init__(self, api_key: Optional[str] = None, model_name: Optional[str] = None, base_path: Optional[str] = None, instructions: Optional[str] = None):
         """
-        Initialize OpenAI connector
+        Initialize Anthropic connector
 
         Args:
-            api_key: OpenAI API key (if None, will look for OPENAI_API_KEY env var)
-            model_name: Model name (if None, will use OPENAI_MODEL env var or default)
+            api_key: Anthropic API key (if None, will look for ANTHROPIC_API_KEY env var)
+            model_name: Model name (if None, will use ANTHROPIC_MODEL env var or default)
             base_path: Base path to the project root
             instructions: Custom instructions for the model (if None, uses default)
         """
         if api_key is None:
-            api_key = os.environ.get("OPENAI_API_KEY")
+            api_key = os.environ.get("ANTHROPIC_API_KEY")
 
         if model_name is None:
-            model_name = os.environ.get("OPENAI_MODEL", "gpt-4")
+            model_name = os.environ.get("ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022")
 
         super().__init__(api_key, model_name, base_path)
 
@@ -43,67 +43,73 @@ class OpenAIConnector(BaseLLMConnector):
         if self.api_key:
             self._initialize_client()
         else:
-            logger.warning("OpenAI API key not found. OpenAI functionality will be disabled.")
+            logger.warning("Anthropic API key not found. Anthropic functionality will be disabled.")
 
     def _initialize_client(self) -> bool:
         """
-        Initialize the OpenAI client
+        Initialize the Anthropic client
 
         Returns:
             bool: True if initialization successful, False otherwise
         """
         try:
-            self.client = openai.OpenAI(api_key=self.api_key)
+            self.client = anthropic.Anthropic(api_key=self.api_key)
             self.is_initialized = True
-            logger.info(f"OpenAI client initialized with model {self.model_name}")
+            logger.info(f"Anthropic client initialized with model {self.model_name}")
             return True
         except Exception as e:
-            logger.error(f"Error initializing OpenAI client: {e}")
+            logger.error(f"Error initializing Anthropic client: {e}")
             self.is_initialized = False
             return False
 
     def query(self, prompt: str) -> Tuple[str, float, str, str, str]:
         """
-        Query the OpenAI API with the given prompt using the Responses API
+        Query the Anthropic API with the given prompt
 
         Args:
-            prompt: The prompt to send to OpenAI
+            prompt: The prompt to send to Claude
 
         Returns:
             Tuple containing:
-            - response_text: The response from OpenAI
+            - response_text: The response from Claude
             - processing_time: Time taken to process the request
             - model_name: Name of the model used
             - model_version: Version of the model used
-            - actual_prompt: The actual full prompt (instructions + prompt for consistency)
+            - actual_prompt: The actual full prompt sent to the API
 
         Raises:
             ValueError: If the client is not initialized
-            Exception: If there's an error querying the OpenAI API
+            Exception: If there's an error querying the Anthropic API
         """
         if not self.client:
-            raise ValueError("OpenAI client not initialized")
+            raise ValueError("Anthropic client not initialized")
 
         start_time = time.time()
         try:
-            response = self.client.responses.create(
+            # Build the full prompt with instructions
+            full_prompt = f"{self.instructions}\n\n{prompt}"
+
+            response = self.client.messages.create(
                 model=self.model_name,
-                instructions=self.instructions,
-                input=prompt
+                max_tokens=4000,  # Ensure enough tokens for detailed reviews
+                temperature=0.1,  # Keep responses consistent for evaluation
+                messages=[
+                    {"role": "user", "content": full_prompt}
+                ]
             )
             processing_time = time.time() - start_time
+
+            # Extract response text
+            response_text = response.content[0].text
 
             # Extract model version from response if available
             model_version = getattr(response, 'model', self.model_name)
 
-            # For consistency with Google connector, return the full prompt that represents what was sent
-            full_prompt = f"{self.instructions}\n\n{prompt}"
-
-            return response.output_text, processing_time, self.model_name, model_version, full_prompt
+            return response_text, processing_time, self.model_name, model_version, full_prompt
         except Exception as e:
-            logger.error(f"Error querying OpenAI: {e}")
+            logger.error(f"Error querying Anthropic: {e}")
             raise
 
     def get_vendor_name(self) -> str:
-        """Get the vendor name for OpenAI"""
-        return "OpenAI"
+        """Get the vendor name for Anthropic"""
+        return "Anthropic"

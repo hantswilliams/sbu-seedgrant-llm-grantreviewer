@@ -51,7 +51,7 @@ class BaseLLMConnector(ABC):
         pass
 
     @abstractmethod
-    def query(self, prompt: str) -> Tuple[str, float, str, str]:
+    def query(self, prompt: str) -> Tuple[str, float, str, str, str]:
         """
         Query the LLM with the given prompt
 
@@ -64,6 +64,7 @@ class BaseLLMConnector(ABC):
             - processing_time: Time taken to process the request
             - model_name: Name of the model used
             - model_version: Version of the model used
+            - actual_prompt: The actual full prompt sent to the API
 
         Raises:
             ValueError: If the client is not initialized

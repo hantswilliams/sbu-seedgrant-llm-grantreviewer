@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Daniel",
+  "reviewer_info": {
+    "vendor": "Google",
+    "model": "gemini-2.5-flash",
+    "iteration": 3,
+    "timestamp": "2025-09-25T19:28:27.991675"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 28,
+        "Rationale": "The proposal addresses a critical public health issue (Lyme disease misdiagnosis) where physical therapists play a crucial first-contact role. The dual-aim approach to assess both educational trends and clinical diagnostic abilities is novel and highly significant for informing future curricular and advocacy efforts."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 24,
+        "Rationale": "The proposed survey and questionnaire methods are generally appropriate and well-described, including content validation and blinding for Aim 2. However, the stated timeline graphic is missing from the document, which introduces a minor gap in fully assessing the detailed execution plan."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 8,
+        "Rationale": "The team is well-composed with complementary expertise, including a content expert PA and a PT with survey design experience, directly aligning with the project's needs. While narrative biosketches are absent (only Google Scholar links provided), their defined roles indicate a strong functional fit."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 9,
+        "Rationale": "The project clearly lays the groundwork for future interventional studies in LD education and clinical practice. The proposal explicitly identifies a specific, relevant funding opportunity (ILADEF), demonstrating strong potential for attracting competitive external grants."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 10,
+        "Rationale": "The budget is meticulously detailed, cost-effective, and directly aligns with the proposed activities and participant incentives within the $5,000 limit. Every expense is clearly justified and necessary for project completion."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 5,
+        "Rationale": "The grant suffers from significant structural and formatting issues, including the complete duplication of the background and methods sections, and a missing timeline graphic. These major flaws severely impact the overall clarity, organization, and ease of comprehension."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 28,\n      \"Rationale\": \"The proposal addresses a critical public health issue (Lyme disease misdiagnosis) where physical therapists play a crucial first-contact role. The dual-aim approach to assess both educational trends and clinical diagnostic abilities is novel and highly significant for informing future curricular and advocacy efforts.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 24,\n      \"Rationale\": \"The proposed survey and questionnaire methods are generally appropriate and well-described, including content validation and blinding for Aim 2. However, the stated timeline graphic is missing from the document, which introduces a minor gap in fully assessing the detailed execution plan.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 8,\n      \"Rationale\": \"The team is well-composed with complementary expertise, including a content expert PA and a PT with survey design experience, directly aligning with the project's needs. While narrative biosketches are absent (only Google Scholar links provided), their defined roles indicate a strong functional fit.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 9,\n      \"Rationale\": \"The project clearly lays the groundwork for future interventional studies in LD education and clinical practice. The proposal explicitly identifies a specific, relevant funding opportunity (ILADEF), demonstrating strong potential for attracting competitive external grants.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 10,\n      \"Rationale\": \"The budget is meticulously detailed, cost-effective, and directly aligns with the proposed activities and participant incentives within the $5,000 limit. Every expense is clearly justified and necessary for project completion.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 5,\n      \"Rationale\": \"The grant suffers from significant structural and formatting issues, including the complete duplication of the background and methods sections, and a missing timeline graphic. These major flaws severely impact the overall clarity, organization, and ease of comprehension.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

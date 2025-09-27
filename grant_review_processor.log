@@ -1147,3 +1147,345 @@
 2025-09-25 14:11:45,631 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
 2025-09-25 14:11:45,631 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.201594084501266}
 2025-09-25 14:11:45,631 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 18:23:52,004 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:23:52,005 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:23:52,095 - ai_ethics - INFO - OpenAI client initialized with model gpt-5-mini
+2025-09-25 18:23:52,095 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:23:52,095 - ai_ethics - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-25 18:23:52,095 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 18:23:52,102 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 18:23:52,103 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 18:23:52,103 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 18:23:52,104 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 18:23:52,104 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 18:23:52,105 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 18:23:52,106 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 18:23:52,107 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-25 18:23:52,107 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-25 18:23:59,523 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:23:59,525 - openai._base_client - INFO - Retrying request to /responses in 0.437027 seconds
+2025-09-25 18:24:06,688 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:24:06,689 - openai._base_client - INFO - Retrying request to /responses in 0.970721 seconds
+2025-09-25 18:24:16,488 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:24:16,491 - ai_ethics - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:24:16,491 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:24:16,502 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 18:24:16,502 - grant_reviewer - INFO - Total reviews: 40
+2025-09-25 18:24:16,502 - grant_reviewer - INFO - By vendor: {'OpenAI': 40}
+2025-09-25 18:24:16,502 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x1163662f0>, <sqlite3.Row object at 0x1163657e0>]
+2025-09-25 18:24:16,502 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 18:24:16,502 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.201594084501266}
+2025-09-25 18:24:16,503 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 18:24:53,966 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:24:53,967 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:24:54,066 - ai_ethics - INFO - OpenAI client initialized with model gpt-4.1-mini
+2025-09-25 18:24:54,066 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:24:54,066 - ai_ethics - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-25 18:24:54,067 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 18:24:54,072 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 18:24:54,072 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 18:24:54,073 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 18:24:54,073 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 18:24:54,074 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 18:24:54,074 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 18:24:54,074 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 18:24:54,076 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-25 18:24:54,076 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-25 18:25:01,268 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:25:01,269 - openai._base_client - INFO - Retrying request to /responses in 0.488099 seconds
+2025-09-25 18:25:08,126 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:25:08,128 - openai._base_client - INFO - Retrying request to /responses in 0.853379 seconds
+2025-09-25 18:25:14,203 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:25:14,206 - ai_ethics - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:25:14,206 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:25:14,212 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 18:25:14,212 - grant_reviewer - INFO - Total reviews: 40
+2025-09-25 18:25:14,213 - grant_reviewer - INFO - By vendor: {'OpenAI': 40}
+2025-09-25 18:25:14,213 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x11e7667a0>, <sqlite3.Row object at 0x11e7665f0>]
+2025-09-25 18:25:14,213 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 18:25:14,213 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.201594084501266}
+2025-09-25 18:25:14,213 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 18:27:54,562 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:27:54,563 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:27:54,652 - ai_ethics - INFO - OpenAI client initialized with model gpt-5-nano
+2025-09-25 18:27:54,653 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:27:54,653 - ai_ethics - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-25 18:27:54,653 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 18:27:54,659 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 18:27:54,659 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 18:27:54,660 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 18:27:54,660 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 18:27:54,661 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 18:27:54,661 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 18:27:54,661 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 18:27:54,663 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-25 18:27:54,664 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-25 18:27:56,233 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:27:56,234 - openai._base_client - INFO - Retrying request to /responses in 0.444532 seconds
+2025-09-25 18:27:57,741 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:27:57,741 - openai._base_client - INFO - Retrying request to /responses in 0.957489 seconds
+2025-09-25 18:27:59,906 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:27:59,910 - ai_ethics - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:27:59,910 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:27:59,917 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 18:27:59,917 - grant_reviewer - INFO - Total reviews: 40
+2025-09-25 18:27:59,918 - grant_reviewer - INFO - By vendor: {'OpenAI': 40}
+2025-09-25 18:27:59,918 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x1058a2710>, <sqlite3.Row object at 0x1058a2950>]
+2025-09-25 18:27:59,920 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 18:27:59,920 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.201594084501266}
+2025-09-25 18:27:59,920 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 18:29:52,844 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:29:52,845 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:29:52,931 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-25 18:29:52,931 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:29:52,931 - ai_ethics - INFO - Google Gemini client initialized with model gemini-1.5-pro
+2025-09-25 18:29:52,931 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 18:29:52,936 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 18:29:52,937 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 18:29:52,937 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 18:29:52,937 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 18:29:52,938 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 18:29:52,938 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 18:29:52,938 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 18:29:52,940 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): openai
+2025-09-25 18:29:52,940 - grant_reviewer - INFO - Running OpenAI iteration 1/1 for Daniel
+2025-09-25 18:30:00,851 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:30:00,851 - openai._base_client - INFO - Retrying request to /responses in 0.375592 seconds
+2025-09-25 18:30:08,159 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:30:08,161 - openai._base_client - INFO - Retrying request to /responses in 0.899835 seconds
+2025-09-25 18:30:14,304 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/responses "HTTP/1.1 429 Too Many Requests"
+2025-09-25 18:30:14,306 - ai_ethics - ERROR - Error querying OpenAI: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:30:14,306 - grant_reviewer - ERROR - Error in OpenAI processing for Daniel: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-09-25 18:30:14,312 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 18:30:14,313 - grant_reviewer - INFO - Total reviews: 40
+2025-09-25 18:30:14,313 - grant_reviewer - INFO - By vendor: {'OpenAI': 40}
+2025-09-25 18:30:14,313 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x11c37e6b0>, <sqlite3.Row object at 0x11c37e830>]
+2025-09-25 18:30:14,313 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 10, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 18:30:14,313 - grant_reviewer - INFO - Average processing times by vendor: {'OpenAI': 19.201594084501266}
+2025-09-25 18:30:14,313 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 18:33:03,051 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:33:03,052 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:33:03,142 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-25 18:33:03,143 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 18:33:03,143 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-25 18:33:03,143 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 18:33:03,147 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 18:33:03,148 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 18:33:03,148 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 18:33:03,149 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 18:33:03,149 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 18:33:03,149 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 18:33:03,149 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 18:33:03,151 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): gemini
+2025-09-25 18:33:03,151 - grant_reviewer - INFO - Running Gemini iteration 1/1 for Daniel
+2025-09-25 18:33:37,219 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-2.5-flash_iter1.json
+2025-09-25 18:33:37,219 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-2.5-flash (gemini-2.5-flash), iteration 1
+2025-09-25 18:33:39,228 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 18:33:39,229 - grant_reviewer - INFO - Total reviews: 41
+2025-09-25 18:33:39,229 - grant_reviewer - INFO - By vendor: {'Google': 1, 'OpenAI': 40}
+2025-09-25 18:33:39,229 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x113570400>, <sqlite3.Row object at 0x113570520>, <sqlite3.Row object at 0x113570550>]
+2025-09-25 18:33:39,229 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 11, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 18:33:39,229 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 34.05706977844238, 'OpenAI': 19.201594084501266}
+2025-09-25 18:33:39,229 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 19:09:56,205 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:09:56,205 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:09:56,309 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-25 19:09:56,309 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:09:56,310 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-25 19:09:56,310 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 19:09:56,313 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 19:09:56,313 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 19:09:56,314 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 19:09:56,314 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 19:09:56,314 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 19:09:56,314 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 19:09:56,314 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 19:11:03,032 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:11:03,033 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:11:03,100 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-25 19:11:03,101 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:11:03,101 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-25 19:11:03,101 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 19:11:03,105 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 19:11:03,105 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 19:11:03,105 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 19:11:03,105 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 19:11:03,106 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 19:11:03,106 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 19:11:03,106 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 19:11:03,107 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): gemini
+2025-09-25 19:11:03,107 - grant_reviewer - INFO - Running Gemini iteration 1/1 for Daniel
+2025-09-25 19:11:33,960 - grant_reviewer - ERROR - Error saving to database: database is locked
+2025-09-25 19:11:33,963 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-2.5-flash_iter1.json
+2025-09-25 19:11:33,963 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-2.5-flash (gemini-2.5-flash), iteration 1
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - Total reviews: 41
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - By vendor: {'Google': 1, 'OpenAI': 40}
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x1125702b0>, <sqlite3.Row object at 0x1125703d0>, <sqlite3.Row object at 0x112570400>]
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 11, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 34.05706977844238, 'OpenAI': 19.201594084501266}
+2025-09-25 19:11:35,974 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 19:11:59,854 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:11:59,855 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:11:59,938 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-25 19:11:59,939 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:11:59,940 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-25 19:11:59,940 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 19:11:59,943 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 19:11:59,943 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 19:11:59,944 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 19:11:59,944 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 19:11:59,944 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 19:11:59,944 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 19:11:59,944 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 19:11:59,946 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): gemini
+2025-09-25 19:11:59,946 - grant_reviewer - INFO - Running Gemini iteration 1/1 for Daniel
+2025-09-25 19:12:26,219 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-2.5-flash_iter1.json
+2025-09-25 19:12:26,219 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-2.5-flash (gemini-2.5-flash), iteration 1
+2025-09-25 19:12:28,229 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 19:12:28,230 - grant_reviewer - INFO - Total reviews: 42
+2025-09-25 19:12:28,230 - grant_reviewer - INFO - By vendor: {'Google': 2, 'OpenAI': 40}
+2025-09-25 19:12:28,230 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x109d70130>, <sqlite3.Row object at 0x109d70190>, <sqlite3.Row object at 0x109d701f0>]
+2025-09-25 19:12:28,230 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 12, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 19:12:28,230 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 30.15971541404724, 'OpenAI': 19.201594084501266}
+2025-09-25 19:12:28,230 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-25 19:26:34,182 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:26:34,183 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:26:34,264 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-25 19:26:34,265 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-25 19:26:34,265 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-25 19:26:34,265 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-25 19:26:34,269 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-25 19:26:34,269 - grant_reviewer - INFO - Using sqlite database
+2025-09-25 19:26:34,270 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-25 19:26:34,270 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-25 19:26:34,270 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-25 19:26:34,270 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-25 19:26:34,270 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-25 19:26:34,272 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): gemini
+2025-09-25 19:26:34,272 - grant_reviewer - INFO - Running Gemini iteration 1/3 for Daniel
+2025-09-25 19:27:05,359 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-2.5-flash_iter1.json
+2025-09-25 19:27:05,360 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-2.5-flash (gemini-2.5-flash), iteration 1
+2025-09-25 19:27:07,362 - grant_reviewer - INFO - Running Gemini iteration 2/3 for Daniel
+2025-09-25 19:27:41,216 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-2.5-flash_iter2.json
+2025-09-25 19:27:41,216 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-2.5-flash (gemini-2.5-flash), iteration 2
+2025-09-25 19:27:43,222 - grant_reviewer - INFO - Running Gemini iteration 3/3 for Daniel
+2025-09-25 19:28:27,994 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Google_gemini-2.5-flash_iter3.json
+2025-09-25 19:28:27,994 - grant_reviewer - INFO - Saved review for Daniel, Google gemini-2.5-flash (gemini-2.5-flash), iteration 3
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - Total reviews: 45
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - By vendor: {'Google': 5, 'OpenAI': 40}
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x118d14b50>, <sqlite3.Row object at 0x118d14be0>, <sqlite3.Row object at 0x118d14c10>]
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 15, 'Kelly': 10, 'Rosie': 10}
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 33.99519019126892, 'OpenAI': 19.201594084501266}
+2025-09-25 19:28:30,006 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-27 17:09:05,886 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:09:05,887 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:09:05,993 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-27 17:09:05,994 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:09:05,994 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-27 17:09:05,994 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:09:06,009 - ai_ethics - INFO - Grok client initialized with model grok-4-fast-reasoning
+2025-09-27 17:09:06,010 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-27 17:09:06,014 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-27 17:09:06,014 - grant_reviewer - INFO - Using sqlite database
+2025-09-27 17:09:06,014 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-27 17:09:06,015 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-27 17:09:06,015 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-27 17:09:06,016 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-27 17:09:06,016 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-27 17:09:06,018 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): grok
+2025-09-27 17:09:06,018 - grant_reviewer - INFO - Running Grok iteration 1/1 for Daniel
+2025-09-27 17:09:26,622 - httpx - INFO - HTTP Request: POST https://api.x.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-09-27 17:09:26,664 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_xAI_grok-4-fast-reasoning_iter1.json
+2025-09-27 17:09:26,664 - grant_reviewer - INFO - Saved review for Daniel, xAI grok-4-fast-reasoning (grok-4-fast-reasoning), iteration 1
+2025-09-27 17:09:28,680 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-27 17:09:28,681 - grant_reviewer - INFO - Total reviews: 46
+2025-09-27 17:09:28,681 - grant_reviewer - INFO - By vendor: {'Google': 5, 'OpenAI': 40, 'xAI': 1}
+2025-09-27 17:09:28,681 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x111b53d90>, <sqlite3.Row object at 0x111b53e20>, <sqlite3.Row object at 0x111b53e50>, <sqlite3.Row object at 0x111b53e80>]
+2025-09-27 17:09:28,681 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 16, 'Kelly': 10, 'Rosie': 10}
+2025-09-27 17:09:28,681 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 33.99519019126892, 'OpenAI': 19.201594084501266, 'xAI': 20.63274073600769}
+2025-09-27 17:09:28,681 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-27 17:30:13,594 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:30:13,594 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:30:13,678 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-27 17:30:13,679 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:30:13,679 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-27 17:30:13,679 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:30:13,693 - ai_ethics - INFO - Grok client initialized with model grok-4-fast-reasoning
+2025-09-27 17:30:13,693 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:30:13,694 - ai_ethics - WARNING - Anthropic API key not found. Anthropic functionality will be disabled.
+2025-09-27 17:30:13,694 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-27 17:30:13,699 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-27 17:30:13,699 - grant_reviewer - INFO - Using sqlite database
+2025-09-27 17:30:13,700 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-27 17:30:13,700 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-27 17:30:13,700 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-27 17:30:13,701 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-27 17:30:13,701 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-27 17:30:13,702 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): claude
+2025-09-27 17:30:13,706 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-27 17:30:13,706 - grant_reviewer - INFO - Total reviews: 46
+2025-09-27 17:30:13,706 - grant_reviewer - INFO - By vendor: {'Google': 5, 'OpenAI': 40, 'xAI': 1}
+2025-09-27 17:30:13,706 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x11b0bba30>, <sqlite3.Row object at 0x11b0bb7c0>, <sqlite3.Row object at 0x11b0bb8b0>, <sqlite3.Row object at 0x11b0bb8e0>]
+2025-09-27 17:30:13,706 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 16, 'Kelly': 10, 'Rosie': 10}
+2025-09-27 17:30:13,707 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 33.99519019126892, 'OpenAI': 19.201594084501266, 'xAI': 20.63274073600769}
+2025-09-27 17:30:13,707 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-27 17:31:50,471 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:31:50,472 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:31:50,552 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-27 17:31:50,552 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:31:50,552 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-27 17:31:50,552 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:31:50,569 - ai_ethics - INFO - Grok client initialized with model grok-4-fast-reasoning
+2025-09-27 17:31:50,569 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:31:50,584 - ai_ethics - INFO - Anthropic client initialized with model claude-3-opus-20240229
+2025-09-27 17:31:50,585 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-27 17:31:50,589 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-27 17:31:50,589 - grant_reviewer - INFO - Using sqlite database
+2025-09-27 17:31:50,590 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-27 17:31:50,590 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-27 17:31:50,590 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-27 17:31:50,590 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-27 17:31:50,591 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-27 17:31:50,592 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): claude
+2025-09-27 17:31:50,592 - grant_reviewer - INFO - Running Claude iteration 1/1 for Daniel
+2025-09-27 17:32:02,689 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 400 Bad Request"
+2025-09-27 17:32:02,691 - ai_ethics - ERROR - Error querying Anthropic: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CTZE3tmQD8mAgT86NzUP4'}
+2025-09-27 17:32:02,691 - grant_reviewer - ERROR - Error in Claude processing for Daniel: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CTZE3tmQD8mAgT86NzUP4'}
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - Total reviews: 46
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - By vendor: {'Google': 5, 'OpenAI': 40, 'xAI': 1}
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x10795e770>, <sqlite3.Row object at 0x10795e830>, <sqlite3.Row object at 0x10795de70>, <sqlite3.Row object at 0x10795e8f0>]
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 16, 'Kelly': 10, 'Rosie': 10}
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - Average processing times by vendor: {'Google': 33.99519019126892, 'OpenAI': 19.201594084501266, 'xAI': 20.63274073600769}
+2025-09-27 17:32:02,695 - grant_reviewer - INFO - Grant review processing completed successfully
+2025-09-27 17:49:03,318 - grant_reviewer - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:49:03,318 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:49:03,392 - ai_ethics - INFO - OpenAI client initialized with model gpt-3.5-turbo
+2025-09-27 17:49:03,393 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:49:03,393 - ai_ethics - INFO - Google Gemini client initialized with model gemini-2.5-flash
+2025-09-27 17:49:03,393 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:49:03,406 - ai_ethics - INFO - Grok client initialized with model grok-4-fast-reasoning
+2025-09-27 17:49:03,406 - ai_ethics - INFO - Loaded grant review instructions from /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/llm/prompts/LLM_Grant_Review_Instructions.md
+2025-09-27 17:49:03,419 - ai_ethics - INFO - Anthropic client initialized with model claude-3-opus-20240229
+2025-09-27 17:49:03,419 - ai_ethics.db - INFO - Using SQLite database at data/results.db
+2025-09-27 17:49:03,423 - ai_ethics.db - INFO - SQLite database initialized with grant review tables
+2025-09-27 17:49:03,423 - grant_reviewer - INFO - Using sqlite database
+2025-09-27 17:49:03,423 - grant_reviewer - INFO - Found complete grant application for Rosie
+2025-09-27 17:49:03,424 - grant_reviewer - INFO - Found complete grant application for Christina
+2025-09-27 17:49:03,424 - grant_reviewer - INFO - Found complete grant application for Kelly
+2025-09-27 17:49:03,424 - grant_reviewer - INFO - Found complete grant application for Daniel
+2025-09-27 17:49:03,424 - grant_reviewer - INFO - Found 4 grant applications
+2025-09-27 17:49:03,426 - grant_reviewer - INFO - Processing grant application for Daniel with model(s): claude
+2025-09-27 17:49:03,426 - grant_reviewer - INFO - Running Claude iteration 1/1 for Daniel
+2025-09-27 17:49:26,091 - httpx - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-09-27 17:49:26,124 - grant_reviewer - INFO - Saved output file: /Users/hantswilliams/Development/python/sbu-seedgrant-llm-grantreviewer/outputs/Daniel_Anthropic_claude-3-opus-20240229_iter1.json
+2025-09-27 17:49:26,124 - grant_reviewer - INFO - Saved review for Daniel, Anthropic claude-3-opus-20240229 (claude-3-opus-20240229), iteration 1
+2025-09-27 17:49:28,135 - grant_reviewer - INFO - Grant Review Summary Statistics:
+2025-09-27 17:49:28,135 - grant_reviewer - INFO - Total reviews: 47
+2025-09-27 17:49:28,135 - grant_reviewer - INFO - By vendor: {'Anthropic': 1, 'Google': 5, 'OpenAI': 40, 'xAI': 1}
+2025-09-27 17:49:28,136 - grant_reviewer - INFO - By model: [<sqlite3.Row object at 0x11a4976a0>, <sqlite3.Row object at 0x11a497820>, <sqlite3.Row object at 0x11a4978e0>, <sqlite3.Row object at 0x11a497910>, <sqlite3.Row object at 0x11a497940>]
+2025-09-27 17:49:28,136 - grant_reviewer - INFO - By applicant: {'Christina': 10, 'Daniel': 17, 'Kelly': 10, 'Rosie': 10}
+2025-09-27 17:49:28,136 - grant_reviewer - INFO - Average processing times by vendor: {'Anthropic': 22.684937953948975, 'Google': 33.99519019126892, 'OpenAI': 19.201594084501266, 'xAI': 20.63274073600769}
+2025-09-27 17:49:28,137 - grant_reviewer - INFO - Grant review processing completed successfully

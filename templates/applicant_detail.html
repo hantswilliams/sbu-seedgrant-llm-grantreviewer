@@ -41,7 +41,7 @@
 <div class="row">
     <div class="col-12">
         <div class="chart-container">
-            <h5>Score Comparison: Human vs LLM Reviewers</h5>
+            <h5>Score Comparison: Human vs All AI Model Reviewers</h5>
             <canvas id="criteriaComparisonChart"></canvas>
         </div>
     </div>
@@ -100,8 +100,65 @@
 </div>
 {% endif %}
 
-<!-- LLM Reviews Section -->
-{% if llm_reviews %}
+<!-- LLM Reviews Section (grouped by vendor) -->
+{% if llm_by_vendor %}
+{% for vendor, reviews in llm_by_vendor.items() %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>{{ vendor }} Reviews</h5>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Iteration</th>
+                            <th>Innovation</th>
+                            <th>Methodology</th>
+                            <th>Team</th>
+                            <th>Funding</th>
+                            <th>Budget</th>
+                            <th>Presentation</th>
+                            <th>Total</th>
+                            <th>Recommendation</th>
+                            <th>Time (s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for review in reviews %}
+                        <tr>
+                            <td><strong>{{ review.model }}</strong></td>
+                            <td>{{ review.iteration }}</td>
+                            <td>{{ review.innovation_impact or '-' }}</td>
+                            <td>{{ review.methodological_approach or '-' }}</td>
+                            <td>{{ review.research_team_strength or '-' }}</td>
+                            <td>{{ review.external_funding_potential or '-' }}</td>
+                            <td>{{ review.budget_clarity or '-' }}</td>
+                            <td>{{ review.presentation_quality or '-' }}</td>
+                            <td><strong>{{ review.total_score or '-' }}</strong></td>
+                            <td>
+                                {% if review.overall_recommendation == 'Fund' %}
+                                <span class="badge bg-success">Fund</span>
+                                {% elif review.overall_recommendation == 'Fund with Revisions' %}
+                                <span class="badge bg-warning">Fund w/ Revisions</span>
+                                {% elif review.overall_recommendation == 'Do Not Fund' %}
+                                <span class="badge bg-danger">Do Not Fund</span>
+                                {% else %}
+                                <span class="badge bg-secondary">{{ review.overall_recommendation }}</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ "%.2f"|format(review.processing_time or 0) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% elif llm_reviews %}
+<!-- Fallback to original structure if vendor grouping fails -->
 <div class="row mt-4">
     <div class="col-12">
         <div class="table-container">
@@ -174,23 +231,73 @@
 const criteriaData = {{ comparison | tojson }};
 
 const ctx = document.getElementById('criteriaComparisonChart').getContext('2d');
+
+// Colors for different models
+const colors = [
+    'rgba(54, 162, 235, 0.8)',   // Blue for human
+    'rgba(255, 99, 132, 0.8)',   // Red for first vendor
+    'rgba(255, 206, 86, 0.8)',   // Yellow for second vendor
+    'rgba(75, 192, 192, 0.8)',   // Teal for third vendor
+    'rgba(153, 102, 255, 0.8)',  // Purple for fourth vendor
+    'rgba(255, 159, 64, 0.8)',   // Orange for fifth vendor
+    'rgba(199, 199, 199, 0.8)'   // Gray for additional
+];
+
+const borderColors = [
+    'rgba(54, 162, 235, 1)',
+    'rgba(255, 99, 132, 1)',
+    'rgba(255, 206, 86, 1)',
+    'rgba(75, 192, 192, 1)',
+    'rgba(153, 102, 255, 1)',
+    'rgba(255, 159, 64, 1)',
+    'rgba(199, 199, 199, 1)'
+];
+
+// Build datasets dynamically
+const datasets = [];
+
+// Add human data first
+datasets.push({
+    label: 'Human Reviewers (Avg)',
+    data: criteriaData.human_avg,
+    backgroundColor: colors[0],
+    borderColor: borderColors[0],
+    borderWidth: 1
+});
+
+// Add vendor datasets
+let colorIndex = 1;
+if (criteriaData.available_vendors && criteriaData.vendor_averages) {
+    criteriaData.available_vendors.forEach(vendor => {
+        if (criteriaData.vendor_averages[vendor]) {
+            datasets.push({
+                label: `${vendor} (Avg)`,
+                data: criteriaData.vendor_averages[vendor],
+                backgroundColor: colors[colorIndex % colors.length],
+                borderColor: borderColors[colorIndex % borderColors.length],
+                borderWidth: 1
+            });
+            colorIndex++;
+        }
+    });
+}
+
+// Fallback: Add overall LLM average if no vendor-specific data
+if (datasets.length === 1 && criteriaData.llm_avg) {
+    datasets.push({
+        label: 'LLM Reviewers (Avg)',
+        data: criteriaData.llm_avg,
+        backgroundColor: colors[1],
+        borderColor: borderColors[1],
+        borderWidth: 1
+    });
+}
+
 new Chart(ctx, {
     type: 'bar',
     data: {
         labels: criteriaData.criteria,
-        datasets: [{
-            label: 'Human Reviewers (Avg)',
-            data: criteriaData.human_avg,
-            backgroundColor: 'rgba(54, 162, 235, 0.8)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-        }, {
-            label: 'LLM Reviewers (Avg)',
-            data: criteriaData.llm_avg,
-            backgroundColor: 'rgba(255, 99, 132, 0.8)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
-        }]
+        datasets: datasets
     },
     options: {
         responsive: true,

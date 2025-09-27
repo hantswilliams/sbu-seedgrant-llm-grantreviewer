@@ -65,7 +65,7 @@ class GoogleConnector(BaseLLMConnector):
             self.is_initialized = False
             return False
 
-    def query(self, prompt: str) -> Tuple[str, float, str, str]:
+    def query(self, prompt: str) -> Tuple[str, float, str, str, str]:
         """
         Query the Google Gemini API with the given prompt
 
@@ -80,6 +80,7 @@ class GoogleConnector(BaseLLMConnector):
             - processing_time: Time taken to process the request
             - model_name: Name of the model used
             - model_version: Version of the model used
+            - actual_prompt: The actual full prompt sent to the API
 
         Raises:
             ValueError: If the client is not initialized
@@ -101,7 +102,7 @@ class GoogleConnector(BaseLLMConnector):
             except (AttributeError, IndexError):
                 model_version = self.model_name
 
-            return response.text, processing_time, self.model_name, model_version
+            return response.text, processing_time, self.model_name, model_version, full_prompt
         except Exception as e:
             logger.error(f"Error querying Google Gemini: {e}")
             raise

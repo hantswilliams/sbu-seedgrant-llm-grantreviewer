@@ -55,7 +55,7 @@
 <div class="row">
     <div class="col-12">
         <div class="chart-container">
-            <h5>Average Scores by Criteria - Human vs GPT-4 vs GPT-5</h5>
+            <h5>Average Scores by Criteria - Comparison Across All Models</h5>
             <canvas id="modelComparisonChart"></canvas>
         </div>
     </div>
@@ -170,34 +170,59 @@ fetch('/api/chart_data?type=scores')
         });
     });
 
-// Model Comparison Chart (Human vs GPT-4 vs GPT-5)
+// Model Comparison Chart (Dynamic vendors)
 fetch('/api/model_comparison')
     .then(response => response.json())
     .then(data => {
         const ctx = document.getElementById('modelComparisonChart').getContext('2d');
+
+        // Colors for different models
+        const colors = [
+            '#36A2EB', // Blue for human
+            '#FF6384', // Red for first vendor
+            '#FFCE56', // Yellow for second vendor
+            '#4BC0C0', // Teal for third vendor
+            '#9966FF', // Purple for fourth vendor
+            '#FF9F40', // Orange for fifth vendor
+            '#FF6384', // Pink for sixth vendor
+            '#C9CBCF'  // Gray for additional
+        ];
+
+        // Build datasets dynamically
+        const datasets = [];
+
+        // Add human data first
+        datasets.push({
+            label: `Human Reviewers (n=${data.counts.human || 0})`,
+            data: data.human_means,
+            backgroundColor: colors[0],
+            borderColor: colors[0],
+            borderWidth: 1
+        });
+
+        // Add vendor datasets
+        let colorIndex = 1;
+        if (data.available_vendors) {
+            data.available_vendors.forEach(vendor => {
+                if (data[`${vendor}_means`] && data.counts[vendor]) {
+                    const vendorName = vendor.charAt(0).toUpperCase() + vendor.slice(1);
+                    datasets.push({
+                        label: `${vendorName} (n=${data.counts[vendor]})`,
+                        data: data[`${vendor}_means`],
+                        backgroundColor: colors[colorIndex % colors.length],
+                        borderColor: colors[colorIndex % colors.length],
+                        borderWidth: 1
+                    });
+                    colorIndex++;
+                }
+            });
+        }
+
         new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: data.criteria,
-                datasets: [{
-                    label: `Human Reviewers (n=${data.counts.human})`,
-                    data: data.human_means,
-                    backgroundColor: '#36A2EB',
-                    borderColor: '#36A2EB',
-                    borderWidth: 1
-                }, {
-                    label: `GPT-4 (n=${data.counts.gpt4})`,
-                    data: data.gpt4_means,
-                    backgroundColor: '#FF6384',
-                    borderColor: '#FF6384',
-                    borderWidth: 1
-                }, {
-                    label: `GPT-5 (n=${data.counts.gpt5})`,
-                    data: data.gpt5_means,
-                    backgroundColor: '#FFCE56',
-                    borderColor: '#FFCE56',
-                    borderWidth: 1
-                }]
+                datasets: datasets
             },
             options: {
                 responsive: true,

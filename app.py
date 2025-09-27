@@ -100,42 +100,65 @@ def applicant_detail(applicant_name):
     # Separate human and LLM reviews
     human_reviews = applicant_data[applicant_data['reviewer_type'] == 'Human']
     llm_reviews = applicant_data[applicant_data['reviewer_type'] == 'LLM']
-    
+
+    # Group LLM reviews by vendor
+    llm_by_vendor = {}
+    for vendor in llm_reviews['vendor'].dropna().unique():
+        if vendor.strip():
+            vendor_reviews = llm_reviews[llm_reviews['vendor'] == vendor]
+            llm_by_vendor[vendor] = vendor_reviews.to_dict('records')
+
     # Calculate average scores by criterion
     score_columns = [
         'innovation_impact', 'methodological_approach', 'research_team_strength',
         'external_funding_potential', 'budget_clarity', 'presentation_quality'
     ]
-    
+
     criterion_names = [
         'Innovation & Impact', 'Methodological Approach', 'Research Team Strength',
         'External Funding Potential', 'Budget Clarity', 'Presentation Quality'
     ]
-    
+
     human_avg = []
-    llm_avg = []
-    
+    vendor_averages = {}
+
     for col in score_columns:
         if len(human_reviews) > 0:
             human_avg.append(round(human_reviews[col].mean(), 1) if human_reviews[col].notna().any() else 0)
         else:
             human_avg.append(0)
-            
+
+        # Calculate averages for each vendor
+        for vendor in llm_by_vendor.keys():
+            vendor_data = llm_reviews[llm_reviews['vendor'] == vendor]
+            if vendor not in vendor_averages:
+                vendor_averages[vendor] = []
+            if len(vendor_data) > 0:
+                vendor_averages[vendor].append(round(vendor_data[col].mean(), 1) if vendor_data[col].notna().any() else 0)
+            else:
+                vendor_averages[vendor].append(0)
+
+    # Also keep overall LLM average for backwards compatibility
+    llm_avg = []
+    for col in score_columns:
         if len(llm_reviews) > 0:
             llm_avg.append(round(llm_reviews[col].mean(), 1) if llm_reviews[col].notna().any() else 0)
         else:
             llm_avg.append(0)
-    
+
     comparison_data = {
         'criteria': criterion_names,
         'human_avg': human_avg,
-        'llm_avg': llm_avg
+        'llm_avg': llm_avg,
+        'vendor_averages': vendor_averages,
+        'available_vendors': list(llm_by_vendor.keys())
     }
     
-    return render_template('applicant_detail.html', 
+    return render_template('applicant_detail.html',
                          applicant=applicant_name.upper(),
                          human_reviews=human_reviews.to_dict('records'),
                          llm_reviews=llm_reviews.to_dict('records'),
+                         llm_by_vendor=llm_by_vendor,
                          comparison=comparison_data)
 
 @app.route('/api/chart_data')
@@ -207,38 +230,76 @@ def criteria_comparison():
 def model_comparison():
     """API endpoint for model-specific criteria comparison data."""
     df = get_combined_reviews()
-    
+
     score_columns = [
         'innovation_impact', 'methodological_approach', 'research_team_strength',
         'external_funding_potential', 'budget_clarity', 'presentation_quality'
     ]
-    
+
     criterion_names = [
         'Innovation & Impact', 'Methodological Approach', 'Research Team Strength',
         'External Funding Potential', 'Budget Clarity', 'Presentation Quality'
     ]
-    
+
     # Get data for each reviewer category
     human_data = df[df['reviewer_type'] == 'Human']
-    gpt4_data = df[(df['reviewer_type'] == 'LLM') & (df['model'].str.contains('gpt-4', case=False, na=False))]
-    gpt5_data = df[(df['reviewer_type'] == 'LLM') & (df['model'].str.contains('gpt-5', case=False, na=False))]
-    
-    # Calculate means for each group
+
+    # Dynamically detect available LLM models by vendor
+    llm_data = df[df['reviewer_type'] == 'LLM']
+
+    # Get unique vendor-model combinations
+    model_groups = {}
+    datasets = []
+    counts = {'human': len(human_data)}
+
+    # Add human data
     human_means = [round(human_data[col].mean(), 1) if human_data[col].notna().any() else 0 for col in score_columns]
-    gpt4_means = [round(gpt4_data[col].mean(), 1) if gpt4_data[col].notna().any() else 0 for col in score_columns]
-    gpt5_means = [round(gpt5_data[col].mean(), 1) if gpt5_data[col].notna().any() else 0 for col in score_columns]
-    
-    return jsonify({
+
+    # Group LLM data by vendor
+    for vendor in llm_data['vendor'].dropna().unique():
+        if vendor.strip():  # Skip empty vendor names
+            vendor_data = llm_data[llm_data['vendor'] == vendor]
+            vendor_key = vendor.lower().replace(' ', '_')
+
+            if len(vendor_data) > 0:
+                vendor_means = [round(vendor_data[col].mean(), 1) if vendor_data[col].notna().any() else 0 for col in score_columns]
+                model_groups[vendor_key] = {
+                    'name': vendor,
+                    'means': vendor_means,
+                    'count': len(vendor_data)
+                }
+                counts[vendor_key] = len(vendor_data)
+
+    # Also check for specific models if needed
+    openai_data = llm_data[llm_data['vendor'].str.contains('openai', case=False, na=False)]
+    google_data = llm_data[llm_data['vendor'].str.contains('google', case=False, na=False)]
+    xai_data = llm_data[llm_data['vendor'].str.contains('xai', case=False, na=False)]
+    anthropic_data = llm_data[llm_data['vendor'].str.contains('anthropic', case=False, na=False)]
+
+    # Build response with available models
+    response_data = {
         'criteria': criterion_names,
         'human_means': human_means,
-        'gpt4_means': gpt4_means,
-        'gpt5_means': gpt5_means,
-        'counts': {
-            'human': len(human_data),
-            'gpt4': len(gpt4_data),
-            'gpt5': len(gpt5_data)
-        }
-    })
+        'counts': counts
+    }
+
+    # Add vendor-specific data
+    for vendor_key, vendor_info in model_groups.items():
+        response_data[f'{vendor_key}_means'] = vendor_info['means']
+
+    # Maintain backwards compatibility with existing chart code
+    if 'openai' in model_groups:
+        response_data['openai_means'] = model_groups['openai']['means']
+    if 'google' in model_groups:
+        response_data['google_means'] = model_groups['google']['means']
+    if 'xai' in model_groups:
+        response_data['xai_means'] = model_groups['xai']['means']
+    if 'anthropic' in model_groups:
+        response_data['anthropic_means'] = model_groups['anthropic']['means']
+
+    response_data['available_vendors'] = list(model_groups.keys())
+
+    return jsonify(response_data)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5003, host='0.0.0.0')
+    app.run(debug=True, port=5004, host='0.0.0.0')

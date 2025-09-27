@@ -27,10 +27,17 @@ CHRISTINA,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,
 CHRISTINA,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:24:11.988541,24,23,8,8,6,8,77,Fund with Revisions,24.47608208656311
 DANIEL,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:02:33.009791,27,24,9,8,9,8,85,Fund,15.045857906341553
 DANIEL,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:24:43.594145,24,18,8,8,8,7,73,Fund with Revisions,29.587276220321655
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-09-25T18:33:37.209267,28,25,9,10,10,8,90,Fund,34.05706977844238
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-09-25T19:12:26.210138,28,22,9,10,10,7,86,Fund with Revisions,26.2623610496521
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-09-25T19:27:05.350352,28,22,9,10,10,6,85,Fund with Revisions,31.07663321495056
+DANIEL,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-09-27T17:09:26.651660,28,24,8,9,10,7,86,Fund,20.63274073600769
+DANIEL,Anthropic_claude-3-opus-20240229_1,LLM,Anthropic,claude-3-opus-20240229,claude-3-opus-20240229,1.0,2025-09-27T17:49:26.112233,28,26,9,8,9,9,89,Fund,22.684937953948975
 DANIEL,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:02:44.396377,27,24,9,8,9,8,85,Fund with Revisions,9.369599103927612
 DANIEL,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:25:13.275837,24,22,8,8,6,7,75,Fund with Revisions,27.67018485069275
+DANIEL,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-09-25T19:27:41.204445,28,26,9,9,10,7,89,Fund with Revisions,33.84004282951355
 DANIEL,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:02:55.229524,25,23,9,8,9,8,82,Fund with Revisions,8.821277141571045
 DANIEL,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:25:42.269667,24,18,8,8,8,7,73,Fund with Revisions,26.982971906661987
+DANIEL,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-09-25T19:28:27.972792,28,24,8,9,10,5,84,Fund with Revisions,44.73984408378601
 DANIEL,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:03:05.981538,26,24,9,8,8,8,83,Fund with Revisions,8.740857124328613
 DANIEL,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:26:16.406642,24,18,8,7,7,6,70,Fund with Revisions,32.1219699382782
 DANIEL,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:03:16.898071,27,25,9,8,9,8,86,Fund,8.898393154144287
