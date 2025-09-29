@@ -4,3 +4,6 @@
 # virtual environment
 venv/
 .venv/
+
+# dummy folder
+llm/toremove

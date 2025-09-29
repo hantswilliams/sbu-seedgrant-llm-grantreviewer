@@ -8,6 +8,7 @@ md = MarkItDown(enable_plugins=True) # Set to True to enable plugins
 
 ## get list of folders within llm/scenarios
 folders = glob.glob("llm/scenarios/*")
+# folders = glob.glob('llm/toremove/*')
 
 if __name__ == "__main__":
 
@@ -29,6 +30,7 @@ if __name__ == "__main__":
                 except Exception as e:
                     print(f"Error processing {file}: {str(e)}")
                 # save text_content to a .md file with the same name as the input file
+                print(f'Writing to .md file... located in: {os.path.dirname(file)}')
                 output_file = os.path.splitext(file)[0] + ".md"
                 with open(output_file, "w", encoding="utf-8") as f:
                     f.write(test.text_content)
