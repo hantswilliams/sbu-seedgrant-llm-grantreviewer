@@ -3,7 +3,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 COPY . .
-EXPOSE 5003
+EXPOSE 5004
 WORKDIR /app
 CMD [ "python", "app.py" ]
 
