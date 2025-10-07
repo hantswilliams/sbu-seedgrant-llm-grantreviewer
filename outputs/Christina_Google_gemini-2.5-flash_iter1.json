@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Christina",
+  "reviewer_info": {
+    "vendor": "Google",
+    "model": "gemini-2.5-flash",
+    "iteration": 1,
+    "timestamp": "2025-10-07T09:53:37.262365"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 24,
+        "Rationale": "The project addresses a critical public health concern through an innovative student-led, interprofessional, community-based model, offering significant dual benefits for older adults and future clinicians. The clear rationale for need in an underserved community enhances its significance and potential for meaningful change."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 20,
+        "Rationale": "While robust groundwork (IRB, space, equipment) strongly supports feasibility, the proposed sample size of 10-12 older adults is critically small for 'evaluating the preliminary impact' (Aim 1) with meaningful statistical rigor. The 6-month timeline for execution, data analysis, and full dissemination also appears very ambitious, presenting a risk to comprehensive analysis."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 7,
+        "Rationale": "The team brings strong clinical and community outreach expertise, and specific research experience in interprofessional education. However, one co-investigator's limited research publication record is a noticeable gap, especially given their listed involvement in outcome measure selection and data analysis."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 9,
+        "Rationale": "This project has high potential to attract external funding due to its strong alignment with federal and foundation priorities in fall prevention, underserved communities, and interprofessional education. The explicit plan to generate pilot data for a larger, multi-site application and its scalable model are highly appealing to funders."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 9,
+        "Rationale": "The budget is very lean, clear, and well-justified, with all requested funds directly supporting the project's aims, including essential equipment and reasonable dissemination costs. It demonstrates excellent cost-effectiveness for a pilot study."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The proposal is generally well-written, logically organized, and easy to comprehend. However, the inconsistent submission of investigator biosketches, with only one provided in the requested format and others as links, represents a notable deficiency in adherence to application standards."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 24,\n      \"Rationale\": \"The project addresses a critical public health concern through an innovative student-led, interprofessional, community-based model, offering significant dual benefits for older adults and future clinicians. The clear rationale for need in an underserved community enhances its significance and potential for meaningful change.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 20,\n      \"Rationale\": \"While robust groundwork (IRB, space, equipment) strongly supports feasibility, the proposed sample size of 10-12 older adults is critically small for 'evaluating the preliminary impact' (Aim 1) with meaningful statistical rigor. The 6-month timeline for execution, data analysis, and full dissemination also appears very ambitious, presenting a risk to comprehensive analysis.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 7,\n      \"Rationale\": \"The team brings strong clinical and community outreach expertise, and specific research experience in interprofessional education. However, one co-investigator's limited research publication record is a noticeable gap, especially given their listed involvement in outcome measure selection and data analysis.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 9,\n      \"Rationale\": \"This project has high potential to attract external funding due to its strong alignment with federal and foundation priorities in fall prevention, underserved communities, and interprofessional education. The explicit plan to generate pilot data for a larger, multi-site application and its scalable model are highly appealing to funders.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 9,\n      \"Rationale\": \"The budget is very lean, clear, and well-justified, with all requested funds directly supporting the project's aims, including essential equipment and reasonable dissemination costs. It demonstrates excellent cost-effectiveness for a pilot study.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The proposal is generally well-written, logically organized, and easy to comprehend. However, the inconsistent submission of investigator biosketches, with only one provided in the requested format and others as links, represents a notable deficiency in adherence to application standards.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+}

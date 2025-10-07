@@ -41,9 +41,10 @@ class DatabaseAdapter:
         """Insert a response into the database"""
         raise NotImplementedError("Subclasses must implement insert_response()")
     
-    def insert_grant_review(self, conn, applicant_name, vendor, model, model_version, 
-                           iteration, timestamp, prompt, full_response, review_scores_json, 
-                           overall_recommendation, processing_time):
+    def insert_grant_review(self, conn, applicant_name, vendor, model, model_version,
+                           iteration, timestamp, prompt, full_response, review_scores_json,
+                           overall_recommendation, processing_time, prompt_experiment_name=None,
+                           prompt_version=None):
         """Insert a grant review into the database"""
         raise NotImplementedError("Subclasses must implement insert_grant_review()")
     
@@ -106,6 +107,8 @@ class SQLiteAdapter(DatabaseAdapter):
             review_scores_json TEXT,
             overall_recommendation TEXT,
             processing_time REAL,
+            prompt_experiment_name TEXT,
+            prompt_version TEXT,
             created_at TEXT DEFAULT CURRENT_TIMESTAMP
         )
         ''')
@@ -159,19 +162,22 @@ class SQLiteAdapter(DatabaseAdapter):
         conn.commit()
         return response_id
     
-    def insert_grant_review(self, conn, applicant_name, vendor, model, model_version, 
-                           iteration, timestamp, prompt, full_response, review_scores_json, 
-                           overall_recommendation, processing_time):
+    def insert_grant_review(self, conn, applicant_name, vendor, model, model_version,
+                           iteration, timestamp, prompt, full_response, review_scores_json,
+                           overall_recommendation, processing_time, prompt_experiment_name=None,
+                           prompt_version=None):
         """Insert a grant review into the SQLite database"""
         cursor = conn.cursor()
         cursor.execute('''
-        INSERT INTO grant_reviews 
-        (applicant_name, vendor, model, model_version, iteration, timestamp, prompt, 
-        full_response, review_scores_json, overall_recommendation, processing_time)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO grant_reviews
+        (applicant_name, vendor, model, model_version, iteration, timestamp, prompt,
+        full_response, review_scores_json, overall_recommendation, processing_time,
+        prompt_experiment_name, prompt_version)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ''', (
             applicant_name, vendor, model, model_version, iteration, timestamp, prompt,
-            full_response, review_scores_json, overall_recommendation, processing_time
+            full_response, review_scores_json, overall_recommendation, processing_time,
+            prompt_experiment_name, prompt_version
         ))
         grant_review_id = cursor.lastrowid
         conn.commit()

@@ -22,6 +22,7 @@ from datetime import datetime
 from pathlib import Path
 import logging
 import re
+import hashlib
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -53,10 +54,10 @@ logging.basicConfig(
 logger = logging.getLogger("grant_reviewer")
 
 class GrantReviewProcessor:
-    def __init__(self, base_path=None, openai_api_key=None, gemini_api_key=None, claude_api_key=None, grok_api_key=None, db_path=None):
+    def __init__(self, base_path=None, openai_api_key=None, gemini_api_key=None, claude_api_key=None, grok_api_key=None, db_path=None, experiment=None):
         """
         Initialize the Grant Review Processor
-        
+
         Args:
             base_path: Path to the project root
             openai_api_key: OpenAI API key (if None, will look for OPENAI_API_KEY env var)
@@ -64,14 +65,19 @@ class GrantReviewProcessor:
             claude_api_key: Anthropic Claude API key (if None, will look for CLAUDE_API_KEY env var)
             grok_api_key: GROK API key (if None, will look for GROK_API_KEY env var)
             db_path: Custom path to database (if None, will use the configured adapter)
+            experiment: Name of the prompt experiment to use (if None, will use active experiment from config)
         """
         # Set base path
         if base_path is None:
             self.base_path = Path(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         else:
             self.base_path = Path(base_path)
-        
-        # Load grant review instructions first
+
+        # Load prompt experiment configuration
+        self.experiment_config = self._load_experiment_config()
+        self.current_experiment = experiment or self.experiment_config.get('active_experiment', 'baseline_v1')
+
+        # Load grant review instructions based on experiment
         self.review_instructions = self._load_grant_review_instructions()
 
         # Initialize LLM connectors with the review instructions
@@ -105,17 +111,53 @@ class GrantReviewProcessor:
         self.gemini_model = self.google_connector.client if self.google_connector.is_available() else None
 
 
+    def _load_experiment_config(self):
+        """Load the prompt experiment configuration"""
+        config_path = self.base_path / "llm" / "prompts" / "config.json"
+        try:
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+                logger.info(f"Loaded experiment configuration from {config_path}")
+                return config
+        except FileNotFoundError:
+            logger.warning(f"Experiment config not found at {config_path}, using defaults")
+            return {
+                "active_experiment": "baseline_v1",
+                "experiments": {
+                    "baseline_v1": {
+                        "file": "baseline_v1.md",
+                        "version": "1.0",
+                        "description": "Baseline prompt"
+                    }
+                }
+            }
+        except Exception as e:
+            logger.error(f"Error loading experiment config: {e}")
+            raise
+
     def _load_grant_review_instructions(self):
-        """Load the grant review instructions from the prompts directory"""
-        instructions_path = self.base_path / "llm" / "prompts" / "LLM_Grant_Review_Instructions.md"
+        """Load the grant review instructions based on the current experiment"""
+        # Get the prompt file for the current experiment
+        experiment_info = self.experiment_config['experiments'].get(self.current_experiment)
+        if not experiment_info:
+            logger.error(f"Experiment '{self.current_experiment}' not found in config")
+            raise ValueError(f"Unknown experiment: {self.current_experiment}")
+
+        prompt_file = experiment_info['file']
+        instructions_path = self.base_path / "llm" / "prompts" / prompt_file
+
         try:
             with open(instructions_path, 'r') as f:
                 instructions = f.read()
-                logger.info(f"Loaded grant review instructions from {instructions_path}")
+                logger.info(f"Loaded grant review instructions from {instructions_path} (experiment: {self.current_experiment})")
                 return instructions
         except Exception as e:
-            logger.error(f"Error loading grant review instructions: {e}")
+            logger.error(f"Error loading grant review instructions from {instructions_path}: {e}")
             raise
+
+    def _get_prompt_hash(self):
+        """Generate a SHA256 hash of the current prompt for tracking"""
+        return hashlib.sha256(self.review_instructions.encode()).hexdigest()[:16]
 
     def _scan_grant_applications(self):
         """Scan for grant applications in the scenarios directory"""
@@ -337,10 +379,14 @@ class GrantReviewProcessor:
         """Save a response to the database and output file"""
         # Extract review scores from response
         review_data = self._extract_review_scores(response)
-        
+
+        # Get experiment metadata
+        experiment_info = self.experiment_config['experiments'][self.current_experiment]
+        prompt_version = experiment_info.get('version', '1.0')
+
         # Save to database
         conn = self.db_adapter.get_connection()
-        
+
         try:
             # Use the new grant_reviews table if available
             if hasattr(self.db_adapter, 'insert_grant_review'):
@@ -356,7 +402,9 @@ class GrantReviewProcessor:
                     response,
                     json.dumps(review_data.get("scores", [])),
                     review_data.get("overall_recommendation", ""),
-                    processing_time
+                    processing_time,
+                    self.current_experiment,  # Add experiment name
+                    prompt_version  # Add prompt version
                 )
                 
                 # Insert individual criterion scores if available
@@ -620,14 +668,21 @@ def main():
                         help='Number of iterations per grant application')
     parser.add_argument('--applicant', type=str, default=None,
                         help='Process only a specific applicant (optional)')
+    parser.add_argument('--experiment', type=str, default=None,
+                        help='Prompt experiment to use (defaults to active experiment in config.json)')
     args = parser.parse_args()
-    
+
     try:
-        processor = GrantReviewProcessor()
-        
+        processor = GrantReviewProcessor(experiment=args.experiment)
+
+        # Log which experiment is being used
+        experiment_info = processor.experiment_config['experiments'][processor.current_experiment]
+        logger.info(f"Using prompt experiment: {processor.current_experiment} (v{experiment_info['version']})")
+        logger.info(f"Description: {experiment_info['description']}")
+
         if args.applicant:
             # Process only the specified applicant
-            matching_applications = [app for app in processor.grant_applications 
+            matching_applications = [app for app in processor.grant_applications
                                    if app["applicant_name"].lower() == args.applicant.lower()]
             if matching_applications:
                 processor.process_grant_application(matching_applications[0], model=args.model, iterations=args.iterations)
@@ -637,7 +692,7 @@ def main():
         else:
             # Process all applications
             processor.process_all_applications(model=args.model, iterations=args.iterations)
-        
+
         processor.generate_summary_stats()
         logger.info("Grant review processing completed successfully")
     except Exception as e:

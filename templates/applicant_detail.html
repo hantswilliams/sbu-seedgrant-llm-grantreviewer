@@ -37,12 +37,146 @@
     </div>
 </div>
 
+<!-- Experiment Filter -->
+{% if experiments_available %}
+<div class="row">
+    <div class="col-12">
+        <div class="alert alert-info">
+            <strong>Experiment Filter:</strong>
+            <div class="btn-group" role="group">
+                <a href="/applicant/{{ applicant }}" class="btn btn-sm {% if not selected_experiment %}btn-primary{% else %}btn-outline-primary{% endif %}">All Experiments</a>
+                {% for exp in experiments_available %}
+                <a href="/applicant/{{ applicant }}?experiment={{ exp }}" class="btn btn-sm {% if selected_experiment == exp %}btn-primary{% else %}btn-outline-primary{% endif %}">{{ exp }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
 <!-- Criteria Comparison Chart -->
 <div class="row">
     <div class="col-12">
         <div class="chart-container">
-            <h5>Score Comparison: Human vs All AI Model Reviewers</h5>
+            <h5>Score Comparison: Human vs All AI Model Reviewers{% if selected_experiment %} ({{ selected_experiment }}){% endif %}</h5>
             <canvas id="criteriaComparisonChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Experiment Comparison Chart (if multiple experiments) -->
+{% if experiment_comparison %}
+<div class="row">
+    <div class="col-12">
+        <div class="chart-container">
+            <h5>Experiment Comparison for {{ applicant }}</h5>
+            <canvas id="experimentComparisonChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Detailed Descriptive Statistics -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>Descriptive Statistics for {{ applicant }}</h5>
+
+            {% if 'Human' in applicant_stats %}
+            <h6 class="mt-3">Human Reviewers</h6>
+            <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Mean</th>
+                            <th>Median</th>
+                            <th>SD</th>
+                            <th>Min</th>
+                            <th>Q1</th>
+                            <th>Q3</th>
+                            <th>Max</th>
+                            <th>N</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% set criterion_labels = {
+                            'innovation_impact': 'Innovation & Impact',
+                            'methodological_approach': 'Methodological Approach',
+                            'research_team_strength': 'Research Team Strength',
+                            'external_funding_potential': 'External Funding Potential',
+                            'budget_clarity': 'Budget Clarity',
+                            'presentation_quality': 'Presentation Quality',
+                            'total_score': 'Total Score'
+                        } %}
+                        {% for criterion, label in criterion_labels.items() %}
+                            {% if criterion in applicant_stats.Human %}
+                            {% set stat = applicant_stats.Human[criterion] %}
+                            <tr {% if criterion == 'total_score' %}class="table-primary fw-bold"{% endif %}>
+                                <td>{{ label }}</td>
+                                <td>{{ stat.mean }}</td>
+                                <td>{{ stat.median }}</td>
+                                <td>{{ stat.std }}</td>
+                                <td>{{ stat.min }}</td>
+                                <td>{{ stat.q1 }}</td>
+                                <td>{{ stat.q3 }}</td>
+                                <td>{{ stat.max }}</td>
+                                <td>{{ stat.count }}</td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+
+            {% if 'LLM' in applicant_stats %}
+            <h6 class="mt-4">LLM Reviewers{% if selected_experiment %} ({{ selected_experiment }}){% endif %}</h6>
+            <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Mean</th>
+                            <th>Median</th>
+                            <th>SD</th>
+                            <th>Min</th>
+                            <th>Q1</th>
+                            <th>Q3</th>
+                            <th>Max</th>
+                            <th>N</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% set criterion_labels = {
+                            'innovation_impact': 'Innovation & Impact',
+                            'methodological_approach': 'Methodological Approach',
+                            'research_team_strength': 'Research Team Strength',
+                            'external_funding_potential': 'External Funding Potential',
+                            'budget_clarity': 'Budget Clarity',
+                            'presentation_quality': 'Presentation Quality',
+                            'total_score': 'Total Score'
+                        } %}
+                        {% for criterion, label in criterion_labels.items() %}
+                            {% if criterion in applicant_stats.LLM %}
+                            {% set stat = applicant_stats.LLM[criterion] %}
+                            <tr {% if criterion == 'total_score' %}class="table-info fw-bold"{% endif %}>
+                                <td>{{ label }}</td>
+                                <td>{{ stat.mean }}</td>
+                                <td>{{ stat.median }}</td>
+                                <td>{{ stat.std }}</td>
+                                <td>{{ stat.min }}</td>
+                                <td>{{ stat.q1 }}</td>
+                                <td>{{ stat.q3 }}</td>
+                                <td>{{ stat.max }}</td>
+                                <td>{{ stat.count }}</td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
@@ -333,5 +467,54 @@ new Chart(ctx, {
         }
     }
 });
+
+// Experiment comparison chart (if multiple experiments exist for this applicant)
+{% if experiment_comparison %}
+const expComparisonData = {{ experiment_comparison | tojson }};
+const expCriteria = {{ comparison.criteria | tojson }};
+
+const expCtx = document.getElementById('experimentComparisonChart').getContext('2d');
+
+const expColors = ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'];
+const expDatasets = [];
+let expColorIndex = 0;
+
+Object.keys(expComparisonData).forEach(expName => {
+    expDatasets.push({
+        label: expName,
+        data: expComparisonData[expName],
+        backgroundColor: expColors[expColorIndex % expColors.length],
+        borderColor: expColors[expColorIndex % expColors.length],
+        borderWidth: 2,
+        fill: false
+    });
+    expColorIndex++;
+});
+
+new Chart(expCtx, {
+    type: 'radar',
+    data: {
+        labels: expCriteria,
+        datasets: expDatasets
+    },
+    options: {
+        responsive: true,
+        scales: {
+            r: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Experiment Comparison - {{ applicant }}'
+            }
+        }
+    }
+});
+{% endif %}
 </script>
 {% endblock %}

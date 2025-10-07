@@ -35,10 +35,8 @@ class OpenAIConnector(BaseLLMConnector):
         if model_name is None:
             model_name = os.environ.get("OPENAI_MODEL", "gpt-4")
 
-        super().__init__(api_key, model_name, base_path)
-
-        # Set instructions - use provided or default
-        self.instructions = instructions or "You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."
+        # Pass instructions to parent class
+        super().__init__(api_key, model_name, base_path, instructions)
 
         if self.api_key:
             self._initialize_client()
@@ -88,7 +86,7 @@ class OpenAIConnector(BaseLLMConnector):
         try:
             response = self.client.responses.create(
                 model=self.model_name,
-                instructions=self.instructions,
+                instructions=self.grant_review_instructions,
                 input=prompt
             )
             processing_time = time.time() - start_time
@@ -97,7 +95,7 @@ class OpenAIConnector(BaseLLMConnector):
             model_version = getattr(response, 'model', self.model_name)
 
             # For consistency with Google connector, return the full prompt that represents what was sent
-            full_prompt = f"{self.instructions}\n\n{prompt}"
+            full_prompt = f"{self.grant_review_instructions}\n\n{prompt}"
 
             return response.output_text, processing_time, self.model_name, model_version, full_prompt
         except Exception as e:

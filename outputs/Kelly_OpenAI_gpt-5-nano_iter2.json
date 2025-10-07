@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Kelly",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-5-nano",
+    "iteration": 2,
+    "timestamp": "2025-10-07T10:28:39.559410"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 23,
+        "Rationale": "The project combines physical activity with VR-based mindfulness to address stress and cardiometabolic health in breast cancer patients, which is timely and potentially impactful. However, as a small feasibility study with only 10 participants and substantial uncertainties about effect sizes and scalability, the magnitude of expected impact is modest. The novelty is present but not groundbreaking given existing VR mindfulness research; the strongest value lies in informing a larger, future trial."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 17,
+        "Rationale": "A 12-week feasibility intervention with home-based PA and VR mindfulness is reasonable, but the plan has notable gaps: inconsistent timeline (12 weeks vs. 10 weeks for certain outcomes), no control or comparator, and an expansive set of outcomes for a very small sample that limits interpretability. Budget deficiencies (lack of costs for devices like FitBits, lab assays, and personnel time) undermine feasibility and reproducibility. Despite these gaps, the study design is conceptually appropriate for a feasibility effort."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "The team is interdisciplinary with expertise in physiology, physical therapy, oncology, and behavioral health, which aligns with the aims. However, the application lacks a clear record of BC-specific or VR mindfulness research within this group, and there is no explicit statistician or data management plan highlighted. The collaboration is solid but could be strengthened with targeted methodological/biostatistical capacity."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 7,
+        "Rationale": "The project aligns with broad NIH priorities in cancer survivorship, digital health, and mind-body interventions, and there is a stated path to future R21/NCI/NCCIH funding. However, the current proposal offers limited preliminary data to demonstrate feasibility or effect sizes, and the small, single-site feasibility study may make subsequent external funding contingent on stronger pilot data and clearer demonstration of feasibility and impact."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 5,
+        "Rationale": "The budget is not well aligned with the described intervention. Critical items appear missing or under-budgeted (e.g., FitBit devices, costs for lab assays, personnel time for data collection/IRB-related tasks). The justification lists items that do not fully cover the described 12-week protocol or IRB processes, raising concerns about whether the study can be implemented as proposed within $5,000."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 6,
+        "Rationale": "The proposal communicates the concept, aims, and team but is hampered by formatting issues, inconsistent terminology, and editing gaps (e.g., timeline inconsistencies, fragmented sections). These readability problems hinder full assessment of methods and feasibility. With thorough editing and harmonization of sections, presentation could be substantially improved."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 23,\n      \"Rationale\": \"The project combines physical activity with VR-based mindfulness to address stress and cardiometabolic health in breast cancer patients, which is timely and potentially impactful. However, as a small feasibility study with only 10 participants and substantial uncertainties about effect sizes and scalability, the magnitude of expected impact is modest. The novelty is present but not groundbreaking given existing VR mindfulness research; the strongest value lies in informing a larger, future trial.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 17,\n      \"Rationale\": \"A 12-week feasibility intervention with home-based PA and VR mindfulness is reasonable, but the plan has notable gaps: inconsistent timeline (12 weeks vs. 10 weeks for certain outcomes), no control or comparator, and an expansive set of outcomes for a very small sample that limits interpretability. Budget deficiencies (lack of costs for devices like FitBits, lab assays, and personnel time) undermine feasibility and reproducibility. Despite these gaps, the study design is conceptually appropriate for a feasibility effort.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The team is interdisciplinary with expertise in physiology, physical therapy, oncology, and behavioral health, which aligns with the aims. However, the application lacks a clear record of BC-specific or VR mindfulness research within this group, and there is no explicit statistician or data management plan highlighted. The collaboration is solid but could be strengthened with targeted methodological/biostatistical capacity.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 7,\n      \"Rationale\": \"The project aligns with broad NIH priorities in cancer survivorship, digital health, and mind-body interventions, and there is a stated path to future R21/NCI/NCCIH funding. However, the current proposal offers limited preliminary data to demonstrate feasibility or effect sizes, and the small, single-site feasibility study may make subsequent external funding contingent on stronger pilot data and clearer demonstration of feasibility and impact.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 5,\n      \"Rationale\": \"The budget is not well aligned with the described intervention. Critical items appear missing or under-budgeted (e.g., FitBit devices, costs for lab assays, personnel time for data collection/IRB-related tasks). The justification lists items that do not fully cover the described 12-week protocol or IRB processes, raising concerns about whether the study can be implemented as proposed within $5,000.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 6,\n      \"Rationale\": \"The proposal communicates the concept, aims, and team but is hampered by formatting issues, inconsistent terminology, and editing gaps (e.g., timeline inconsistencies, fragmented sections). These readability problems hinder full assessment of methods and feasibility. With thorough editing and harmonization of sections, presentation could be substantially improved.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

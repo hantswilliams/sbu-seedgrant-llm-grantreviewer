@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block title %}Prompt Experiments Comparison{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h1 class="mb-4">Prompt Experiments Comparison</h1>
+        <p class="text-muted">Compare performance across different prompt variations</p>
+    </div>
+</div>
+
+<!-- Available Experiments -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>Available Experiments</h5>
+            {% if experiments %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Experiment Name</th>
+                        <th>Version</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for exp in experiments %}
+                    <tr>
+                        <td><strong>{{ exp.prompt_experiment_name }}</strong></td>
+                        <td>{{ exp.prompt_version }}</td>
+                        <td>
+                            <a href="/reviews?experiment={{ exp.prompt_experiment_name }}" class="btn btn-sm btn-outline-primary">
+                                View Reviews
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <div class="alert alert-info">
+                No experiments found. Run the grant review processor with <code>--experiment</code> flag to create experiment data.
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<!-- Experiment Statistics Comparison -->
+<div class="row mb-4" id="statsContainer" style="display: none;">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>Experiment Statistics</h5>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Experiment</th>
+                        <th>Version</th>
+                        <th>Avg Score</th>
+                        <th>Score Range</th>
+                        <th>Total Reviews</th>
+                        <th>Recommendations</th>
+                    </tr>
+                </thead>
+                <tbody id="statsTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Score Distribution Comparison -->
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="chart-container">
+            <h5>Score Distribution by Experiment</h5>
+            <canvas id="scoreDistributionChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<!-- Detailed Descriptive Statistics by Experiment -->
+{% if experiment_detailed_stats %}
+<div class="row mt-4">
+    <div class="col-12">
+        <div class="table-container">
+            <h5>Detailed Descriptive Statistics by Experiment</h5>
+
+            {% for exp_name, stats in experiment_detailed_stats.items() %}
+            <h6 class="mt-4">{{ exp_name }}</h6>
+            <div class="table-responsive">
+                <table class="table table-sm table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Criterion</th>
+                            <th>Mean</th>
+                            <th>Median</th>
+                            <th>SD</th>
+                            <th>Min</th>
+                            <th>Q1</th>
+                            <th>Q3</th>
+                            <th>Max</th>
+                            <th>N</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% set criterion_labels = {
+                            'innovation_impact': 'Innovation & Impact',
+                            'methodological_approach': 'Methodological Approach',
+                            'research_team_strength': 'Research Team Strength',
+                            'external_funding_potential': 'External Funding Potential',
+                            'budget_clarity': 'Budget Clarity',
+                            'presentation_quality': 'Presentation Quality',
+                            'total_score': 'Total Score'
+                        } %}
+                        {% for criterion, label in criterion_labels.items() %}
+                            {% if criterion in stats %}
+                            {% set stat = stats[criterion] %}
+                            <tr {% if criterion == 'total_score' %}class="table-warning fw-bold"{% endif %}>
+                                <td>{{ label }}</td>
+                                <td>{{ stat.mean }}</td>
+                                <td>{{ stat.median }}</td>
+                                <td>{{ stat.std }}</td>
+                                <td>{{ stat.min }}</td>
+                                <td>{{ stat.q1 }}</td>
+                                <td>{{ stat.q3 }}</td>
+                                <td>{{ stat.max }}</td>
+                                <td>{{ stat.count }}</td>
+                            </tr>
+                            {% endif %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Define experiment order (same as dashboard)
+const experimentOrder = ['baseline_v1', 'with_training_data_v1', 'multi_examples_v1', 'strict_scoring_v1'];
+
+// Load experiment statistics
+fetch('/api/experiment_stats')
+    .then(response => response.json())
+    .then(data => {
+        if (Object.keys(data).length > 0) {
+            document.getElementById('statsContainer').style.display = 'block';
+            const tbody = document.getElementById('statsTableBody');
+
+            // Sort experiments according to defined order
+            const orderedExperiments = experimentOrder.filter(exp => data[exp]);
+
+            orderedExperiments.forEach(expName => {
+                const exp = data[expName];
+                const row = document.createElement('tr');
+
+                // Format recommendations
+                let recText = '';
+                if (exp.recommendations) {
+                    recText = Object.entries(exp.recommendations)
+                        .map(([rec, count]) => `${rec}: ${count}`)
+                        .join(', ');
+                }
+
+                row.innerHTML = `
+                    <td><strong>${expName}</strong></td>
+                    <td>${exp.version || 'N/A'}</td>
+                    <td>${exp.avg_score.toFixed(1)}</td>
+                    <td>${exp.min_score.toFixed(0)} - ${exp.max_score.toFixed(0)}</td>
+                    <td>${exp.total_reviews}</td>
+                    <td><small>${recText}</small></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+    })
+    .catch(error => console.error('Error loading stats:', error));
+
+// Score Distribution Chart
+fetch('/api/experiment_stats')
+    .then(response => response.json())
+    .then(data => {
+        const ctx = document.getElementById('scoreDistributionChart').getContext('2d');
+
+        // Sort experiments according to defined order
+        const experiments = experimentOrder.filter(exp => data[exp]);
+        const avgScores = experiments.map(exp => data[exp].avg_score);
+        const colors = ['#36A2EB', '#FF6384', '#FFCE56', '#4BC0C0', '#9966FF', '#FF9F40'];
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: experiments,
+                datasets: [{
+                    label: 'Average Total Score',
+                    data: avgScores,
+                    backgroundColor: colors.slice(0, experiments.length),
+                    borderColor: colors.slice(0, experiments.length),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: {
+                            display: true,
+                            text: 'Average Score (out of 100)'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: true,
+                        text: 'Overall Performance by Experiment'
+                    }
+                }
+            }
+        });
+    })
+    .catch(error => console.error('Error loading score distribution:', error));
+</script>
+{% endblock %}

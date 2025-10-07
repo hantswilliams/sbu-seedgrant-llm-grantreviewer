@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Kelly",
+  "reviewer_info": {
+    "vendor": "xAI",
+    "model": "grok-4-fast-reasoning",
+    "iteration": 2,
+    "timestamp": "2025-10-07T09:47:37.713944"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 22,
+        "Rationale": "The proposal combines physical activity with VR-based mindfulness, which shows some novelty in integrating technology for breast cancer patients, building on existing literature for separate interventions. However, the impact is limited to a small feasibility study without strong evidence of transformative change, and references include oddly future-dated citations that undermine credibility. Potential for scalability is mentioned but not compellingly supported."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 18,
+        "Rationale": "The single-arm design with n=10 is appropriate for feasibility but lacks a control group, detailed risk management for chemotherapy side effects, or contingencies for low adherence in a home-based intervention. Methods use validated tools and align with aims, but the timeline is vaguely described without a visual, and statistical power is acknowledged as low without clear plans for handling variability. Feasibility metrics are standard but not robustly justified for this population."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 7,
+        "Rationale": "The interdisciplinary team includes relevant expertise in physiology, physical therapy, oncology, and psychology, with the PI having experience in exercise and stress studies. However, the PI and team lack direct track record in cancer-specific interventions or VR applications, relying more on general fitness and mental health backgrounds."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 7,
+        "Rationale": "The project aligns with NIH priorities in integrative oncology and digital health, with plans for R21 and NCI submissions post-feasibility. Yet, the small scale and preliminary nature may not generate sufficiently compelling data for competitive external funding without stronger preliminary evidence or innovation."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 9,
+        "Rationale": "The $5,000 budget is well-justified, with costs directly tied to intervention delivery (e.g., VR units, equipment, incentives) and appearing cost-effective for a small feasibility study. Minor concern about only 4 VR units for 10 participants, but overall alignment and eligibility are clear."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 6,
+        "Rationale": "The document is generally organized but suffers from typos, incomplete sentences, missing elements (e.g., timeline figure, Fig. 1), and awkward flow in sections like background. References include implausible future dates, reducing clarity and professionalism."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 22,\n      \"Rationale\": \"The proposal combines physical activity with VR-based mindfulness, which shows some novelty in integrating technology for breast cancer patients, building on existing literature for separate interventions. However, the impact is limited to a small feasibility study without strong evidence of transformative change, and references include oddly future-dated citations that undermine credibility. Potential for scalability is mentioned but not compellingly supported.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 18,\n      \"Rationale\": \"The single-arm design with n=10 is appropriate for feasibility but lacks a control group, detailed risk management for chemotherapy side effects, or contingencies for low adherence in a home-based intervention. Methods use validated tools and align with aims, but the timeline is vaguely described without a visual, and statistical power is acknowledged as low without clear plans for handling variability. Feasibility metrics are standard but not robustly justified for this population.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 7,\n      \"Rationale\": \"The interdisciplinary team includes relevant expertise in physiology, physical therapy, oncology, and psychology, with the PI having experience in exercise and stress studies. However, the PI and team lack direct track record in cancer-specific interventions or VR applications, relying more on general fitness and mental health backgrounds.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 7,\n      \"Rationale\": \"The project aligns with NIH priorities in integrative oncology and digital health, with plans for R21 and NCI submissions post-feasibility. Yet, the small scale and preliminary nature may not generate sufficiently compelling data for competitive external funding without stronger preliminary evidence or innovation.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 9,\n      \"Rationale\": \"The $5,000 budget is well-justified, with costs directly tied to intervention delivery (e.g., VR units, equipment, incentives) and appearing cost-effective for a small feasibility study. Minor concern about only 4 VR units for 10 participants, but overall alignment and eligibility are clear.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 6,\n      \"Rationale\": \"The document is generally organized but suffers from typos, incomplete sentences, missing elements (e.g., timeline figure, Fig. 1), and awkward flow in sections like background. References include implausible future dates, reducing clarity and professionalism.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

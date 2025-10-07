@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Rosie",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-5-nano",
+    "iteration": 1,
+    "timestamp": "2025-10-07T10:29:20.658207"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 22,
+        "Rationale": "The project targets an important gap by integrating a mobile health app with real-world driving data and caregiver input to inform driver rehabilitation. The dyad approach and naturalistic data collection are promising and could elevate driving assessments. However, the novelty is limited by a sparse description of how the approach substantially surpasses existing naturalistic driving work, and the expected impact is not quantified."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 22,
+        "Rationale": "Aims align with measuring validity, feasibility, and alignment between clinic and real-world data. However, the plan lacks key methodological details: sample size, recruitment strategy, statistical analysis plan, power considerations, data management, and handling of missing data. Risks and contingency plans are underdeveloped; IRB and data privacy considerations are not described."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 7,
+        "Rationale": "Team has strong OT and mobile health expertise and clinically relevant driver rehabilitation experience. However, there is limited evidence of formal biostatistics/data science support and plan for trainees; no clear roles for statisticians or data analysts beyond the PI and Co-PI."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 8,
+        "Rationale": "The project aims to generate data that could support larger foundation or federal grants and lists several target funders, with an explicit pathway to LOIs. The novelty and clinical relevance support competitiveness. The likelihood hinges on generating robust pilot data and a clear publications plan."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 4,
+        "Rationale": "Budget is inadequately described: only a single line item (UFOV) for $5,000 with multiple placeholder items, and no personnel, equipment, software, data storage, or participant costs detailed. This undermines feasibility and alignment with aims. A revised budget with itemized line items is essential."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The proposal is generally readable and logically organized but contains formatting inconsistencies, typos, and duplications (e.g., timeline sections, references) that impede clarity. A thorough edit and consistency check would improve comprehension and perceived rigor."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 22,\n      \"Rationale\": \"The project targets an important gap by integrating a mobile health app with real-world driving data and caregiver input to inform driver rehabilitation. The dyad approach and naturalistic data collection are promising and could elevate driving assessments. However, the novelty is limited by a sparse description of how the approach substantially surpasses existing naturalistic driving work, and the expected impact is not quantified.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 22,\n      \"Rationale\": \"Aims align with measuring validity, feasibility, and alignment between clinic and real-world data. However, the plan lacks key methodological details: sample size, recruitment strategy, statistical analysis plan, power considerations, data management, and handling of missing data. Risks and contingency plans are underdeveloped; IRB and data privacy considerations are not described.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 7,\n      \"Rationale\": \"Team has strong OT and mobile health expertise and clinically relevant driver rehabilitation experience. However, there is limited evidence of formal biostatistics/data science support and plan for trainees; no clear roles for statisticians or data analysts beyond the PI and Co-PI.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 8,\n      \"Rationale\": \"The project aims to generate data that could support larger foundation or federal grants and lists several target funders, with an explicit pathway to LOIs. The novelty and clinical relevance support competitiveness. The likelihood hinges on generating robust pilot data and a clear publications plan.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 4,\n      \"Rationale\": \"Budget is inadequately described: only a single line item (UFOV) for $5,000 with multiple placeholder items, and no personnel, equipment, software, data storage, or participant costs detailed. This undermines feasibility and alignment with aims. A revised budget with itemized line items is essential.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The proposal is generally readable and logically organized but contains formatting inconsistencies, typos, and duplications (e.g., timeline sections, references) that impede clarity. A thorough edit and consistency check would improve comprehension and perceived rigor.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

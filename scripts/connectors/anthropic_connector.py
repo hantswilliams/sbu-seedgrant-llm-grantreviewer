@@ -35,10 +35,8 @@ class AnthropicConnector(BaseLLMConnector):
         if model_name is None:
             model_name = os.environ.get("ANTHROPIC_MODEL", "claude-3-5-sonnet-20241022")
 
-        super().__init__(api_key, model_name, base_path)
-
-        # Set instructions - use provided or default
-        self.instructions = instructions or "You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."
+        # Pass instructions to parent class
+        super().__init__(api_key, model_name, base_path, instructions)
 
         if self.api_key:
             self._initialize_client()
@@ -87,7 +85,7 @@ class AnthropicConnector(BaseLLMConnector):
         start_time = time.time()
         try:
             # Build the full prompt with instructions
-            full_prompt = f"{self.instructions}\n\n{prompt}"
+            full_prompt = f"{self.grant_review_instructions}\n\n{prompt}"
 
             response = self.client.messages.create(
                 model=self.model_name,

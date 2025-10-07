@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Rosie",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-5-nano",
+    "iteration": 3,
+    "timestamp": "2025-10-07T10:30:01.568900"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 22,
+        "Rationale": "The project proposes a novel mobile-health approach that incorporates caregiver/passenger input to assess real-world driving, which could enhance relevance to everyday functioning. However, the degree of novelty relative to existing naturalistic driving work is moderate, and expected impact on practice and policy is not yet concretely demonstrated."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 18,
+        "Rationale": "Aims are logically connected to app validation, feasibility, and linking clinical and real-world data. Yet the plan lacks essential details: sample size/power calculations, explicit data analysis methods, and a clear, realistic timeline aligned with an award cycle. The timeline contains pre-award elements (pilot August 2025) that undermine feasibility and raise questions about project sequencing."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 9,
+        "Rationale": "Strong clinical expertise in driving rehabilitation (Co-PI) paired with a technically proficient PI in mobile-health research; interdisciplinary collaboration with neurology. While team members are well-qualified, additional data-science/statistics depth and broader F/R expertise could strengthen the methodological core."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 8,
+        "Rationale": "The project articulates clear pathways to foundation and interprofessional grants and references plausible follow-on funding (AOTF, Mother Cabrini Foundation, ASAHP). However, actual feasibility and readiness for a competitive external grant depend on generating pilot data and a rigorous analysis plan, which are not yet fully demonstrated."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 5,
+        "Rationale": "Budget presentation is poorly itemized ( UFOV item shown, but many placeholders and vague line items), with little justification for costs or alignment to aims. This creates questions about fiscal stewardship and whether funds will directly advance aims within a seed timeframe."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 7,
+        "Rationale": "The proposal is generally readable and organized, but formatting inconsistencies, timeline ambiguities, and budget deficiencies hinder full comprehension. Some sections (e.g., pilot timeline, IRB status) need tightening for clarity."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 22,\n      \"Rationale\": \"The project proposes a novel mobile-health approach that incorporates caregiver/passenger input to assess real-world driving, which could enhance relevance to everyday functioning. However, the degree of novelty relative to existing naturalistic driving work is moderate, and expected impact on practice and policy is not yet concretely demonstrated.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 18,\n      \"Rationale\": \"Aims are logically connected to app validation, feasibility, and linking clinical and real-world data. Yet the plan lacks essential details: sample size/power calculations, explicit data analysis methods, and a clear, realistic timeline aligned with an award cycle. The timeline contains pre-award elements (pilot August 2025) that undermine feasibility and raise questions about project sequencing.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"Strong clinical expertise in driving rehabilitation (Co-PI) paired with a technically proficient PI in mobile-health research; interdisciplinary collaboration with neurology. While team members are well-qualified, additional data-science/statistics depth and broader F/R expertise could strengthen the methodological core.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 8,\n      \"Rationale\": \"The project articulates clear pathways to foundation and interprofessional grants and references plausible follow-on funding (AOTF, Mother Cabrini Foundation, ASAHP). However, actual feasibility and readiness for a competitive external grant depend on generating pilot data and a rigorous analysis plan, which are not yet fully demonstrated.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 5,\n      \"Rationale\": \"Budget presentation is poorly itemized ( UFOV item shown, but many placeholders and vague line items), with little justification for costs or alignment to aims. This creates questions about fiscal stewardship and whether funds will directly advance aims within a seed timeframe.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"The proposal is generally readable and organized, but formatting inconsistencies, timeline ambiguities, and budget deficiencies hinder full comprehension. Some sections (e.g., pilot timeline, IRB status) need tightening for clarity.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

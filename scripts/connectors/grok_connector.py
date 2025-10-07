@@ -35,10 +35,8 @@ class GrokConnector(BaseLLMConnector):
         if model_name is None:
             model_name = os.environ.get("GROK_MODEL", "grok-beta")
 
-        super().__init__(api_key, model_name, base_path)
-
-        # Set instructions - use provided or default
-        self.instructions = instructions or "You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."
+        # Pass instructions to parent class
+        super().__init__(api_key, model_name, base_path, instructions)
 
         if self.api_key:
             self._initialize_client()
@@ -92,7 +90,7 @@ class GrokConnector(BaseLLMConnector):
         try:
             # Build messages for chat completion
             messages = [
-                {"role": "system", "content": self.instructions},
+                {"role": "system", "content": self.grant_review_instructions},
                 {"role": "user", "content": prompt}
             ]
 
@@ -111,7 +109,7 @@ class GrokConnector(BaseLLMConnector):
             model_version = getattr(response, 'model', self.model_name)
 
             # For consistency with other connectors, return the full prompt that represents what was sent
-            full_prompt = f"{self.instructions}\n\n{prompt}"
+            full_prompt = f"{self.grant_review_instructions}\n\n{prompt}"
 
             return response_text, processing_time, self.model_name, model_version, full_prompt
         except Exception as e:

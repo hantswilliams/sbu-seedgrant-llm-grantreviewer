@@ -1,0 +1,29 @@
+{
+  "active_experiment": "baseline_v1",
+  "experiments": {
+    "baseline_v1": {
+      "file": "baseline_v1.md",
+      "version": "1.0",
+      "description": "Original prompt without training examples - baseline for comparison",
+      "notes": "Can analyze all applicants including Daniel"
+    },
+    "with_training_data_v1": {
+      "file": "with_training_data_v1.md",
+      "version": "2.0",
+      "description": "Prompt enhanced with single training example to guide LLM scoring",
+      "notes": "WARNING: EXCLUDE DANIEL from analysis - Daniel's data is used as training example in this prompt"
+    },
+    "multi_examples_v1": {
+      "file": "multi_examples_v1.md",
+      "version": "3.0",
+      "description": "Prompt with multiple training examples (high, medium, low performers) for better calibration across score ranges",
+      "notes": "WARNING: EXCLUDE DANIEL from analysis - Daniel's data is used as training example in this prompt"
+    },
+    "strict_scoring_v1": {
+      "file": "strict_scoring_v1.md",
+      "version": "4.0",
+      "description": "Prompt with explicit conservative scoring instructions to test bias reduction and reduce LLM optimism",
+      "notes": "WARNING: EXCLUDE DANIEL from analysis - Daniel's data is used as training example in this prompt"
+    }
+  }
+}

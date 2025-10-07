@@ -1,0 +1,46 @@
+{
+  "applicant_name": "Daniel",
+  "reviewer_info": {
+    "vendor": "OpenAI",
+    "model": "gpt-5-nano",
+    "iteration": 3,
+    "timestamp": "2025-10-07T10:27:39.095464"
+  },
+  "review_data": {
+    "scores": [
+      {
+        "Criterion": "Innovation and Impact",
+        "Score": 22,
+        "Rationale": "The topic targets a real gap in PT education regarding Lyme disease differential diagnosis and has potential curricular impact. However, the approach is largely a conventional needs assessment (surveys) with limited methodological novelty, which lowers the likelihood of high-impact transformative change unless paired with stronger implementation plans."
+      },
+      {
+        "Criterion": "Methodological Approach and Feasibility",
+        "Score": 20,
+        "Rationale": "Strengths include dual aims, content validation, piloting, and clear descriptive analysis. Major concerns include lack of formal sample size justification, potential recruitment bias, unclear IRB/data management specifics, and an ambitious recruitment target (100 educators and 100 clinicians) that may be difficult to achieve and may limit generalizability."
+      },
+      {
+        "Criterion": "Strength of Research Team",
+        "Score": 7,
+        "Rationale": "PI and co-investigators have relevant clinical backgrounds and survey experience, but there is limited demonstrated track record in Lyme disease specifically or PT education research. The proposal would benefit from explicit evidence of prior publications, grant success, and clearly delineated roles with complementary expertise."
+      },
+      {
+        "Criterion": "Potential to Attract External Funding",
+        "Score": 6,
+        "Rationale": "The study could seed larger curricula or practice-change projects and align with educational grant opportunities. However, without preliminary data or demonstrated track record in this exact area, the likelihood of securing substantial external funding beyond seed support is uncertain."
+      },
+      {
+        "Criterion": "Clarity and Efficiency of Budget",
+        "Score": 4,
+        "Rationale": "Budget presentation is unclear and contains placeholders (e.g., Cost Item X) and some disjointed line items. While the direct costs are modest, the lack of a clean, itemized budget with explicit justification and alignment to aims undermines credibility and fundability."
+      },
+      {
+        "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
+        "Score": 6,
+        "Rationale": "The document is long and at times repetitive, with duplications and formatting inconsistencies. While the core idea is understandable, improved organization, concise sections, and proofing would enhance readability and perceived rigor."
+      }
+    ],
+    "overall_recommendation": "Fund with Revisions",
+    "parsed_successfully": true
+  },
+  "raw_response": "{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 22,\n      \"Rationale\": \"The topic targets a real gap in PT education regarding Lyme disease differential diagnosis and has potential curricular impact. However, the approach is largely a conventional needs assessment (surveys) with limited methodological novelty, which lowers the likelihood of high-impact transformative change unless paired with stronger implementation plans.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 20,\n      \"Rationale\": \"Strengths include dual aims, content validation, piloting, and clear descriptive analysis. Major concerns include lack of formal sample size justification, potential recruitment bias, unclear IRB/data management specifics, and an ambitious recruitment target (100 educators and 100 clinicians) that may be difficult to achieve and may limit generalizability.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 7,\n      \"Rationale\": \"PI and co-investigators have relevant clinical backgrounds and survey experience, but there is limited demonstrated track record in Lyme disease specifically or PT education research. The proposal would benefit from explicit evidence of prior publications, grant success, and clearly delineated roles with complementary expertise.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 6,\n      \"Rationale\": \"The study could seed larger curricula or practice-change projects and align with educational grant opportunities. However, without preliminary data or demonstrated track record in this exact area, the likelihood of securing substantial external funding beyond seed support is uncertain.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 4,\n      \"Rationale\": \"Budget presentation is unclear and contains placeholders (e.g., Cost Item X) and some disjointed line items. While the direct costs are modest, the lack of a clean, itemized budget with explicit justification and alignment to aims undermines credibility and fundability.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 6,\n      \"Rationale\": \"The document is long and at times repetitive, with duplications and formatting inconsistencies. While the core idea is understandable, improved organization, concise sections, and proofing would enhance readability and perceived rigor.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}"
+}

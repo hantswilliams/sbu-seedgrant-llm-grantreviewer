@@ -1,64 +1,161 @@
-applicant_name,reviewer_id,reviewer_type,vendor,model,model_version,iteration,timestamp,innovation_impact,methodological_approach,research_team_strength,external_funding_potential,budget_clarity,presentation_quality,total_score,overall_recommendation,processing_time
-DANIEL,AM,Human,,,,,,27,14,8,6,6,5,66,Do Not Fund,
-DANIEL,SW,Human,,,,,,25,24,9,7,9,6,80,Fund with Revisions,
-DANIEL,HW,Human,,,,,,25,20,10,7,8,7,77,Do Not Fund,
-DANIEL,Y,Human,,,,,,20,17,6,5,6,7,61,Do Not Fund,
-ROSIE,AM,Human,,,,,,29,21,6,8,5,8,77,Do Not Fund,
-ROSIE,SW,Human,,,,,,30,30,10,9,10,10,99,Fund,
-ROSIE,HW,Human,,,,,,28,25,8,9,5,7,82,Fund with Revisions,
-ROSIE,Y,Human,,,,,,26,26,8,9,9,8,86,Fund,
-KELLY,AM,Human,,,,,,27,26,10,9,10,8,90,Fund with Revisions,
-KELLY,SW,Human,,,,,,29,30,10,10,10,10,99,Fund,
-KELLY,HW,Human,,,,,,27,27,10,9,9,9,91,Fund,
-KELLY,Y,Human,,,,,,22,25,7,7,9,7,77,Fund with Revisions,
-CHRISTINA,AM,Human,,,,,,25,14,6,6,8,6,65,Do Not Fund,
-CHRISTINA,SW,Human,,,,,,28,30,10,10,10,10,98,Fund,
-CHRISTINA,HW,Human,,,,,,25,25,8,8,8,7,81,Do Not Fund,
-CHRISTINA,Y,Human,,,,,,25,8,9,8,7,7,64,Fund,
-CHRISTINA,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:01:14.994085,27,25,9,8,7,9,85,Fund with Revisions,9.676369190216064
-CHRISTINA,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:22:21.389350,24,22,8,8,6,8,76,Fund with Revisions,30.046059131622314
-CHRISTINA,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:01:34.486793,27,26,9,8,8,9,87,Fund with Revisions,17.4815731048584
-CHRISTINA,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:22:48.633836,25,22,8,8,5,7,75,Fund with Revisions,25.233361959457397
-CHRISTINA,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:01:49.001953,27,26,9,8,7,8,85,Fund with Revisions,12.499531984329224
-CHRISTINA,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:23:19.112371,25,23,8,7,7,8,78,Fund with Revisions,28.460932970046997
-CHRISTINA,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:01:58.940999,27,27,9,8,7,8,86,Fund with Revisions,7.919785022735596
-CHRISTINA,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:23:45.500556,24,22,8,8,5,7,74,Fund with Revisions,24.3715181350708
-CHRISTINA,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:02:15.942800,27,26,9,8,8,9,87,Fund with Revisions,14.985615015029907
-CHRISTINA,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:24:11.988541,24,23,8,8,6,8,77,Fund with Revisions,24.47608208656311
-DANIEL,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:02:33.009791,27,24,9,8,9,8,85,Fund,15.045857906341553
-DANIEL,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:24:43.594145,24,18,8,8,8,7,73,Fund with Revisions,29.587276220321655
-DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-09-25T18:33:37.209267,28,25,9,10,10,8,90,Fund,34.05706977844238
-DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-09-25T19:12:26.210138,28,22,9,10,10,7,86,Fund with Revisions,26.2623610496521
-DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-09-25T19:27:05.350352,28,22,9,10,10,6,85,Fund with Revisions,31.07663321495056
-DANIEL,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-09-27T17:09:26.651660,28,24,8,9,10,7,86,Fund,20.63274073600769
-DANIEL,Anthropic_claude-3-opus-20240229_1,LLM,Anthropic,claude-3-opus-20240229,claude-3-opus-20240229,1.0,2025-09-27T17:49:26.112233,28,26,9,8,9,9,89,Fund,22.684937953948975
-DANIEL,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:02:44.396377,27,24,9,8,9,8,85,Fund with Revisions,9.369599103927612
-DANIEL,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:25:13.275837,24,22,8,8,6,7,75,Fund with Revisions,27.67018485069275
-DANIEL,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-09-25T19:27:41.204445,28,26,9,9,10,7,89,Fund with Revisions,33.84004282951355
-DANIEL,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:02:55.229524,25,23,9,8,9,8,82,Fund with Revisions,8.821277141571045
-DANIEL,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:25:42.269667,24,18,8,8,8,7,73,Fund with Revisions,26.982971906661987
-DANIEL,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-09-25T19:28:27.972792,28,24,8,9,10,5,84,Fund with Revisions,44.73984408378601
-DANIEL,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:03:05.981538,26,24,9,8,8,8,83,Fund with Revisions,8.740857124328613
-DANIEL,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:26:16.406642,24,18,8,7,7,6,70,Fund with Revisions,32.1219699382782
-DANIEL,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:03:16.898071,27,25,9,8,9,8,86,Fund,8.898393154144287
-DANIEL,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:26:43.295159,25,22,8,8,8,7,78,Fund with Revisions,24.87191891670227
-KELLY,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:03:27.894555,27,25,9,9,8,7,85,Fund with Revisions,8.979427099227905
-KELLY,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:27:18.463788,24,17,9,7,5,7,69,Fund with Revisions,33.15231800079346
-KELLY,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:03:37.378900,27,23,9,9,9,8,85,Fund with Revisions,7.47235894203186
-KELLY,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:27:58.772958,24,18,8,7,6,6,69,Fund with Revisions,38.29792261123657
-KELLY,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:03:47.556084,27,24,9,8,9,7,84,Fund with Revisions,8.161988735198975
-KELLY,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:28:38.400221,24,18,8,8,5,6,69,Fund with Revisions,37.612037897109985
-KELLY,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:03:58.615522,27,24,9,8,9,7,84,Fund with Revisions,9.042963027954102
-KELLY,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:29:08.808120,24,18,8,7,5,7,69,Fund with Revisions,28.386066198349
-KELLY,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:04:08.603624,27,24,9,8,8,7,83,Fund with Revisions,7.974123954772949
-KELLY,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:29:34.511961,24,17,9,7,9,7,73,Fund with Revisions,23.69331121444702
-ROSIE,OpenAI_gpt-4.1-mini_1,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,1.0,2025-09-16T12:04:21.956267,27,24,9,8,7,8,83,Fund with Revisions,11.334928750991821
-ROSIE,OpenAI_gpt-5-mini_1,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,1.0,2025-09-16T12:30:16.167553,24,18,8,8,3,7,68,Fund with Revisions,39.63957381248474
-ROSIE,OpenAI_gpt-4.1-mini_2,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,2.0,2025-09-16T12:04:32.611957,28,24,10,9,7,8,86,Fund with Revisions,8.642530918121338
-ROSIE,OpenAI_gpt-5-mini_2,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,2.0,2025-09-16T12:30:45.866019,25,18,8,8,5,8,72,Fund with Revisions,27.68626308441162
-ROSIE,OpenAI_gpt-4.1-mini_3,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,3.0,2025-09-16T12:04:47.054377,27,25,10,9,7,8,86,Fund with Revisions,12.425516843795776
-ROSIE,OpenAI_gpt-5-mini_3,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,3.0,2025-09-16T12:31:06.712181,25,18,8,8,3,8,70,Fund with Revisions,18.83090305328369
-ROSIE,OpenAI_gpt-4.1-mini_4,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,4.0,2025-09-16T12:04:56.161913,27,24,10,9,7,8,85,Fund with Revisions,7.093344211578369
-ROSIE,OpenAI_gpt-5-mini_4,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,4.0,2025-09-16T12:31:32.167641,26,21,9,8,5,8,77,Fund with Revisions,23.443477153778076
-ROSIE,OpenAI_gpt-4.1-mini_5,LLM,OpenAI,gpt-4.1-mini,gpt-4.1-mini-2025-04-14,5.0,2025-09-16T12:05:05.920674,28,25,9,9,7,8,86,Fund with Revisions,7.745558977127075
-ROSIE,OpenAI_gpt-5-mini_5,LLM,OpenAI,gpt-5-mini,gpt-5-mini-2025-08-07,5.0,2025-09-16T12:31:55.368931,25,22,9,8,5,8,77,Fund with Revisions,21.188014030456543
+applicant_name,reviewer_id,reviewer_type,vendor,model,model_version,iteration,timestamp,innovation_impact,methodological_approach,research_team_strength,external_funding_potential,budget_clarity,presentation_quality,total_score,overall_recommendation,processing_time,prompt_experiment_name,prompt_version
+DANIEL,AM,Human,,,,,,27.0,14.0,8.0,6.0,6.0,5.0,66.0,Do Not Fund,,,
+DANIEL,SW,Human,,,,,,25.0,24.0,9.0,7.0,9.0,6.0,80.0,Fund with Revisions,,,
+DANIEL,HW,Human,,,,,,25.0,20.0,10.0,7.0,8.0,7.0,77.0,Do Not Fund,,,
+DANIEL,Y,Human,,,,,,20.0,17.0,6.0,5.0,6.0,7.0,61.0,Do Not Fund,,,
+ROSIE,AM,Human,,,,,,29.0,21.0,6.0,8.0,5.0,8.0,77.0,Do Not Fund,,,
+ROSIE,SW,Human,,,,,,30.0,30.0,10.0,9.0,10.0,10.0,99.0,Fund,,,
+ROSIE,HW,Human,,,,,,28.0,25.0,8.0,9.0,5.0,7.0,82.0,Fund with Revisions,,,
+ROSIE,Y,Human,,,,,,26.0,26.0,8.0,9.0,9.0,8.0,86.0,Fund,,,
+KELLY,AM,Human,,,,,,27.0,26.0,10.0,9.0,10.0,8.0,90.0,Fund with Revisions,,,
+KELLY,SW,Human,,,,,,29.0,30.0,10.0,10.0,10.0,10.0,99.0,Fund,,,
+KELLY,HW,Human,,,,,,27.0,27.0,10.0,9.0,9.0,9.0,91.0,Fund,,,
+KELLY,Y,Human,,,,,,22.0,25.0,7.0,7.0,9.0,7.0,77.0,Fund with Revisions,,,
+CHRISTINA,AM,Human,,,,,,25.0,14.0,6.0,6.0,8.0,6.0,65.0,Do Not Fund,,,
+CHRISTINA,SW,Human,,,,,,28.0,30.0,10.0,10.0,10.0,10.0,98.0,Fund,,,
+CHRISTINA,HW,Human,,,,,,25.0,25.0,8.0,8.0,8.0,7.0,81.0,Do Not Fund,,,
+CHRISTINA,Y,Human,,,,,,25.0,8.0,9.0,8.0,7.0,7.0,64.0,Fund,,,
+CHRISTINA,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T08:54:09.098473,25.0,27.0,9.0,9.0,8.0,8.0,86.0,Fund,9.549288988113403,baseline_v1,1.0
+CHRISTINA,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:07:32.514024,28.0,27.0,8.0,9.0,10.0,9.0,91.0,Fund,25.236413955688477,baseline_v1,1.0
+CHRISTINA,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:15:51.738042,24.0,28.0,9.0,8.0,7.0,8.0,84.0,Fund,11.257549047470093,with_training_data_v1,2.0
+CHRISTINA,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:19:41.200069,27.0,27.0,7.0,9.0,7.0,10.0,87.0,Fund,36.546767234802246,with_training_data_v1,2.0
+CHRISTINA,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:28:08.652944,25.0,23.0,8.0,8.0,8.0,9.0,81.0,Fund with Revisions,10.295468091964722,multi_examples_v1,3.0
+CHRISTINA,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:36:05.006499,26.0,23.0,8.0,8.0,8.0,9.0,82.0,Fund with Revisions,32.88252592086792,multi_examples_v1,3.0
+CHRISTINA,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:46:05.432883,22.0,21.0,7.0,8.0,8.0,7.0,73.0,Fund with Revisions,8.384273767471313,strict_scoring_v1,4.0
+CHRISTINA,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:53:37.250087,24.0,20.0,7.0,9.0,9.0,7.0,76.0,Fund with Revisions,56.521023988723755,strict_scoring_v1,4.0
+CHRISTINA,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:09:19.971265,26.0,24.0,8.0,7.0,8.0,7.0,80.0,Fund with Revisions,25.435834884643555,baseline_v1,1.0
+CHRISTINA,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:13:37.500528,23.0,24.0,8.0,9.0,6.0,8.0,78.0,Fund with Revisions,15.204898834228516,with_training_data_v1,2.0
+CHRISTINA,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:20:04.437073,23.0,22.0,8.0,8.0,5.0,8.0,74.0,Fund with Revisions,23.129650831222534,multi_examples_v1,3.0
+CHRISTINA,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:25:58.513205,24.0,23.0,8.0,7.0,7.0,7.0,76.0,Fund with Revisions,16.788740158081055,strict_scoring_v1,4.0
+CHRISTINA,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T08:54:19.836393,25.0,27.0,9.0,9.0,8.0,8.0,86.0,Fund,8.720232963562012,baseline_v1,1.0
+CHRISTINA,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:08:11.837129,28.0,27.0,7.0,9.0,8.0,9.0,88.0,Fund,37.3028519153595,baseline_v1,1.0
+CHRISTINA,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:16:04.316379,24.0,25.0,9.0,8.0,7.0,8.0,81.0,Fund with Revisions,10.562924861907959,with_training_data_v1,2.0
+CHRISTINA,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:20:09.614289,28.0,28.0,9.0,9.0,10.0,9.0,93.0,Fund,26.3940110206604,with_training_data_v1,2.0
+CHRISTINA,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:28:20.358805,25.0,26.0,9.0,9.0,7.0,8.0,84.0,Fund with Revisions,9.686353921890259,multi_examples_v1,3.0
+CHRISTINA,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:36:55.950748,27.0,21.0,5.0,8.0,6.0,6.0,73.0,Do Not Fund,48.92389106750488,multi_examples_v1,3.0
+CHRISTINA,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:46:17.661701,22.0,18.0,7.0,8.0,8.0,8.0,71.0,Do Not Fund,10.215210914611816,strict_scoring_v1,4.0
+CHRISTINA,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:54:27.896402,25.0,20.0,5.0,9.0,8.0,7.0,74.0,Do Not Fund,48.625507831573486,strict_scoring_v1,4.0
+CHRISTINA,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:09:41.106509,25.0,26.0,8.0,9.0,7.0,7.0,82.0,Fund with Revisions,19.127012729644775,baseline_v1,1.0
+CHRISTINA,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:14:02.539193,24.0,26.0,8.0,9.0,5.0,7.0,79.0,Fund with Revisions,23.02678108215332,with_training_data_v1,2.0
+CHRISTINA,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:20:22.555569,23.0,24.0,9.0,8.0,7.0,8.0,79.0,Fund with Revisions,16.1053409576416,multi_examples_v1,3.0
+CHRISTINA,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:26:19.331455,22.0,23.0,7.0,7.0,5.0,6.0,70.0,Fund with Revisions,18.805558919906616,strict_scoring_v1,4.0
+CHRISTINA,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T08:54:30.775837,24.0,25.0,9.0,9.0,8.0,8.0,83.0,Fund,8.922427892684937,baseline_v1,1.0
+CHRISTINA,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:08:54.923777,28.0,28.0,8.0,9.0,9.0,8.0,90.0,Fund,41.06613111495972,baseline_v1,1.0
+CHRISTINA,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:16:15.789360,24.0,25.0,8.0,8.0,7.0,8.0,80.0,Fund with Revisions,9.45047926902771,with_training_data_v1,2.0
+CHRISTINA,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:21:08.032200,28.0,28.0,7.0,9.0,10.0,9.0,91.0,Fund,56.399003982543945,with_training_data_v1,2.0
+CHRISTINA,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:28:33.253185,25.0,26.0,8.0,9.0,8.0,8.0,84.0,Fund,10.874345064163208,multi_examples_v1,3.0
+CHRISTINA,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:37:35.090144,25.0,22.0,7.0,9.0,6.0,8.0,77.0,Fund with Revisions,37.11895179748535,multi_examples_v1,3.0
+CHRISTINA,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:46:31.636604,22.0,17.0,7.0,8.0,6.0,7.0,67.0,Fund with Revisions,11.955790996551514,strict_scoring_v1,4.0
+CHRISTINA,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:55:18.584985,25.0,22.0,7.0,9.0,9.0,7.0,79.0,Fund with Revisions,48.6675341129303,strict_scoring_v1,4.0
+CHRISTINA,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:10:07.112683,23.0,24.0,8.0,8.0,5.0,7.0,75.0,Fund with Revisions,23.98774290084839,baseline_v1,1.0
+CHRISTINA,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:14:21.165630,24.0,24.0,8.0,8.0,6.0,7.0,77.0,Fund with Revisions,16.603384017944336,with_training_data_v1,2.0
+CHRISTINA,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:20:42.163580,23.0,24.0,9.0,8.0,6.0,8.0,78.0,Fund with Revisions,17.590869188308716,multi_examples_v1,3.0
+CHRISTINA,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:26:38.912502,22.0,24.0,8.0,7.0,6.0,7.0,74.0,Fund with Revisions,17.563521146774292,strict_scoring_v1,4.0
+DANIEL,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T08:54:41.264445,28.0,24.0,9.0,8.0,10.0,7.0,86.0,Fund,8.464272022247314,baseline_v1,1.0
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:09:23.929185,28.0,24.0,8.0,9.0,10.0,7.0,86.0,Fund with Revisions,26.98281502723694,baseline_v1,1.0
+DANIEL,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:16:31.051062,28.0,24.0,8.0,8.0,9.0,6.0,83.0,Fund with Revisions,13.239077806472778,with_training_data_v1,2.0
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:21:50.232845,26.0,20.0,6.0,8.0,9.0,6.0,75.0,Do Not Fund,40.1830039024353,with_training_data_v1,2.0
+DANIEL,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:28:46.986677,25.0,20.0,9.0,8.0,9.0,6.0,77.0,Fund with Revisions,11.717167139053345,multi_examples_v1,3.0
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:38:26.111155,26.0,20.0,9.0,9.0,9.0,6.0,79.0,Fund with Revisions,48.99872803688049,multi_examples_v1,3.0
+DANIEL,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:46:43.347574,22.0,18.0,7.0,7.0,9.0,6.0,69.0,Do Not Fund,9.689316749572754,strict_scoring_v1,4.0
+DANIEL,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:56:07.258051,26.0,15.0,9.0,9.0,10.0,5.0,74.0,Do Not Fund,46.64993500709534,strict_scoring_v1,4.0
+DANIEL,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:10:26.072907,24.0,24.0,8.0,8.0,6.0,8.0,78.0,Fund with Revisions,16.935513973236084,baseline_v1,1.0
+DANIEL,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:15:29.942328,23.0,25.0,8.0,7.0,4.0,7.0,74.0,Fund with Revisions,66.75488805770874,with_training_data_v1,2.0
+DANIEL,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:21:02.577625,24.0,23.0,9.0,8.0,8.0,8.0,80.0,Fund with Revisions,18.396003007888794,multi_examples_v1,3.0
+DANIEL,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:27:02.510961,22.0,22.0,8.0,7.0,7.0,7.0,73.0,Fund with Revisions,21.576522827148438,strict_scoring_v1,4.0
+DANIEL,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T08:54:54.549331,24.0,23.0,8.0,8.0,10.0,7.0,80.0,Fund,11.26625680923462,baseline_v1,1.0
+DANIEL,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:10:09.046684,29.0,27.0,9.0,9.0,9.0,6.0,89.0,Fund with Revisions,43.098541021347046,baseline_v1,1.0
+DANIEL,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:16:45.479511,28.0,22.0,8.0,9.0,9.0,7.0,83.0,Fund with Revisions,12.406990051269531,with_training_data_v1,2.0
+DANIEL,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:22:30.567693,28.0,24.0,9.0,10.0,10.0,7.0,88.0,Fund with Revisions,38.31091284751892,with_training_data_v1,2.0
+DANIEL,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:29:02.037664,25.0,20.0,8.0,7.0,8.0,6.0,74.0,Fund with Revisions,13.029905796051025,multi_examples_v1,3.0
+DANIEL,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:39:01.780684,26.0,18.0,8.0,7.0,9.0,6.0,74.0,Do Not Fund,33.64901518821716,multi_examples_v1,3.0
+DANIEL,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:46:55.996710,22.0,17.0,8.0,7.0,9.0,6.0,69.0,Do Not Fund,10.63064694404602,strict_scoring_v1,4.0
+DANIEL,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:56:57.021513,25.0,18.0,10.0,7.0,8.0,6.0,74.0,Do Not Fund,47.744354009628296,strict_scoring_v1,4.0
+DANIEL,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:10:45.258250,24.0,26.0,8.0,8.0,6.0,7.0,79.0,Fund with Revisions,17.1663978099823,baseline_v1,1.0
+DANIEL,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:15:56.502497,22.0,23.0,9.0,9.0,7.0,7.0,77.0,Fund with Revisions,24.54248881340027,with_training_data_v1,2.0
+DANIEL,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:21:27.395720,24.0,24.0,8.0,7.0,8.0,7.0,78.0,Fund with Revisions,22.80317187309265,multi_examples_v1,3.0
+DANIEL,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:27:18.625421,22.0,17.0,8.0,7.0,5.0,7.0,66.0,Fund with Revisions,14.096829891204834,strict_scoring_v1,4.0
+DANIEL,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T08:55:07.143319,28.0,24.0,9.0,9.0,10.0,7.0,87.0,Fund,10.57606816291809,baseline_v1,1.0
+DANIEL,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:10:50.152673,28.0,22.0,8.0,9.0,7.0,6.0,80.0,Fund with Revisions,39.08681297302246,baseline_v1,1.0
+DANIEL,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:16:57.562766,25.0,22.0,8.0,8.0,9.0,7.0,79.0,Do Not Fund,10.068419694900513,with_training_data_v1,2.0
+DANIEL,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:23:08.766354,27.0,22.0,9.0,9.0,10.0,7.0,84.0,Fund with Revisions,36.180757999420166,with_training_data_v1,2.0
+DANIEL,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:29:14.632523,25.0,22.0,8.0,8.0,9.0,6.0,78.0,Fund with Revisions,10.577197790145874,multi_examples_v1,3.0
+DANIEL,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:39:45.019466,25.0,18.0,9.0,7.0,8.0,5.0,72.0,Do Not Fund,41.21862602233887,multi_examples_v1,3.0
+DANIEL,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:47:11.060327,22.0,21.0,7.0,8.0,9.0,7.0,74.0,Do Not Fund,13.044317960739136,strict_scoring_v1,4.0
+DANIEL,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:57:43.147366,25.0,18.0,9.0,9.0,10.0,5.0,76.0,Do Not Fund,44.11146593093872,strict_scoring_v1,4.0
+DANIEL,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:11:06.305063,24.0,23.0,8.0,8.0,4.0,7.0,74.0,Fund with Revisions,19.02852201461792,baseline_v1,1.0
+DANIEL,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:16:22.815525,23.0,24.0,9.0,8.0,7.0,7.0,78.0,Fund with Revisions,24.29483914375305,with_training_data_v1,2.0
+DANIEL,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:21:51.228706,23.0,24.0,8.0,8.0,8.0,7.0,78.0,Fund with Revisions,21.819483041763306,multi_examples_v1,3.0
+DANIEL,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:27:39.085444,22.0,20.0,7.0,6.0,4.0,6.0,65.0,Fund with Revisions,18.443729877471924,strict_scoring_v1,4.0
+KELLY,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T08:55:17.085731,28.0,24.0,9.0,9.0,10.0,7.0,87.0,Fund,7.920195817947388,baseline_v1,1.0
+KELLY,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:11:32.006131,29.0,28.0,8.0,10.0,10.0,9.0,94.0,Fund,39.83552384376526,baseline_v1,1.0
+KELLY,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:17:08.012992,26.0,25.0,9.0,9.0,10.0,8.0,87.0,Fund,8.42936897277832,with_training_data_v1,2.0
+KELLY,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:23:40.329490,28.0,29.0,10.0,10.0,10.0,10.0,97.0,Fund,29.5415461063385,with_training_data_v1,2.0
+KELLY,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:29:25.035116,24.0,25.0,9.0,8.0,10.0,7.0,83.0,Fund,8.379981756210327,multi_examples_v1,3.0
+KELLY,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:40:16.953251,28.0,25.0,9.0,9.0,10.0,9.0,90.0,Fund,29.910326957702637,multi_examples_v1,3.0
+KELLY,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:47:25.910547,22.0,18.0,7.0,7.0,9.0,7.0,70.0,Fund with Revisions,12.828081130981445,strict_scoring_v1,4.0
+KELLY,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:58:30.337365,27.0,18.0,10.0,9.0,10.0,9.0,83.0,Do Not Fund,45.16740798950195,strict_scoring_v1,4.0
+KELLY,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:11:25.756686,23.0,22.0,9.0,9.0,8.0,7.0,78.0,Fund with Revisions,17.428521871566772,baseline_v1,1.0
+KELLY,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:16:48.020251,27.0,24.0,9.0,9.0,8.0,7.0,84.0,Fund with Revisions,23.183902978897095,with_training_data_v1,2.0
+KELLY,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:22:07.037589,23.0,22.0,9.0,8.0,8.0,7.0,77.0,Fund with Revisions,13.787796974182129,multi_examples_v1,3.0
+KELLY,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:27:58.641032,24.0,17.0,,8.0,6.0,7.0,62.0,Fund with Revisions,17.534977912902832,strict_scoring_v1,4.0
+KELLY,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T08:55:25.884286,28.0,24.0,9.0,9.0,10.0,7.0,87.0,Fund,6.7854132652282715,baseline_v1,1.0
+KELLY,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:12:06.846274,28.0,27.0,10.0,10.0,10.0,9.0,94.0,Fund,32.82171297073364,baseline_v1,1.0
+KELLY,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:17:19.580869,27.0,24.0,9.0,9.0,10.0,7.0,86.0,Fund,9.547237157821655,with_training_data_v1,2.0
+KELLY,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:24:20.337695,28.0,25.0,10.0,10.0,10.0,9.0,92.0,Fund,37.98813271522522,with_training_data_v1,2.0
+KELLY,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:29:35.005347,25.0,24.0,9.0,9.0,10.0,7.0,84.0,Fund with Revisions,7.952143907546997,multi_examples_v1,3.0
+KELLY,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:40:56.582651,28.0,24.0,10.0,9.0,10.0,9.0,90.0,Fund with Revisions,37.61064600944519,multi_examples_v1,3.0
+KELLY,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:47:37.701492,22.0,18.0,7.0,7.0,9.0,6.0,69.0,Fund with Revisions,9.772490978240967,strict_scoring_v1,4.0
+KELLY,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:59:17.222056,26.0,17.0,10.0,9.0,10.0,8.0,80.0,Do Not Fund,44.865906953811646,strict_scoring_v1,4.0
+KELLY,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:11:50.306792,26.0,18.0,9.0,9.0,6.0,7.0,75.0,Fund with Revisions,22.53019690513611,baseline_v1,1.0
+KELLY,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:17:31.538898,24.0,22.0,8.0,9.0,6.0,6.0,75.0,Fund with Revisions,41.499725103378296,with_training_data_v1,2.0
+KELLY,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:22:41.002070,24.0,22.0,9.0,8.0,8.0,7.0,78.0,Fund with Revisions,31.94680404663086,multi_examples_v1,3.0
+KELLY,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:28:39.546975,23.0,17.0,9.0,7.0,5.0,6.0,67.0,Fund with Revisions,38.756585121154785,strict_scoring_v1,4.0
+KELLY,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T08:55:34.588357,25.0,24.0,9.0,9.0,10.0,7.0,84.0,Fund with Revisions,6.687281131744385,baseline_v1,1.0
+KELLY,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:12:41.047735,26.0,24.0,8.0,9.0,10.0,7.0,84.0,Fund with Revisions,32.18082094192505,baseline_v1,1.0
+KELLY,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:17:31.170091,25.0,23.0,9.0,9.0,10.0,7.0,83.0,Fund,9.569710969924927,with_training_data_v1,2.0
+KELLY,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:24:51.574500,28.0,26.0,10.0,10.0,10.0,8.0,92.0,Fund,29.219369173049927,with_training_data_v1,2.0
+KELLY,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:29:44.687250,26.0,24.0,9.0,9.0,9.0,7.0,84.0,Fund with Revisions,7.663358926773071,multi_examples_v1,3.0
+KELLY,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:41:51.467243,28.0,22.0,7.0,9.0,10.0,6.0,82.0,Fund with Revisions,52.86577820777893,multi_examples_v1,3.0
+KELLY,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:47:49.771136,22.0,18.0,7.0,7.0,7.0,6.0,67.0,Fund with Revisions,10.048616886138916,strict_scoring_v1,4.0
+KELLY,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T10:00:11.447513,25.0,18.0,8.0,7.0,10.0,8.0,76.0,Do Not Fund,52.206799268722534,strict_scoring_v1,4.0
+KELLY,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:12:08.821111,23.0,18.0,9.0,9.0,9.0,7.0,75.0,Fund with Revisions,16.499085903167725,baseline_v1,1.0
+KELLY,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:17:59.901543,28.0,25.0,9.0,9.0,5.0,7.0,83.0,Fund with Revisions,26.342539072036743,with_training_data_v1,2.0
+KELLY,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:23:00.648790,23.0,18.0,9.0,8.0,6.0,6.0,70.0,Fund with Revisions,17.628208875656128,multi_examples_v1,3.0
+KELLY,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:29:01.817700,22.0,18.0,9.0,7.0,7.0,7.0,70.0,Fund with Revisions,20.249818801879883,strict_scoring_v1,4.0
+ROSIE,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T08:55:44.725094,28.0,25.0,9.0,9.0,10.0,8.0,89.0,Fund,8.114759922027588,baseline_v1,1.0
+ROSIE,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:13:14.020609,29.0,28.0,10.0,9.0,9.0,8.0,93.0,Fund,30.950196027755737,baseline_v1,1.0
+ROSIE,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:17:40.564361,28.0,25.0,9.0,9.0,10.0,8.0,89.0,Fund,7.372609615325928,with_training_data_v1,2.0
+ROSIE,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:25:20.749103,29.0,25.0,10.0,9.0,10.0,8.0,91.0,Fund,27.150216102600098,with_training_data_v1,2.0
+ROSIE,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:29:54.773376,26.0,24.0,9.0,8.0,6.0,7.0,80.0,Fund with Revisions,8.061766147613525,multi_examples_v1,3.0
+ROSIE,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T09:42:40.578186,28.0,18.0,10.0,9.0,3.0,6.0,74.0,Do Not Fund,47.089584827423096,multi_examples_v1,3.0
+ROSIE,xAI_grok-4-fast-reasoning_1,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,1.0,2025-10-07T09:48:02.363662,24.0,19.0,9.0,8.0,7.0,7.0,74.0,Fund with Revisions,10.569813966751099,strict_scoring_v1,4.0
+ROSIE,Google_gemini-2.5-flash_1,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,1.0,2025-10-07T10:01:01.419627,25.0,16.0,10.0,9.0,5.0,7.0,72.0,Do Not Fund,47.919142961502075,strict_scoring_v1,4.0
+ROSIE,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:12:29.146175,27.0,24.0,9.0,8.0,6.0,7.0,81.0,Fund with Revisions,18.308389902114868,baseline_v1,1.0
+ROSIE,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:18:26.211510,24.0,23.0,9.0,9.0,3.0,7.0,75.0,Fund with Revisions,24.286365747451782,with_training_data_v1,2.0
+ROSIE,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:23:37.327945,26.0,18.0,8.0,8.0,4.0,7.0,71.0,Fund with Revisions,34.664535999298096,multi_examples_v1,3.0
+ROSIE,OpenAI_gpt-5-nano_1,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,1.0,2025-10-07T10:29:20.648278,22.0,22.0,7.0,8.0,4.0,7.0,70.0,Fund with Revisions,16.80890703201294,strict_scoring_v1,4.0
+ROSIE,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T08:55:54.688428,28.0,26.0,9.0,9.0,10.0,8.0,90.0,Fund,7.948585033416748,baseline_v1,1.0
+ROSIE,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:13:40.542797,29.0,28.0,10.0,10.0,10.0,9.0,96.0,Fund,24.502882957458496,baseline_v1,1.0
+ROSIE,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:17:51.527139,28.0,25.0,9.0,9.0,10.0,8.0,89.0,Fund,8.948511838912964,with_training_data_v1,2.0
+ROSIE,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:26:01.099050,28.0,21.0,10.0,9.0,2.0,7.0,77.0,Do Not Fund,38.32849717140198,with_training_data_v1,2.0
+ROSIE,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:30:06.644454,28.0,25.0,9.0,9.0,10.0,8.0,89.0,Fund,9.853904962539673,multi_examples_v1,3.0
+ROSIE,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T09:43:20.453637,28.0,20.0,10.0,9.0,10.0,7.0,84.0,Fund with Revisions,37.855175256729126,multi_examples_v1,3.0
+ROSIE,xAI_grok-4-fast-reasoning_2,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,2.0,2025-10-07T09:48:12.913892,22.0,17.0,9.0,8.0,7.0,7.0,70.0,Fund with Revisions,8.530364036560059,strict_scoring_v1,4.0
+ROSIE,Google_gemini-2.5-flash_2,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,2.0,2025-10-07T10:01:49.137547,25.0,17.0,10.0,8.0,5.0,7.0,72.0,Do Not Fund,45.70011591911316,strict_scoring_v1,4.0
+ROSIE,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:12:45.630630,28.0,24.0,9.0,9.0,4.0,7.0,81.0,Fund with Revisions,14.464715003967285,baseline_v1,1.0
+ROSIE,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:19:02.771723,27.0,23.0,8.0,9.0,4.0,7.0,78.0,Fund with Revisions,34.542397022247314,with_training_data_v1,2.0
+ROSIE,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:23:58.108914,28.0,24.0,9.0,9.0,6.0,8.0,84.0,Fund with Revisions,18.763322114944458,multi_examples_v1,3.0
+ROSIE,OpenAI_gpt-5-nano_2,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,2.0,2025-10-07T10:29:42.438922,26.0,18.0,8.0,8.0,4.0,7.0,71.0,Fund with Revisions,19.772477865219116,strict_scoring_v1,4.0
+ROSIE,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T08:56:05.718600,28.0,26.0,9.0,9.0,9.0,8.0,89.0,Fund,9.012089014053345,baseline_v1,1.0
+ROSIE,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:14:16.895326,28.0,24.0,10.0,9.0,7.0,8.0,86.0,Fund with Revisions,34.331780195236206,baseline_v1,1.0
+ROSIE,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:18:02.485021,28.0,25.0,9.0,9.0,10.0,8.0,89.0,Fund,8.942496061325073,with_training_data_v1,2.0
+ROSIE,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:26:32.122656,28.0,24.0,10.0,9.0,8.0,8.0,87.0,Fund,29.0026912689209,with_training_data_v1,2.0
+ROSIE,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:30:24.284693,28.0,25.0,9.0,9.0,8.0,8.0,87.0,Fund,15.627038955688477,multi_examples_v1,3.0
+ROSIE,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T09:44:07.577093,27.0,18.0,10.0,9.0,4.0,6.0,74.0,Do Not Fund,45.10333299636841,multi_examples_v1,3.0
+ROSIE,xAI_grok-4-fast-reasoning_3,LLM,xAI,grok-4-fast-reasoning,grok-4-fast-reasoning,3.0,2025-10-07T09:48:30.863852,22.0,17.0,9.0,8.0,6.0,7.0,69.0,Fund with Revisions,15.931756734848022,strict_scoring_v1,4.0
+ROSIE,Google_gemini-2.5-flash_3,LLM,Google,gemini-2.5-flash,gemini-2.5-flash,3.0,2025-10-07T10:02:37.528298,27.0,19.0,10.0,9.0,9.0,7.0,81.0,Do Not Fund,46.3678719997406,strict_scoring_v1,4.0
+ROSIE,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:13:01.450943,25.0,23.0,9.0,9.0,6.0,7.0,79.0,Fund with Revisions,13.8016939163208,baseline_v1,1.0
+ROSIE,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:19:19.923804,24.0,22.0,8.0,8.0,5.0,7.0,74.0,Fund with Revisions,15.131378889083862,with_training_data_v1,2.0
+ROSIE,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:24:16.244017,24.0,22.0,9.0,9.0,6.0,7.0,77.0,Fund with Revisions,16.12132716178894,multi_examples_v1,3.0
+ROSIE,OpenAI_gpt-5-nano_3,LLM,OpenAI,gpt-5-nano,gpt-5-nano-2025-08-07,3.0,2025-10-07T10:30:01.558332,22.0,18.0,9.0,8.0,5.0,7.0,69.0,Fund with Revisions,17.104292154312134,strict_scoring_v1,4.0

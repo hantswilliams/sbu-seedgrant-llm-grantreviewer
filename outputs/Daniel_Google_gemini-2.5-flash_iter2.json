@@ -4,43 +4,43 @@
     "vendor": "Google",
     "model": "gemini-2.5-flash",
     "iteration": 2,
-    "timestamp": "2025-09-25T19:27:41.214612"
+    "timestamp": "2025-10-07T09:56:57.031263"
   },
   "review_data": {
     "scores": [
       {
         "Criterion": "Innovation and Impact",
-        "Score": 28,
-        "Rationale": "The proposal addresses a highly significant and under-researched area concerning Lyme disease differential diagnosis in physical therapy, a profession increasingly serving as a first point of contact for patients. Identifying gaps in both education and clinical practice has clear potential for meaningful change in patient care and public health outcomes."
+        "Score": 25,
+        "Rationale": "The proposal identifies a significant and novel gap in physical therapy education and practice regarding Lyme disease differential diagnosis. The problem is well-justified, and the potential for the study to inform curricular planning and improve patient outcomes is high. This study offers a foundational step to address a critical public health issue for the PT profession."
       },
       {
         "Criterion": "Methodological Approach and Feasibility",
-        "Score": 26,
-        "Rationale": "The methodological approach is sound, with clear aims, well-defined participant criteria, and robust plans for survey development, validation, and piloting. The timeline is realistic, and the recruitment strategies are appropriate, though reliance on a single conference for in-person data collection for both aims presents a minor, manageable risk."
+        "Score": 18,
+        "Rationale": "Significant methodological weaknesses undermine the rigor and feasibility. Crucially, the timeline for the project is completely absent. For Aim 2, the plan for developing and objectively scoring case scenarios for 'accuracy' is not adequately detailed, which is vital for the validity of diagnostic assessment. Potential for self-selection bias in Aim 2 recruitment and weak sample size justification further detract."
       },
       {
         "Criterion": "Strength of Research Team",
-        "Score": 9,
-        "Rationale": "The research team is well-balanced and highly appropriate for this project, combining the PI's coordination and PT expertise with a Co-I's medical content expertise in Lyme disease and another Co-I's strong background in survey design and PT education recruitment."
+        "Score": 10,
+        "Rationale": "The research team is exemplary, comprising a PI with relevant research experience, a Co-I with strong content expertise from a PA perspective, and another Co-I with specific experience in PT education and survey design. Their defined roles are complementary and well-suited to the proposed study, demonstrating a strong collective capacity to execute the project."
       },
       {
         "Criterion": "Potential to Attract External Funding",
-        "Score": 9,
-        "Rationale": "This study has strong potential to attract external funding, addressing a critical public health issue. The proposal clearly articulates how findings will lead to subsequent intervention studies and identifies a highly relevant specialized funding opportunity (ILADEF)."
+        "Score": 7,
+        "Rationale": "The proposal clearly outlines a pathway to future external funding by identifying ILADEF as a target funder for subsequent interventional studies. The public health relevance of Lyme disease also aligns with broader funding priorities. However, the current descriptive nature of the study provides preliminary data rather than direct readiness for highly competitive major grants."
       },
       {
         "Criterion": "Clarity and Efficiency of Budget",
-        "Score": 10,
-        "Rationale": "The requested budget of $5,000 is exceptionally clear, fully justified, and highly cost-effective. All expenses, including participant incentives, data collection equipment, travel, and research assistant support, directly align with the proposed aims and demonstrate efficient use of funds."
+        "Score": 8,
+        "Rationale": "The budget is clear, itemized, and appears cost-effective, with all requested funds directly supporting the proposed aims and activities. Participant compensation, equipment, and travel are well-justified. The use of generic 'Cost Item X' placeholders and a note about additional travel funds are minor presentation issues, but do not detract from the budget's overall clarity and efficiency."
       },
       {
         "Criterion": "Overall Presentation (Writing, Clarity, Flow)",
-        "Score": 7,
-        "Rationale": "While the writing is generally clear and professional, the proposal contains a significant formatting error with repeated sections (Background and Methods) immediately before the Biosketches. This repetition detracts from the overall organization and ease of comprehension, despite strong content within the sections."
+        "Score": 6,
+        "Rationale": "While the writing is generally clear and the project's logic is easy to follow, the overall presentation suffers from significant flaws. The project timeline is entirely missing, and several large sections of text (Background & Problem Statement, Specific Aims) are duplicated, indicating a lack of careful review before submission. These errors seriously detract from the professionalism and organization of the proposal."
       }
     ],
-    "overall_recommendation": "Fund with Revisions",
+    "overall_recommendation": "Do Not Fund",
     "parsed_successfully": true
   },
-  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 28,\n      \"Rationale\": \"The proposal addresses a highly significant and under-researched area concerning Lyme disease differential diagnosis in physical therapy, a profession increasingly serving as a first point of contact for patients. Identifying gaps in both education and clinical practice has clear potential for meaningful change in patient care and public health outcomes.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 26,\n      \"Rationale\": \"The methodological approach is sound, with clear aims, well-defined participant criteria, and robust plans for survey development, validation, and piloting. The timeline is realistic, and the recruitment strategies are appropriate, though reliance on a single conference for in-person data collection for both aims presents a minor, manageable risk.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 9,\n      \"Rationale\": \"The research team is well-balanced and highly appropriate for this project, combining the PI's coordination and PT expertise with a Co-I's medical content expertise in Lyme disease and another Co-I's strong background in survey design and PT education recruitment.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 9,\n      \"Rationale\": \"This study has strong potential to attract external funding, addressing a critical public health issue. The proposal clearly articulates how findings will lead to subsequent intervention studies and identifies a highly relevant specialized funding opportunity (ILADEF).\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 10,\n      \"Rationale\": \"The requested budget of $5,000 is exceptionally clear, fully justified, and highly cost-effective. All expenses, including participant incentives, data collection equipment, travel, and research assistant support, directly align with the proposed aims and demonstrate efficient use of funds.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 7,\n      \"Rationale\": \"While the writing is generally clear and professional, the proposal contains a significant formatting error with repeated sections (Background and Methods) immediately before the Biosketches. This repetition detracts from the overall organization and ease of comprehension, despite strong content within the sections.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Fund with Revisions\"\n}\n```"
+  "raw_response": "```json\n{\n  \"scores\": [\n    {\n      \"Criterion\": \"Innovation and Impact\",\n      \"Score\": 25,\n      \"Rationale\": \"The proposal identifies a significant and novel gap in physical therapy education and practice regarding Lyme disease differential diagnosis. The problem is well-justified, and the potential for the study to inform curricular planning and improve patient outcomes is high. This study offers a foundational step to address a critical public health issue for the PT profession.\"\n    },\n    {\n      \"Criterion\": \"Methodological Approach and Feasibility\",\n      \"Score\": 18,\n      \"Rationale\": \"Significant methodological weaknesses undermine the rigor and feasibility. Crucially, the timeline for the project is completely absent. For Aim 2, the plan for developing and objectively scoring case scenarios for 'accuracy' is not adequately detailed, which is vital for the validity of diagnostic assessment. Potential for self-selection bias in Aim 2 recruitment and weak sample size justification further detract.\"\n    },\n    {\n      \"Criterion\": \"Strength of Research Team\",\n      \"Score\": 10,\n      \"Rationale\": \"The research team is exemplary, comprising a PI with relevant research experience, a Co-I with strong content expertise from a PA perspective, and another Co-I with specific experience in PT education and survey design. Their defined roles are complementary and well-suited to the proposed study, demonstrating a strong collective capacity to execute the project.\"\n    },\n    {\n      \"Criterion\": \"Potential to Attract External Funding\",\n      \"Score\": 7,\n      \"Rationale\": \"The proposal clearly outlines a pathway to future external funding by identifying ILADEF as a target funder for subsequent interventional studies. The public health relevance of Lyme disease also aligns with broader funding priorities. However, the current descriptive nature of the study provides preliminary data rather than direct readiness for highly competitive major grants.\"\n    },\n    {\n      \"Criterion\": \"Clarity and Efficiency of Budget\",\n      \"Score\": 8,\n      \"Rationale\": \"The budget is clear, itemized, and appears cost-effective, with all requested funds directly supporting the proposed aims and activities. Participant compensation, equipment, and travel are well-justified. The use of generic 'Cost Item X' placeholders and a note about additional travel funds are minor presentation issues, but do not detract from the budget's overall clarity and efficiency.\"\n    },\n    {\n      \"Criterion\": \"Overall Presentation (Writing, Clarity, Flow)\",\n      \"Score\": 6,\n      \"Rationale\": \"While the writing is generally clear and the project's logic is easy to follow, the overall presentation suffers from significant flaws. The project timeline is entirely missing, and several large sections of text (Background & Problem Statement, Specific Aims) are duplicated, indicating a lack of careful review before submission. These errors seriously detract from the professionalism and organization of the proposal.\"\n    }\n  ],\n  \"OverallRecommendation\": \"Do Not Fund\"\n}\n```"
 }

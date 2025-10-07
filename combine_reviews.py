@@ -50,9 +50,9 @@ def load_llm_reviews(db_path):
     
     conn = sqlite3.connect(db_path)
     
-    # Get main review data
+    # Get main review data including experiment information
     reviews_query = """
-    SELECT 
+    SELECT
         id,
         applicant_name,
         vendor,
@@ -61,7 +61,9 @@ def load_llm_reviews(db_path):
         iteration,
         timestamp,
         overall_recommendation,
-        processing_time
+        processing_time,
+        prompt_experiment_name,
+        prompt_version
     FROM grant_reviews
     ORDER BY applicant_name, iteration
     """
@@ -140,7 +142,9 @@ def combine_reviews(human_df, llm_df):
             'presentation_quality': row['Overall Presentation (Writing, Clarity, Flow)'],
             'total_score': row['Total Score'],
             'overall_recommendation': row['Overall Recommendation'],
-            'processing_time': None
+            'processing_time': None,
+            'prompt_experiment_name': None,
+            'prompt_version': None
         }
         human_combined.append(record)
     
@@ -164,7 +168,9 @@ def combine_reviews(human_df, llm_df):
             'presentation_quality': row.get('Overall Presentation (Writing, Clarity, Flow)'),
             'total_score': row.get('Total Score'),
             'overall_recommendation': row['overall_recommendation'],
-            'processing_time': row['processing_time']
+            'processing_time': row['processing_time'],
+            'prompt_experiment_name': row.get('prompt_experiment_name'),
+            'prompt_version': row.get('prompt_version')
         }
         llm_combined.append(record)
     
@@ -190,7 +196,7 @@ def save_to_database(df, db_path):
     
     conn = sqlite3.connect(db_path)
     
-    # Create the combined reviews table
+    # Create the combined reviews table with experiment tracking
     create_table_sql = """
     CREATE TABLE IF NOT EXISTS combined_reviews (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -211,6 +217,8 @@ def save_to_database(df, db_path):
         total_score REAL,
         overall_recommendation TEXT,
         processing_time REAL,
+        prompt_experiment_name TEXT,
+        prompt_version TEXT,
         created_at TEXT DEFAULT CURRENT_TIMESTAMP
     )
     """

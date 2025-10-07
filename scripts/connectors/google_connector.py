@@ -37,10 +37,8 @@ class GoogleConnector(BaseLLMConnector):
         if model_name is None:
             model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-pro")
 
-        super().__init__(api_key, model_name, base_path)
-
-        # Set instructions - use provided or default
-        self.instructions = instructions or "You are an expert grant reviewer for the School of Health Professions Research Seed Grant program."
+        # Pass instructions to parent class
+        super().__init__(api_key, model_name, base_path, instructions)
 
         if self.api_key:
             self._initialize_client()
@@ -92,7 +90,7 @@ class GoogleConnector(BaseLLMConnector):
         start_time = time.time()
         try:
             # Combine instructions with prompt for Gemini (it doesn't have separate system messages)
-            full_prompt = f"{self.instructions}\n\n{prompt}"
+            full_prompt = f"{self.grant_review_instructions}\n\n{prompt}"
             response = self.client.generate_content(full_prompt)
             processing_time = time.time() - start_time
 
