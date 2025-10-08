@@ -13,9 +13,14 @@ from pathlib import Path
 def load_human_reviews(csv_path):
     """Load and process human reviews from CSV file."""
     print(f"Loading human reviews from {csv_path}")
-    
+
     df = pd.read_csv(csv_path)
-    
+
+    # EXCLUDE ROSIE - data cannot be used per request
+    print(f"Total records before filtering: {len(df)}")
+    df = df[df['Applicant'].str.upper() != 'ROSIE']
+    print(f"Records after excluding ROSIE: {len(df)}")
+
     # Rename columns for consistency
     column_mapping = {
         'Innovation and Impact (Why & What): Score between 0 to 30': 'Innovation and Impact',
@@ -47,10 +52,11 @@ def load_human_reviews(csv_path):
 def load_llm_reviews(db_path):
     """Load and process LLM reviews from SQLite database."""
     print(f"Loading LLM reviews from {db_path}")
-    
+
     conn = sqlite3.connect(db_path)
-    
+
     # Get main review data including experiment information
+    # EXCLUDE ROSIE - data cannot be used per request
     reviews_query = """
     SELECT
         id,
@@ -65,25 +71,30 @@ def load_llm_reviews(db_path):
         prompt_experiment_name,
         prompt_version
     FROM grant_reviews
+    WHERE UPPER(applicant_name) != 'ROSIE'
     ORDER BY applicant_name, iteration
     """
-    
+
     reviews_df = pd.read_sql_query(reviews_query, conn)
+    print(f"Loaded {len(reviews_df)} LLM reviews (ROSIE excluded)")
     
     # Get criteria scores
+    # EXCLUDE ROSIE - data cannot be used per request
     criteria_query = """
-    SELECT 
+    SELECT
         grant_review_id,
         applicant_name,
         criterion_name,
         score,
         rationale
     FROM grant_review_criteria
+    WHERE UPPER(applicant_name) != 'ROSIE'
     ORDER BY grant_review_id, criterion_name
     """
-    
+
     criteria_df = pd.read_sql_query(criteria_query, conn)
     conn.close()
+    print(f"Loaded {len(criteria_df)} criteria records (ROSIE excluded)")
     
     # Pivot criteria scores to create columns for each criterion
     criteria_pivot = criteria_df.pivot_table(

@@ -1,0 +1,174 @@
+{
+  "overall": {
+    "human_mean": 79.08333333333333,
+    "human_std": 13.324334084218949,
+    "human_n": 12,
+    "llm_mean": 79.55555555555556,
+    "llm_std": 7.141210313049357,
+    "llm_n": 108,
+    "difference": 0.47222222222222854,
+    "p_value": 0.8450718971988934,
+    "cohens_d": 0.04417588740943083,
+    "interpretation": "No significant difference"
+  },
+  "criteria": {
+    "innovation_impact": {
+      "human_mean": 25.416666666666668,
+      "llm_mean": 25.046296296296298,
+      "human_pct": 84.72222222222221,
+      "llm_pct": 83.48765432098766,
+      "difference": -0.37037037037037024,
+      "p_value": 0.5731682586709944
+    },
+    "methodological_approach": {
+      "human_mean": 21.666666666666668,
+      "llm_mean": 22.62962962962963,
+      "human_pct": 72.22222222222221,
+      "llm_pct": 75.4320987654321,
+      "difference": 0.9629629629629619,
+      "p_value": 0.40050119392724115
+    },
+    "research_team_strength": {
+      "human_mean": 8.583333333333334,
+      "llm_mean": 8.30841121495327,
+      "human_pct": 85.83333333333334,
+      "llm_pct": 83.0841121495327,
+      "difference": -0.2749221183800632,
+      "p_value": 0.39287600040134074
+    },
+    "external_funding_potential": {
+      "human_mean": 7.666666666666667,
+      "llm_mean": 8.351851851851851,
+      "human_pct": 76.66666666666667,
+      "llm_pct": 83.51851851851852,
+      "difference": 0.6851851851851842,
+      "p_value": 0.02213970939937721
+    },
+    "budget_clarity": {
+      "human_mean": 8.333333333333334,
+      "llm_mean": 8.074074074074074,
+      "human_pct": 83.33333333333334,
+      "llm_pct": 80.74074074074075,
+      "difference": -0.2592592592592595,
+      "p_value": 0.6177175494699554
+    },
+    "presentation_quality": {
+      "human_mean": 7.416666666666667,
+      "llm_mean": 7.222222222222222,
+      "human_pct": 74.16666666666667,
+      "llm_pct": 72.22222222222221,
+      "difference": -0.19444444444444464,
+      "p_value": 0.5607591598229468
+    }
+  },
+  "experiments": {
+    "results": {
+      "baseline_v1": {
+        "mean": 83.62962962962963,
+        "std": 5.745554456394614,
+        "n": 27,
+        "diff_from_human": 4.546296296296305,
+        "abs_diff_from_human": 4.546296296296305
+      },
+      "with_training_data_v1": {
+        "mean": 84.94444444444444,
+        "std": 6.187960057498967,
+        "n": 18,
+        "diff_from_human": 5.861111111111114,
+        "abs_diff_from_human": 5.861111111111114
+      },
+      "multi_examples_v1": {
+        "mean": 80.55555555555556,
+        "std": 5.360226314605649,
+        "n": 18,
+        "diff_from_human": 1.4722222222222285,
+        "abs_diff_from_human": 1.4722222222222285
+      },
+      "strict_scoring_v1": {
+        "mean": 72.44444444444444,
+        "std": 5.338233043446473,
+        "n": 18,
+        "diff_from_human": -6.638888888888886,
+        "abs_diff_from_human": 6.638888888888886
+      }
+    },
+    "best_experiment": "multi_examples_v1",
+    "best_value": {
+      "mean": 80.55555555555556,
+      "std": 5.360226314605649,
+      "n": 18,
+      "diff_from_human": 1.4722222222222285,
+      "abs_diff_from_human": 1.4722222222222285
+    }
+  },
+  "models": {
+    "results": {
+      "Google": {
+        "mean": 83.5,
+        "std": 7.412344915265152,
+        "n": 36,
+        "diff_from_human": 4.416666666666671
+      },
+      "OpenAI": {
+        "mean": 75.44444444444444,
+        "std": 4.976771440226481,
+        "n": 36,
+        "diff_from_human": -3.6388888888888857
+      },
+      "xAI": {
+        "mean": 79.72222222222223,
+        "std": 6.540472290116195,
+        "n": 36,
+        "diff_from_human": 0.6388888888888999
+      }
+    },
+    "ranked": [
+      [
+        "xAI",
+        {
+          "mean": 79.72222222222223,
+          "std": 6.540472290116195,
+          "n": 36,
+          "diff_from_human": 0.6388888888888999
+        }
+      ],
+      [
+        "OpenAI",
+        {
+          "mean": 75.44444444444444,
+          "std": 4.976771440226481,
+          "n": 36,
+          "diff_from_human": -3.6388888888888857
+        }
+      ],
+      [
+        "Google",
+        {
+          "mean": 83.5,
+          "std": 7.412344915265152,
+          "n": 36,
+          "diff_from_human": 4.416666666666671
+        }
+      ]
+    ]
+  },
+  "reliability": {
+    "avg_human_std": 11.36938036585579,
+    "avg_llm_std": 6.9357350029251945,
+    "pearson_r": 0.9026169006050828,
+    "spearman_r": 1.0
+  },
+  "recommendations": {
+    "human_recs": {
+      "Do Not Fund": 5,
+      "Fund": 4,
+      "Fund with Revisions": 3
+    },
+    "llm_recs": {
+      "Fund with Revisions": 66,
+      "Fund": 26,
+      "Do Not Fund": 16
+    },
+    "agreement_rate": 0.0
+  }
+}
