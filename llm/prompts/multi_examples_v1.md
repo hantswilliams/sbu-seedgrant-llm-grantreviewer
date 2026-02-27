@@ -49,7 +49,7 @@ You are an expert grant reviewer assessing a **School of Health Professions Rese
 
 To help calibrate your scoring, here are **all four human reviewer scores** for the same grant application (Applicant: DANIEL). This shows the natural variation in human scoring and demonstrates different perspectives on the same proposal:
 
-### Complete Human Review Panel for DANIEL
+### Complete Human Review Panel for PART_A
 
 | Reviewer | Innovation & Impact (0-30) | Method & Feasibility (0-30) | Team Strength (0-10) | External Funding (0-10) | Budget (0-10) | Presentation (0-10) | Total | Recommendation |
 |----------|---------------------------|----------------------------|---------------------|------------------------|--------------|-------------------|-------|----------------|

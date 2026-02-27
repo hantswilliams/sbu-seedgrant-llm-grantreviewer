@@ -1,0 +1,698 @@
+{
+  "baseline_v1": {
+    "overall": {
+      "human": {
+        "n": 12,
+        "mean": 79.08333333333333,
+        "std": 13.324334084218949,
+        "median": 78.5,
+        "min": 61.0,
+        "max": 99.0,
+        "q25": 65.75,
+        "q75": 90.25
+      },
+      "llm": {
+        "n": 27,
+        "mean": 83.62962962962963,
+        "std": 5.745554456394614,
+        "median": 84.0,
+        "min": 74.0,
+        "max": 94.0,
+        "q25": 79.5,
+        "q75": 87.0
+      },
+      "statistics": {
+        "difference": 4.546296296296305,
+        "t_statistic": -1.5033217015978453,
+        "p_value": 0.14124440601514096,
+        "cohens_d": 0.44309399009110384,
+        "significant": false
+      }
+    },
+    "criteria": {
+      "innovation_impact": {
+        "label": "Innovation & Impact",
+        "max_score": 30,
+        "human_mean": 25.416666666666668,
+        "human_pct": 84.72222222222221,
+        "llm_mean": 26.11111111111111,
+        "llm_pct": 87.03703703703704,
+        "difference": 0.6944444444444429,
+        "difference_pct": 2.3148148148148096,
+        "t_statistic": -0.9136449744287926,
+        "p_value": 0.366818972369378,
+        "significant": false
+      },
+      "methodological_approach": {
+        "label": "Methodology & Feasibility",
+        "max_score": 30,
+        "human_mean": 21.666666666666668,
+        "human_pct": 72.22222222222221,
+        "llm_mean": 24.48148148148148,
+        "llm_pct": 81.60493827160494,
+        "difference": 2.814814814814813,
+        "difference_pct": 9.38271604938271,
+        "t_statistic": -1.8476601178226868,
+        "p_value": 0.07265841413423632,
+        "significant": false
+      },
+      "research_team_strength": {
+        "label": "Team Strength",
+        "max_score": 10,
+        "human_mean": 8.583333333333334,
+        "human_pct": 85.83333333333334,
+        "llm_mean": 8.481481481481481,
+        "llm_pct": 84.81481481481481,
+        "difference": -0.10185185185185297,
+        "difference_pct": -1.0185185185185297,
+        "t_statistic": 0.2909945028427294,
+        "p_value": 0.772680556191625,
+        "significant": false
+      },
+      "external_funding_potential": {
+        "label": "External Funding Potential",
+        "max_score": 10,
+        "human_mean": 7.666666666666667,
+        "human_pct": 76.66666666666667,
+        "llm_mean": 8.777777777777779,
+        "llm_pct": 87.77777777777779,
+        "difference": 1.1111111111111116,
+        "difference_pct": 11.111111111111116,
+        "t_statistic": -3.1061196273654006,
+        "p_value": 0.0036294115798610467,
+        "significant": true
+      },
+      "budget_clarity": {
+        "label": "Budget Clarity",
+        "max_score": 10,
+        "human_mean": 8.333333333333334,
+        "human_pct": 83.33333333333334,
+        "llm_mean": 8.37037037037037,
+        "llm_pct": 83.7037037037037,
+        "difference": 0.03703703703703631,
+        "difference_pct": 0.37037037037036313,
+        "t_statistic": -0.06338102503688714,
+        "p_value": 0.9498042766946709,
+        "significant": false
+      },
+      "presentation_quality": {
+        "label": "Presentation Quality",
+        "max_score": 10,
+        "human_mean": 7.416666666666667,
+        "human_pct": 74.16666666666667,
+        "llm_mean": 7.407407407407407,
+        "llm_pct": 74.07407407407408,
+        "difference": -0.009259259259259522,
+        "difference_pct": -0.09259259259259522,
+        "t_statistic": 0.02408358621457701,
+        "p_value": 0.9809153571408018,
+        "significant": false
+      }
+    },
+    "models": {
+      "Google": {
+        "n": 9,
+        "mean": 88.44444444444444,
+        "std": 4.585605497399202,
+        "median": 89.0,
+        "diff_from_human": 9.361111111111114,
+        "abs_diff_from_human": 9.361111111111114
+      },
+      "OpenAI": {
+        "n": 9,
+        "mean": 77.33333333333333,
+        "std": 2.7386127875258306,
+        "median": 78.0,
+        "diff_from_human": -1.75,
+        "abs_diff_from_human": 1.75
+      },
+      "xAI": {
+        "n": 9,
+        "mean": 85.11111111111111,
+        "std": 2.3687784005919825,
+        "median": 86.0,
+        "diff_from_human": 6.027777777777786,
+        "abs_diff_from_human": 6.027777777777786
+      }
+    },
+    "recommendations": {
+      "human": {
+        "Do Not Fund": {
+          "count": 5,
+          "percentage": 41.66666666666667
+        },
+        "Fund": {
+          "count": 4,
+          "percentage": 33.33333333333333
+        },
+        "Fund with Revisions": {
+          "count": 3,
+          "percentage": 25.0
+        }
+      },
+      "llm": {
+        "Fund with Revisions": {
+          "count": 14,
+          "percentage": 51.85185185185185
+        },
+        "Fund": {
+          "count": 13,
+          "percentage": 48.148148148148145
+        }
+      },
+      "agreement_rate": 0.0
+    },
+    "consistency": {
+      "human_avg_std": 11.36938036585579,
+      "llm_avg_std": 5.78165790057686,
+      "pearson_r": 0.6638307438815498,
+      "pearson_p": 0.5378590481954371,
+      "spearman_r": 0.5,
+      "spearman_p": 0.6666666666666667
+    }
+  },
+  "with_training_data_v1": {
+    "overall": {
+      "human": {
+        "n": 11,
+        "mean": 79.27272727272727,
+        "std": 13.957728390328485,
+        "median": 80.0,
+        "min": 61.0,
+        "max": 99.0,
+        "q25": 65.5,
+        "q75": 90.5
+      },
+      "llm": {
+        "n": 27,
+        "mean": 83.33333333333333,
+        "std": 6.089082285281016,
+        "median": 83.0,
+        "min": 74.0,
+        "max": 97.0,
+        "q25": 78.5,
+        "q75": 87.0
+      },
+      "statistics": {
+        "difference": 4.060606060606062,
+        "t_statistic": -1.2621741814805332,
+        "p_value": 0.21500204588486865,
+        "cohens_d": 0.3771030680253761,
+        "significant": false
+      }
+    },
+    "criteria": {
+      "innovation_impact": {
+        "label": "Innovation & Impact",
+        "max_score": 30,
+        "human_mean": 25.454545454545453,
+        "human_pct": 84.84848484848484,
+        "llm_mean": 25.814814814814813,
+        "llm_pct": 86.04938271604937,
+        "difference": 0.36026936026935985,
+        "difference_pct": 1.2008978675645328,
+        "t_statistic": -0.45448779041937815,
+        "p_value": 0.6522064637217567,
+        "significant": false
+      },
+      "methodological_approach": {
+        "label": "Methodology & Feasibility",
+        "max_score": 30,
+        "human_mean": 21.818181818181817,
+        "human_pct": 72.72727272727272,
+        "llm_mean": 24.59259259259259,
+        "llm_pct": 81.9753086419753,
+        "difference": 2.774410774410775,
+        "difference_pct": 9.248035914702584,
+        "t_statistic": -1.8112796984213329,
+        "p_value": 0.07844805944037103,
+        "significant": false
+      },
+      "research_team_strength": {
+        "label": "Team Strength",
+        "max_score": 10,
+        "human_mean": 8.454545454545455,
+        "human_pct": 84.54545454545455,
+        "llm_mean": 8.518518518518519,
+        "llm_pct": 85.18518518518519,
+        "difference": 0.06397306397306401,
+        "difference_pct": 0.6397306397306401,
+        "t_statistic": -0.1557522394953496,
+        "p_value": 0.877098412546405,
+        "significant": false
+      },
+      "external_funding_potential": {
+        "label": "External Funding Potential",
+        "max_score": 10,
+        "human_mean": 7.7272727272727275,
+        "human_pct": 77.27272727272727,
+        "llm_mean": 8.777777777777779,
+        "llm_pct": 87.77777777777779,
+        "difference": 1.050505050505051,
+        "difference_pct": 10.50505050505051,
+        "t_statistic": -2.691956803156452,
+        "p_value": 0.01071031407344025,
+        "significant": true
+      },
+      "budget_clarity": {
+        "label": "Budget Clarity",
+        "max_score": 10,
+        "human_mean": 8.363636363636363,
+        "human_pct": 83.63636363636363,
+        "llm_mean": 8.074074074074074,
+        "llm_pct": 80.74074074074075,
+        "difference": -0.2895622895622889,
+        "difference_pct": -2.895622895622889,
+        "t_statistic": 0.44638415220988403,
+        "p_value": 0.6579934086747301,
+        "significant": false
+      },
+      "presentation_quality": {
+        "label": "Presentation Quality",
+        "max_score": 10,
+        "human_mean": 7.454545454545454,
+        "human_pct": 74.54545454545453,
+        "llm_mean": 7.555555555555555,
+        "llm_pct": 75.55555555555556,
+        "difference": 0.10101010101010122,
+        "difference_pct": 1.0101010101010122,
+        "t_statistic": -0.22365028953505706,
+        "p_value": 0.8242937750084425,
+        "significant": false
+      }
+    },
+    "models": {
+      "Google": {
+        "n": 9,
+        "mean": 88.77777777777777,
+        "std": 6.398784606817489,
+        "median": 91.0,
+        "diff_from_human": 9.505050505050505,
+        "abs_diff_from_human": 9.505050505050505
+      },
+      "OpenAI": {
+        "n": 9,
+        "mean": 78.33333333333333,
+        "std": 3.3166247903554,
+        "median": 78.0,
+        "diff_from_human": -0.9393939393939377,
+        "abs_diff_from_human": 0.9393939393939377
+      },
+      "xAI": {
+        "n": 9,
+        "mean": 82.88888888888889,
+        "std": 2.619372274250285,
+        "median": 83.0,
+        "diff_from_human": 3.6161616161616195,
+        "abs_diff_from_human": 3.6161616161616195
+      }
+    },
+    "recommendations": {
+      "human": {
+        "Do Not Fund": {
+          "count": 4,
+          "percentage": 36.36363636363637
+        },
+        "Fund": {
+          "count": 4,
+          "percentage": 36.36363636363637
+        },
+        "Fund with Revisions": {
+          "count": 3,
+          "percentage": 27.27272727272727
+        }
+      },
+      "llm": {
+        "Fund with Revisions": {
+          "count": 15,
+          "percentage": 55.55555555555556
+        },
+        "Fund": {
+          "count": 10,
+          "percentage": 37.03703703703704
+        },
+        "Do Not Fund": {
+          "count": 2,
+          "percentage": 7.4074074074074066
+        }
+      },
+      "agreement_rate": 33.33333333333333
+    },
+    "consistency": {
+      "human_avg_std": 11.658512169719495,
+      "llm_avg_std": 5.6406077965088945,
+      "pearson_r": 0.9927385061728462,
+      "pearson_p": 0.07676641506467634,
+      "spearman_r": 1.0,
+      "spearman_p": 0.0
+    }
+  },
+  "multi_examples_v1": {
+    "overall": {
+      "human": {
+        "n": 8,
+        "mean": 83.125,
+        "std": 13.726278238681973,
+        "median": 85.5,
+        "min": 64.0,
+        "max": 99.0,
+        "q25": 74.0,
+        "q75": 92.75
+      },
+      "llm": {
+        "n": 27,
+        "mean": 79.25925925925925,
+        "std": 4.950466897891805,
+        "median": 78.0,
+        "min": 70.0,
+        "max": 90.0,
+        "q25": 77.0,
+        "q75": 82.5
+      },
+      "statistics": {
+        "difference": -3.8657407407407476,
+        "t_statistic": 1.247358931360414,
+        "p_value": 0.22104584716979622,
+        "cohens_d": -0.3746637706453323,
+        "significant": false
+      }
+    },
+    "criteria": {
+      "innovation_impact": {
+        "label": "Innovation & Impact",
+        "max_score": 30,
+        "human_mean": 26.0,
+        "human_pct": 86.66666666666667,
+        "llm_mean": 24.962962962962962,
+        "llm_pct": 83.20987654320987,
+        "difference": -1.037037037037038,
+        "difference_pct": -3.456790123456794,
+        "t_statistic": 1.5029382986043605,
+        "p_value": 0.14236528584783859,
+        "significant": false
+      },
+      "methodological_approach": {
+        "label": "Methodology & Feasibility",
+        "max_score": 30,
+        "human_mean": 23.125,
+        "human_pct": 77.08333333333334,
+        "llm_mean": 22.444444444444443,
+        "llm_pct": 74.81481481481481,
+        "difference": -0.6805555555555571,
+        "difference_pct": -2.268518518518524,
+        "t_statistic": 0.40553740696631857,
+        "p_value": 0.6876999187357179,
+        "significant": false
+      },
+      "research_team_strength": {
+        "label": "Team Strength",
+        "max_score": 10,
+        "human_mean": 8.75,
+        "human_pct": 87.5,
+        "llm_mean": 8.407407407407407,
+        "llm_pct": 84.07407407407406,
+        "difference": -0.34259259259259345,
+        "difference_pct": -3.4259259259259345,
+        "t_statistic": 0.7542362887540217,
+        "p_value": 0.45605604358759455,
+        "significant": false
+      },
+      "external_funding_potential": {
+        "label": "External Funding Potential",
+        "max_score": 10,
+        "human_mean": 8.375,
+        "human_pct": 83.75,
+        "llm_mean": 8.185185185185185,
+        "llm_pct": 81.85185185185185,
+        "difference": -0.18981481481481488,
+        "difference_pct": -1.8981481481481488,
+        "t_statistic": 0.5317640776515624,
+        "p_value": 0.5984512973237217,
+        "significant": false
+      },
+      "budget_clarity": {
+        "label": "Budget Clarity",
+        "max_score": 10,
+        "human_mean": 8.875,
+        "human_pct": 88.75,
+        "llm_mean": 8.074074074074074,
+        "llm_pct": 80.74074074074075,
+        "difference": -0.8009259259259256,
+        "difference_pct": -8.009259259259256,
+        "t_statistic": 1.46673545981983,
+        "p_value": 0.15191387645863233,
+        "significant": false
+      },
+      "presentation_quality": {
+        "label": "Presentation Quality",
+        "max_score": 10,
+        "human_mean": 8.0,
+        "human_pct": 80.0,
+        "llm_mean": 7.185185185185185,
+        "llm_pct": 71.85185185185186,
+        "difference": -0.8148148148148149,
+        "difference_pct": -8.148148148148149,
+        "t_statistic": 1.6432448364626875,
+        "p_value": 0.10982814654132829,
+        "significant": false
+      }
+    },
+    "models": {
+      "Google": {
+        "n": 9,
+        "mean": 79.88888888888889,
+        "std": 6.772083217970015,
+        "median": 79.0,
+        "diff_from_human": -3.2361111111111143,
+        "abs_diff_from_human": 3.2361111111111143
+      },
+      "OpenAI": {
+        "n": 9,
+        "mean": 76.88888888888889,
+        "std": 3.0595932917809696,
+        "median": 78.0,
+        "diff_from_human": -6.236111111111114,
+        "abs_diff_from_human": 6.236111111111114
+      },
+      "xAI": {
+        "n": 9,
+        "mean": 81.0,
+        "std": 3.774917217635375,
+        "median": 83.0,
+        "diff_from_human": -2.125,
+        "abs_diff_from_human": 2.125
+      }
+    },
+    "recommendations": {
+      "human": {
+        "Fund": {
+          "count": 4,
+          "percentage": 50.0
+        },
+        "Do Not Fund": {
+          "count": 2,
+          "percentage": 25.0
+        },
+        "Fund with Revisions": {
+          "count": 2,
+          "percentage": 25.0
+        }
+      },
+      "llm": {
+        "Fund with Revisions": {
+          "count": 21,
+          "percentage": 77.77777777777779
+        },
+        "Do Not Fund": {
+          "count": 3,
+          "percentage": 11.11111111111111
+        },
+        "Fund": {
+          "count": 3,
+          "percentage": 11.11111111111111
+        }
+      },
+      "agreement_rate": 0.0
+    },
+    "consistency": {
+      "human_avg_std": 12.56333935368119,
+      "llm_avg_std": 4.350245344463148,
+      "pearson_r": 1.0,
+      "pearson_p": 1.0,
+      "spearman_r": 0.9999999999999999,
+      "spearman_p": null
+    }
+  },
+  "strict_scoring_v1": {
+    "overall": {
+      "human": {
+        "n": 11,
+        "mean": 79.27272727272727,
+        "std": 13.957728390328485,
+        "median": 80.0,
+        "min": 61.0,
+        "max": 99.0,
+        "q25": 65.5,
+        "q75": 90.5
+      },
+      "llm": {
+        "n": 27,
+        "mean": 72.0,
+        "std": 4.883252384031962,
+        "median": 73.0,
+        "min": 62.0,
+        "max": 83.0,
+        "q25": 69.0,
+        "q75": 75.0
+      },
+      "statistics": {
+        "difference": -7.272727272727266,
+        "t_statistic": 2.4072549869012345,
+        "p_value": 0.02132543618811169,
+        "cohens_d": -0.6955419397060636,
+        "significant": true
+      }
+    },
+    "criteria": {
+      "innovation_impact": {
+        "label": "Innovation & Impact",
+        "max_score": 30,
+        "human_mean": 25.454545454545453,
+        "human_pct": 84.84848484848484,
+        "llm_mean": 23.296296296296298,
+        "llm_pct": 77.65432098765433,
+        "difference": -2.1582491582491556,
+        "difference_pct": -7.1941638608305185,
+        "t_statistic": 3.0777889909440415,
+        "p_value": 0.003973865800060356,
+        "significant": true
+      },
+      "methodological_approach": {
+        "label": "Methodology & Feasibility",
+        "max_score": 30,
+        "human_mean": 21.818181818181817,
+        "human_pct": 72.72727272727272,
+        "llm_mean": 19.0,
+        "llm_pct": 63.33333333333333,
+        "difference": -2.8181818181818166,
+        "difference_pct": -9.39393939393939,
+        "t_statistic": 1.818654399314487,
+        "p_value": 0.07729138726286086,
+        "significant": false
+      },
+      "research_team_strength": {
+        "label": "Team Strength",
+        "max_score": 10,
+        "human_mean": 8.454545454545455,
+        "human_pct": 84.54545454545455,
+        "llm_mean": 7.8076923076923075,
+        "llm_pct": 78.07692307692308,
+        "difference": -0.6468531468531475,
+        "difference_pct": -6.468531468531475,
+        "t_statistic": 1.364873799274213,
+        "p_value": 0.18100324805189955,
+        "significant": false
+      },
+      "external_funding_potential": {
+        "label": "External Funding Potential",
+        "max_score": 10,
+        "human_mean": 7.7272727272727275,
+        "human_pct": 77.27272727272727,
+        "llm_mean": 7.666666666666667,
+        "llm_pct": 76.66666666666667,
+        "difference": -0.06060606060606055,
+        "difference_pct": -0.6060606060606055,
+        "t_statistic": 0.1435094619704818,
+        "p_value": 0.8866881443868259,
+        "significant": false
+      },
+      "budget_clarity": {
+        "label": "Budget Clarity",
+        "max_score": 10,
+        "human_mean": 8.363636363636363,
+        "human_pct": 83.63636363636363,
+        "llm_mean": 7.777777777777778,
+        "llm_pct": 77.77777777777779,
+        "difference": -0.5858585858585856,
+        "difference_pct": -5.858585858585856,
+        "t_statistic": 0.9490924778401024,
+        "p_value": 0.3489018174641071,
+        "significant": false
+      },
+      "presentation_quality": {
+        "label": "Presentation Quality",
+        "max_score": 10,
+        "human_mean": 7.454545454545454,
+        "human_pct": 74.54545454545453,
+        "llm_mean": 6.7407407407407405,
+        "llm_pct": 67.4074074074074,
+        "difference": -0.7138047138047137,
+        "difference_pct": -7.138047138047137,
+        "t_statistic": 1.7297879322734195,
+        "p_value": 0.09223475134791707,
+        "significant": false
+      }
+    },
+    "models": {
+      "Google": {
+        "n": 9,
+        "mean": 76.88888888888889,
+        "std": 3.1402406135694623,
+        "median": 76.0,
+        "diff_from_human": -2.3838383838383805,
+        "abs_diff_from_human": 2.3838383838383805
+      },
+      "OpenAI": {
+        "n": 9,
+        "mean": 69.22222222222223,
+        "std": 4.6037424389777115,
+        "median": 70.0,
+        "diff_from_human": -10.050505050505038,
+        "abs_diff_from_human": 10.050505050505038
+      },
+      "xAI": {
+        "n": 9,
+        "mean": 69.88888888888889,
+        "std": 2.4209731743889917,
+        "median": 69.0,
+        "diff_from_human": -9.38383838383838,
+        "abs_diff_from_human": 9.38383838383838
+      }
+    },
+    "recommendations": {
+      "human": {
+        "Do Not Fund": {
+          "count": 4,
+          "percentage": 36.36363636363637
+        },
+        "Fund": {
+          "count": 4,
+          "percentage": 36.36363636363637
+        },
+        "Fund with Revisions": {
+          "count": 3,
+          "percentage": 27.27272727272727
+        }
+      },
+      "llm": {
+        "Fund with Revisions": {
+          "count": 16,
+          "percentage": 59.25925925925925
+        },
+        "Do Not Fund": {
+          "count": 11,
+          "percentage": 40.74074074074074
+        }
+      },
+      "agreement_rate": 33.33333333333333
+    },
+    "consistency": {
+      "human_avg_std": 11.658512169719495,
+      "llm_avg_std": 4.774189616411789,
+      "pearson_r": 0.06948516413362726,
+      "pearson_p": 0.9557286967410012,
+      "spearman_r": 0.5,
+      "spearman_p": 0.6666666666666667
+    }
+  }
+}

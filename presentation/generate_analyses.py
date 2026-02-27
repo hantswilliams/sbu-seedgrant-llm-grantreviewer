@@ -372,6 +372,139 @@ def analyze_recommendation_agreement(df):
         'agreement_rate': agreement_rate
     }
 
+def analyze_experiment_detailed(df, experiment_name, experiment_label):
+    """Detailed analysis for a specific experiment"""
+    print("\n" + "="*80)
+    print(f"DETAILED ANALYSIS: {experiment_label}")
+    print("="*80)
+
+    # Filter data for this experiment
+    exp_df = filter_for_experiment(df, experiment_name)
+
+    # Overall performance
+    human_scores = exp_df[exp_df['reviewer_type'] == 'Human']['total_score'].dropna()
+    llm_scores = exp_df[exp_df['reviewer_type'] == 'LLM']['total_score'].dropna()
+
+    print(f"\n{'='*80}")
+    print(f"OVERALL SCORES - {experiment_label}")
+    print(f"{'='*80}")
+
+    if len(llm_scores) > 0:
+        human_mean = human_scores.mean()
+        human_std = human_scores.std()
+        llm_mean = llm_scores.mean()
+        llm_std = llm_scores.std()
+
+        print(f"\nHuman Reviewers (n={len(human_scores)}):")
+        print(f"  Mean ± SD: {human_mean:.2f} ± {human_std:.2f}")
+        print(f"\nLLM Reviewers (n={len(llm_scores)}):")
+        print(f"  Mean ± SD: {llm_mean:.2f} ± {llm_std:.2f}")
+        print(f"  Difference from Human: {llm_mean - human_mean:+.2f} points")
+
+        if len(llm_scores) > 1 and len(human_scores) > 1:
+            t_stat, p_value = stats.ttest_ind(human_scores, llm_scores)
+            cohens_d = (llm_mean - human_mean) / np.sqrt((human_std**2 + llm_std**2) / 2)
+            print(f"  t-test: t={t_stat:.3f}, p={p_value:.4f}")
+            print(f"  Cohen's d: {cohens_d:.3f}")
+
+    # Criteria breakdown
+    print(f"\n{'='*80}")
+    print(f"CRITERIA BREAKDOWN - {experiment_label}")
+    print(f"{'='*80}")
+
+    criteria_cols = [
+        'innovation_impact', 'methodological_approach', 'research_team_strength',
+        'external_funding_potential', 'budget_clarity', 'presentation_quality'
+    ]
+
+    criteria_labels = [
+        'Innovation & Impact',
+        'Methodology',
+        'Team Strength',
+        'External Funding',
+        'Budget Clarity',
+        'Presentation Quality'
+    ]
+
+    max_scores = [30, 30, 10, 10, 10, 10]
+
+    criteria_results = {}
+
+    for col, label, max_score in zip(criteria_cols, criteria_labels, max_scores):
+        human_criterion = exp_df[exp_df['reviewer_type'] == 'Human'][col].dropna()
+        llm_criterion = exp_df[exp_df['reviewer_type'] == 'LLM'][col].dropna()
+
+        if len(llm_criterion) > 0 and len(human_criterion) > 0:
+            human_mean = human_criterion.mean()
+            llm_mean = llm_criterion.mean()
+            diff = llm_mean - human_mean
+
+            print(f"\n{label} (max {max_score}):")
+            print(f"  Human: {human_mean:.2f} ({(human_mean/max_score)*100:.1f}%)")
+            print(f"  LLM:   {llm_mean:.2f} ({(llm_mean/max_score)*100:.1f}%)")
+            print(f"  Difference: {diff:+.2f} points")
+
+            criteria_results[col] = {
+                'human_mean': human_mean,
+                'llm_mean': llm_mean,
+                'difference': diff
+            }
+
+    # Model comparison within experiment
+    print(f"\n{'='*80}")
+    print(f"MODEL PERFORMANCE - {experiment_label}")
+    print(f"{'='*80}")
+
+    llm_exp_df = exp_df[exp_df['reviewer_type'] == 'LLM']
+    vendors = llm_exp_df['vendor'].dropna().unique()
+
+    model_results = {}
+
+    for vendor in sorted(vendors):
+        vendor_scores = llm_exp_df[llm_exp_df['vendor'] == vendor]['total_score'].dropna()
+        if len(vendor_scores) > 0:
+            vendor_mean = vendor_scores.mean()
+            vendor_std = vendor_scores.std()
+            print(f"\n{vendor} (n={len(vendor_scores)}):")
+            print(f"  Mean ± SD: {vendor_mean:.2f} ± {vendor_std:.2f}")
+            model_results[vendor] = {
+                'mean': vendor_mean,
+                'std': vendor_std,
+                'n': len(vendor_scores)
+            }
+
+    # Recommendation distribution
+    print(f"\n{'='*80}")
+    print(f"RECOMMENDATION DISTRIBUTION - {experiment_label}")
+    print(f"{'='*80}")
+
+    human_recs = exp_df[exp_df['reviewer_type'] == 'Human']['overall_recommendation'].value_counts()
+    llm_recs = exp_df[exp_df['reviewer_type'] == 'LLM']['overall_recommendation'].value_counts()
+
+    print("\nHuman Reviewers:")
+    for rec, count in human_recs.items():
+        pct = (count / len(exp_df[exp_df['reviewer_type'] == 'Human'])) * 100
+        print(f"  {rec}: {count} ({pct:.1f}%)")
+
+    print("\nLLM Reviewers:")
+    for rec, count in llm_recs.items():
+        pct = (count / len(exp_df[exp_df['reviewer_type'] == 'LLM'])) * 100
+        print(f"  {rec}: {count} ({pct:.1f}%)")
+
+    return {
+        'overall': {
+            'human_mean': human_mean if len(human_scores) > 0 else None,
+            'llm_mean': llm_mean if len(llm_scores) > 0 else None,
+            'difference': llm_mean - human_mean if len(llm_scores) > 0 and len(human_scores) > 0 else None
+        },
+        'criteria': criteria_results,
+        'models': model_results,
+        'recommendations': {
+            'human': human_recs.to_dict(),
+            'llm': llm_recs.to_dict()
+        }
+    }
+
 def generate_key_findings_summary(all_results):
     """Generate a summary of key findings for the presentation"""
     print("\n" + "="*80)
@@ -448,6 +581,26 @@ def main():
     # Generate summary
     generate_key_findings_summary(all_results)
 
+    # Run detailed per-experiment analyses
+    print("\n" + "="*80)
+    print("RUNNING PER-EXPERIMENT DETAILED ANALYSES")
+    print("="*80)
+
+    experiment_definitions = {
+        'baseline_v1': 'Experiment 1: Baseline (No Examples)',
+        'with_training_data_v1': 'Experiment 2: Single Training Example',
+        'multi_examples_v1': 'Experiment 3: Multiple Examples (4)',
+        'strict_scoring_v1': 'Experiment 4: Strict Scoring Instructions'
+    }
+
+    experiment_detailed_results = {}
+
+    for exp_name, exp_label in experiment_definitions.items():
+        exp_detailed = analyze_experiment_detailed(df, exp_name, exp_label)
+        experiment_detailed_results[exp_name] = exp_detailed
+
+    all_results['experiment_detailed'] = experiment_detailed_results
+
     # Save results to JSON
     # Convert to serializable format
     serializable_results = {}
@@ -463,6 +616,9 @@ def main():
                 'results': value['results'],
                 'ranked': [(name, data) for name, data in value['ranked']]
             }
+        elif key == 'experiment_detailed':
+            # Already in serializable format
+            serializable_results[key] = value
         else:
             serializable_results[key] = value
 

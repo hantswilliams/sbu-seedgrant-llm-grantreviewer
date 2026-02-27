@@ -53,7 +53,7 @@ To help calibrate your scoring, here is an example from an experienced human rev
 
 | Applicant | Innovation & Impact (0-30) | Method & Feasibility (0-30) | Team Strength (0-10) | External Funding (0-10) | Budget (0-10) | Presentation (0-10) | Total | Recommendation |
 |-----------|---------------------------|----------------------------|---------------------|------------------------|--------------|-------------------|-------|----------------|
-| DANIEL    | 25                        | 20                         | 10                  | 7                      | 8            | 7                 | 77    | Do Not Fund    |
+| PART_A    | 25                        | 20                         | 10                  | 7                      | 8            | 7                 | 77    | Do Not Fund    |
 
 ### Key Observation:
 This example demonstrates how even with solid scores across most criteria, a proposal may still receive "Do Not Fund" when it falls short of the competitive threshold. With scores in the "Adequate" ranges for innovation (25/30) and methodology (20/30), and respectable scores in other areas, the total of 77/100 reflects a competent but not compelling proposal that lacks the excellence needed for funding in a competitive environment.

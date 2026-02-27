@@ -7,3 +7,9 @@ venv/
 
 # dummy folder
 llm/toremove
+
+# excluded experiment prompt
+llm/prompts/with_training_data_v1.md
+
+# database backup
+data/results_full_backup.db

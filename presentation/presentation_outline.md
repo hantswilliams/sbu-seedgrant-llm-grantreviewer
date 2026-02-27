@@ -164,7 +164,33 @@ Can Large Language Models (LLMs) provide reliable grant reviews comparable to hu
 
 ---
 
-## Slide 9: Inter-Rater Reliability & Agreement
+## Slide 9: Funding Recommendation Frequencies
+
+**Recommendation Distribution:**
+
+**Human Reviewers (n=16):**
+- Fund: 37% (6 reviews)
+- Do Not Fund: 37% (6 reviews)
+- Fund with Revisions: 25% (4 reviews)
+
+**LLM Reviewers (n=144):**
+- Fund: 21% (30 reviews)
+- Do Not Fund: 21% (30 reviews)
+- Fund with Revisions: 58% (84 reviews)
+
+**Key Findings:**
+- **LLMs strongly prefer "Fund with Revisions"** (58% vs 25%)
+- Humans show more polarized decisions (Fund vs Do Not Fund)
+- **LLMs more optimistic about revision potential**
+- Different recommendation philosophies despite similar scoring
+
+**Key Visual:**
+
+![Recommendation Frequencies](./slide9_recommendation_frequencies.png)
+
+---
+
+## Slide 10: Inter-Rater Reliability & Agreement
 
 **Consistency Analysis:**
 
@@ -178,12 +204,7 @@ Can Large Language Models (LLMs) provide reliable grant reviews comparable to hu
 - Spearman correlation: ρ = 1.00 (p<0.001)
 - **Perfect rank-order agreement** on applicant scoring
 
-**BUT: Recommendation Agreement:**
-- **0% agreement on funding decisions**
-- LLMs prefer "Fund with Revisions" (58%) vs Human split (37% Fund, 37% Do Not Fund)
-- LLMs more optimistic about revision potential
-
-**Critical Finding:** Strong numerical agreement doesn't guarantee decision alignment
+**Critical Finding:** Strong numerical score agreement doesn't guarantee decision alignment
 
 **Key Visual:**
 
@@ -193,7 +214,7 @@ Can Large Language Models (LLMs) provide reliable grant reviews comparable to hu
 
 ---
 
-## Slide 10: Conclusions & Implications
+## Slide 11: Conclusions & Implications
 
 **Key Takeaways:**
 
@@ -234,7 +255,7 @@ Can Large Language Models (LLMs) provide reliable grant reviews comparable to hu
 
 ---
 
-## Slide 11: Future Directions & Acknowledgments
+## Slide 12: Future Directions & Acknowledgments
 
 **Next Steps for Research:**
 1. **Expand sample size** - Test across multiple grant programs and cycles

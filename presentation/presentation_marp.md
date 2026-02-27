@@ -209,6 +209,34 @@ IRB2025-00534 - Exempt, Non-Human Subjects Research (Stony Brook University)
 
 ---
 
+## Funding Recommendation Frequencies
+
+### Recommendation Distribution:
+
+**Human Reviewers (n=12):**
+- Fund: 33% (4 reviews)
+- Do Not Fund: 42% (5 reviews)
+- Fund with Revisions: 25% (3 reviews)
+
+**LLM Reviewers (n=108):**
+- Fund: 19% (20 reviews)
+- Do Not Fund: 20% (22 reviews)
+- Fund with Revisions: 61% (66 reviews)
+
+---
+
+## Funding Recommendations (continued)
+
+### Key Findings:
+- **LLMs strongly prefer "Fund with Revisions"** (61% vs 25%)
+- Humans show more polarized decisions (Fund vs Do Not Fund: 75% combined)
+- **LLMs more optimistic about revision potential**
+- Different recommendation philosophies despite similar scoring
+
+![w:900 center](./slide9_recommendation_frequencies.png)
+
+---
+
 ## Inter-Rater Reliability & Agreement
 
 ### Consistency Analysis:
@@ -221,15 +249,11 @@ IRB2025-00534 - Exempt, Non-Human Subjects Research (Stony Brook University)
 - Pearson correlation: r = 0.90 (p=0.283); Spearman correlation: ρ = 1.00 (p<0.001)
 - **Perfect rank-order agreement on applicant scoring**
 
-**Recommendation Agreement:**
-- LLMs prefer "Fund with Revisions" (61%) vs Human split (42% Do Not Fund, 33% Fund, 25% Revisions)
-- **LLMs more optimistic about revision potential**
-
 ---
 
 ## Inter-Rater Reliability (continued)
 
-**Critical Finding:** Strong numerical agreement doesn't guarantee decision alignment
+**Critical Finding:** Strong numerical score agreement doesn't guarantee decision alignment
 
 ![w:900 center](./slide9_agreement_analysis.png)
 

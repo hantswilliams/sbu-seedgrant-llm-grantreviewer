@@ -1,0 +1,4 @@
+Vendor,Mean ± SD,Diff from Human
+xAI (Grok),69.50 ± 2.35,-9.58
+Google (Gemini),78.00 ± 3.29,-1.08
+OpenAI (GPT),69.83 ± 5.00,-9.25

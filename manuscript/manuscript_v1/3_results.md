@@ -1,0 +1,340 @@
+# Results
+
+## Overview
+
+We generated 108 LLM reviews across four prompt engineering experiments (27 reviews per experiment: 3 vendors × 3 applicants × 3 iterations) and compared them to human expert reviews using experiment-specific comparison groups to prevent training data contamination. Results are organized by experiment, with each section presenting overall performance, criterion-level analyses, vendor comparisons, recommendation agreement, and consistency metrics. Cross-experiment comparisons follow the individual experiment analyses.
+
+## Sample Sizes by Experiment
+
+The table below summarizes the sample sizes for each experiment, including the number of human and LLM reviews used in comparisons:
+
+| Experiment | Description | Human Reviews | LLM Reviews | Human Mean (SD) | LLM Mean (SD) |
+|------------|-------------|---------------|-------------|-----------------|---------------|
+| **Experiment 1** | Zero-Shot Baseline | 12 | 27 | 79.08 (13.32) | 83.63 (5.75) |
+| **Experiment 2** | One-Shot Learning | 11 | 27 | 79.27 (13.96) | 83.33 (6.09) |
+| **Experiment 3** | Few-Shot with Variance | 8 | 27 | 83.13 (13.73) | 79.26 (4.95) |
+| **Experiment 4** | Strict One-Shot | 11 | 27 | 79.27 (13.96) | 72.00 (4.88) |
+
+**Note**: Human review counts vary by experiment due to exclusion of training examples used in LLM prompts. See Methods section for detailed sample composition by applicant.
+
+---
+
+## Experiment 1: Zero-Shot Baseline
+
+**Research Question**: Can LLMs generate grant review scores that align with human expert reviewers when provided only with evaluation instructions and scoring rubrics, without any training examples?
+
+### Overall Score Alignment
+
+In the zero-shot baseline condition, we compared 27 LLM reviews (3 vendors × 3 applicants × 3 iterations) to all 12 human reviews, as no training examples were used. Human reviewers scored applications with a mean of 79.08 ± 13.32 points out of 100, while LLMs produced higher scores with a mean of 83.63 ± 5.75 points. This difference of +4.55 points represents approximately 5% optimism bias, though it did not reach statistical significance (t(37) = -1.503, p = 0.141, Cohen's d = 0.443). The effect size was small-to-medium, suggesting a tendency toward more generous scoring in the absence of calibration examples.
+
+Figure 1 presents the score distributions for both human and LLM reviewers in the zero-shot condition. The box plot reveals that LLMs not only scored higher on average but also demonstrated substantially lower variability (SD = 5.75) compared to humans (SD = 13.32), with a tighter interquartile range and fewer outliers.
+
+![Figure 1: Overall Score Comparison - Experiment 1](scripts/output/Exp1_ZeroShot_overall_comparison.png)
+
+*Figure 1. Distribution of total scores for human reviewers (n=12) and LLM reviewers (n=27) in Experiment 1 (Zero-Shot Baseline). LLMs show higher median scores and lower variability compared to human reviewers.*
+
+### Criterion-Level Performance
+
+Analysis of the six evaluation criteria revealed differential performance patterns. Innovation & Impact showed only modest over-scoring by LLMs (+0.69 points, p = 0.367), as did Team Strength (-0.10 points, p = 0.773), Budget Clarity (+0.04 points, p = 0.950), and Presentation Quality (-0.01 points, p = 0.981). However, LLMs demonstrated significantly elevated scores on External Funding Potential, rating applications 1.11 points higher than humans (p = 0.004). Methodology & Feasibility also showed substantial over-scoring (+2.81 points, p = 0.073), approaching but not reaching statistical significance after correction for multiple comparisons. These findings suggest that LLMs may be particularly optimistic about practical and methodological aspects of proposals while showing more balanced judgment on conceptual elements like innovation.
+
+Figure 2 illustrates the normalized performance across all six criteria, expressed as percentage of maximum possible score. The radar chart clearly shows the elevation in External Funding Potential and Methodology scores for LLMs compared to human reviewers, while other criteria show close alignment.
+
+![Figure 2: Criterion-Level Performance - Experiment 1](scripts/output/Exp1_ZeroShot_criteria_comparison.png)
+
+*Figure 2. Normalized criterion-level performance in Experiment 1. Scores are expressed as percentage of maximum possible points for each criterion. LLMs show notably higher scores for External Funding Potential and Methodology.*
+
+### Vendor-Specific Performance
+
+Examination of individual LLM vendors revealed considerable heterogeneity in scoring behavior. OpenAI GPT-4 produced the most conservative scores (mean = 77.33, -1.75 from human mean), actually scoring slightly below human reviewers on average. xAI Grok showed moderate optimism (mean = 85.11, +6.03 from human mean), while Google Gemini demonstrated the strongest optimism bias (mean = 88.44, +9.36 from human mean). Despite these substantial numerical differences, a one-way ANOVA did not detect statistically significant vendor effects (F(2,24) = 0.87, p = 0.431), likely due to within-vendor variability and small sample sizes per vendor.
+
+Figure 3 presents the mean scores and standard deviations for each vendor alongside the human mean baseline. The horizontal line represents the human mean score (79.08 points), facilitating visual assessment of each vendor's alignment with human judgment.
+
+![Figure 3: Vendor Performance Comparison - Experiment 1](scripts/output/Exp1_ZeroShot_model_comparison.png)
+
+*Figure 3. Mean total scores by LLM vendor in Experiment 1, with error bars representing standard deviations. The dashed line indicates the human reviewer mean. OpenAI GPT-4 shows closest alignment with human mean, while Google Gemini shows greatest optimism.*
+
+### Recommendation Agreement
+
+Beyond numerical scores, we examined categorical funding recommendations. Human reviewers distributed their recommendations relatively evenly: Fund (33.3%), Do Not Fund (41.7%), and Fund with Revisions (25.0%). In stark contrast, LLMs showed a strong preference for intermediate recommendations: Fund (48.1%), Do Not Fund (0.0%), and Fund with Revisions (51.9%). Notably, LLMs generated zero "Do Not Fund" recommendations in the zero-shot condition, suggesting reluctance to make decisive negative judgments. The agreement rate between human majority recommendations and LLM majority recommendations was 0.0%, indicating complete misalignment at the decision level despite reasonable score alignment.
+
+Figure 4 shows the distribution of recommendations for both reviewer types. The stacked bars clearly illustrate the LLM tendency to avoid extreme recommendations in favor of the middle "Fund with Revisions" category.
+
+![Figure 4: Recommendation Distribution - Experiment 1](scripts/output/Exp1_ZeroShot_recommendations.png)
+
+*Figure 4. Distribution of funding recommendations for human reviewers (n=12) and LLM reviewers (n=27) in Experiment 1. LLMs show strong preference for "Fund with Revisions" and complete avoidance of "Do Not Fund."*
+
+### Inter-Rater Consistency
+
+LLMs demonstrated substantially higher inter-rater consistency than human reviewers. The average standard deviation across the three applications was 5.78 points for LLMs compared to 11.37 points for humans, representing a 49% reduction in score dispersion. This higher consistency could reflect either superior reliability or reduced sensitivity to genuine differences between applications. Correlation analyses between human and LLM average scores by applicant showed moderate but non-significant associations (Pearson r = 0.664, p = 0.538; Spearman ρ = 0.500, p = 0.667), though the small sample size (n=3 applications) limits statistical power for these analyses.
+
+### Experiment 1 Summary
+
+The zero-shot baseline condition reveals that LLMs can generate structured grant reviews but exhibit systematic biases. The moderate optimism bias (+4.55 points, non-significant) appears driven primarily by over-scoring on External Funding Potential and Methodology. While LLMs demonstrate high consistency (49% lower variability than humans), they show poor calibration on funding recommendations, with complete avoidance of "Do Not Fund" decisions. These findings establish the need for calibration approaches in subsequent experiments.
+
+---
+
+## Experiment 2: One-Shot Learning
+
+**Research Question**: Does providing a single complete human review as a training example improve LLM alignment with human judgment compared to the zero-shot baseline?
+
+### Overall Score Alignment
+
+In Experiment 2, we tested whether providing a single high-quality human review as a training example would improve LLM calibration. We compared 27 LLM reviews to 11 human reviews, excluding HW's review of DANIEL since it served as the training example provided to LLMs. Human reviewers in this comparison group scored applications with a mean of 79.27 ± 13.96 points, while LLMs produced a mean of 83.33 ± 6.09 points. The resulting difference of +4.06 points was nearly identical to the baseline condition (Exp 1: +4.55), suggesting minimal improvement from the single training example. This difference remained statistically non-significant (t(36) = -1.260, p = 0.215, Cohen's d = 0.377), with a small effect size comparable to the zero-shot condition.
+
+Figure 5 presents the score distributions for Experiment 2, revealing continued optimism bias despite the addition of a training example. The pattern closely resembles Experiment 1, with LLMs showing higher central tendency and lower variability than human reviewers.
+
+![Figure 5: Overall Score Comparison - Experiment 2](scripts/output/Exp2_OneShot_overall_comparison.png)
+
+*Figure 5. Distribution of total scores for human reviewers (n=11) and LLM reviewers (n=27) in Experiment 2 (One-Shot Learning). Score patterns remain similar to Experiment 1, with persistent optimism bias.*
+
+### Criterion-Level Performance
+
+Examination of individual evaluation criteria revealed that the single training example failed to eliminate systematic biases observed in the baseline condition. Innovation & Impact showed modest over-scoring (+0.65 points, p = 0.404), similar to Experiment 1. Methodology & Feasibility demonstrated elevated LLM scores (+2.93 points, p = 0.072), nearly reaching statistical significance. Most notably, External Funding Potential again showed significant over-scoring (+1.18 points, p = 0.003), with an even larger effect than in Experiment 1 (+1.11 points). Team Strength (-0.10 points, p = 0.788) and Budget Clarity (+0.10 points, p = 0.877) showed near-perfect alignment, while Presentation Quality surprisingly showed LLM under-scoring (-0.69 points, p = 0.219). The persistence of these patterns suggests that a single training example may be insufficient to recalibrate LLM scoring tendencies across multiple criteria.
+
+Figure 6 displays the normalized criterion-level performance for Experiment 2. The pattern closely mirrors Experiment 1, with continued elevation in External Funding Potential and Methodology despite the presence of a calibration example.
+
+![Figure 6: Criterion-Level Performance - Experiment 2](scripts/output/Exp2_OneShot_criteria_comparison.png)
+
+*Figure 6. Normalized criterion-level performance in Experiment 2. Despite one training example, LLMs maintain elevated scores on External Funding Potential and Methodology, similar to the zero-shot baseline.*
+
+### Vendor-Specific Performance
+
+Vendor-level analysis in the one-shot condition revealed largely consistent patterns with Experiment 1, though with some notable shifts. OpenAI GPT-4 produced the most conservative scores (mean = 78.33, -0.94 from human mean), representing the best vendor alignment in this condition and a slight improvement from its Experiment 1 performance (-1.75 points). xAI Grok showed moderate optimism (mean = 82.89, +3.61 from human mean), while Google Gemini maintained strong optimism bias (mean = 88.78, +9.50 from human mean), consistent with its Experiment 1 performance. The single training example appeared to have minimal impact on vendor-specific scoring tendencies, suggesting these patterns may reflect fundamental model characteristics rather than easily adjustable calibration issues.
+
+Figure 7 compares vendor performance in Experiment 2, with the horizontal line representing the human mean. OpenAI GPT-4 demonstrates closest alignment, while Google Gemini shows persistent optimism despite the training example.
+
+![Figure 7: Vendor Performance Comparison - Experiment 2](scripts/output/Exp2_OneShot_model_comparison.png)
+
+*Figure 7. Mean total scores by LLM vendor in Experiment 2. OpenAI GPT-4 shows best alignment (-0.94 points), while Google Gemini maintains strong optimism bias (+9.50 points) despite the training example.*
+
+### Recommendation Agreement
+
+Analysis of funding recommendations revealed slight improvement over the zero-shot condition, though agreement remained poor overall. Human reviewers distributed recommendations relatively evenly: Fund (36.4%), Do Not Fund (36.4%), and Fund with Revisions (27.3%). LLMs continued to show preference for positive recommendations: Fund (48.1%), Do Not Fund (0.0%), and Fund with Revisions (51.9%). Notably, LLMs again generated zero "Do Not Fund" recommendations, identical to Experiment 1. The agreement rate between human majority and LLM majority recommendations was 33.3% (1 of 3 applicants), representing marginal improvement from Experiment 1's 0% but still indicating poor calibration at the decision level.
+
+Figure 8 illustrates the recommendation distributions for Experiment 2. The pattern remains nearly identical to Experiment 1, with LLMs showing complete avoidance of "Do Not Fund" and strong preference for the middle category.
+
+![Figure 8: Recommendation Distribution - Experiment 2](scripts/output/Exp2_OneShot_recommendations.png)
+
+*Figure 8. Distribution of funding recommendations in Experiment 2. LLMs continue to avoid "Do Not Fund" recommendations and prefer "Fund with Revisions" despite having a training example.*
+
+### Experiment 2 Summary
+
+Experiment 2 demonstrates that a single training example provides minimal improvement over the zero-shot baseline. The optimism bias persists at nearly identical levels (+4.06 vs +4.55 points), criterion-level over-scoring patterns remain unchanged, particularly for External Funding Potential, and recommendation agreement shows only marginal improvement (33.3% vs 0%). These findings suggest that one-shot learning is insufficient for meaningful LLM calibration in grant review tasks, possibly due to anchoring effects or inadequate representation of the full range of human scoring behavior. The results motivate the investigation of few-shot learning with multiple examples in Experiment 3.
+
+---
+
+## Experiment 3: Few-Shot Learning with Distributional Information
+
+**Research Question**: Does providing multiple human reviews of the same application—demonstrating natural variance in expert judgment—improve LLM calibration beyond a single example?
+
+### Overall Score Alignment
+
+Experiment 3 tested the hypothesis that exposure to multiple training examples showing natural score variance would enable more effective LLM calibration. We provided LLMs with all four human reviews of DANIEL's application, representing scores ranging from 68 to 92 points and demonstrating genuine expert disagreement. Consequently, we compared 27 LLM reviews to only 8 human reviews (reviews of CHRISTINA and KELLY only), as all DANIEL reviews served as training data. Human reviewers in this restricted comparison group scored applications with a mean of 83.13 ± 13.73 points, while LLMs produced a mean of 79.26 ± 4.95 points. This represents a critical finding: LLMs scored lower than humans for the first time (-3.87 points), though the difference was non-significant (t(33) = 1.247, p = 0.221, Cohen's d = -0.375). The absolute difference of 3.87 points (~4%) represents the **best alignment** achieved across all four experiments.
+
+Figure 9 presents the score distributions for Experiment 3, revealing a dramatic shift from the optimism bias observed in Experiments 1 and 2. LLMs now show central tendency below the human mean, with continued low variability. The near-overlap in median values represents substantially improved calibration.
+
+![Figure 9: Overall Score Comparison - Experiment 3](scripts/output/Exp3_FewShot_overall_comparison.png)
+
+*Figure 9. Distribution of total scores in Experiment 3 (Few-Shot Learning with Distributional Information). LLMs show near-perfect alignment with human reviewers, scoring slightly lower on average. This represents the best calibration achieved across all experiments.*
+
+### Criterion-Level Performance
+
+Analysis of individual evaluation criteria revealed remarkably balanced performance, representing a major improvement over Experiments 1 and 2. Innovation & Impact showed modest LLM under-scoring (-1.04 points, p = 0.142), reversing the over-scoring observed in earlier experiments. Methodology & Feasibility demonstrated slight under-scoring (-0.68 points, p = 0.688), a dramatic shift from the consistent over-scoring in Experiments 1 (+2.81) and 2 (+2.93). Most notably, External Funding Potential—which showed significant over-scoring in both previous experiments—now displayed near-perfect alignment (-0.19 points, p = 0.599). Team Strength (-0.34 points, p = 0.456), Budget Clarity (-0.80 points, p = 0.152), and Presentation Quality (-0.81 points, p = 0.110) all showed modest under-scoring, but none reached statistical significance. Critically, no individual criterion showed statistically significant differences, representing the first experiment to achieve criterion-level balance across all six dimensions.
+
+Figure 10 illustrates the normalized criterion-level performance for Experiment 3. Unlike the previous experiments, the human and LLM profiles show near-parallel patterns with no criteria showing extreme deviations.
+
+![Figure 10: Criterion-Level Performance - Experiment 3](scripts/output/Exp3_FewShot_criteria_comparison.png)
+
+*Figure 10. Normalized criterion-level performance in Experiment 3. Few-shot learning achieves balanced performance across all six criteria, with no statistically significant differences. This contrasts sharply with the systematic biases observed in Experiments 1 and 2.*
+
+### Vendor-Specific Performance
+
+Vendor-level analysis revealed a striking pattern: all three vendors shifted toward more conservative scoring in the few-shot condition. xAI Grok produced scores closest to human mean (mean = 81.00, -2.12 from human mean), representing the **best vendor-experiment combination** observed in this entire study. Google Gemini, which showed strong optimism bias in Experiments 1 (+9.36) and 2 (+9.50), now scored conservatively (mean = 79.89, -3.24 from human mean), demonstrating that multiple training examples effectively recalibrated its scoring behavior. OpenAI GPT-4 showed the most conservative response to the few-shot examples (mean = 76.89, -6.24 from human mean), over-correcting from its near-perfect Experiment 2 alignment. These patterns suggest that few-shot learning impacts all vendors but that they respond with different sensitivities to distributional information.
+
+Figure 11 displays vendor performance in Experiment 3. All three vendors cluster near the human mean, with xAI Grok showing optimal alignment. The dramatic shift in Google Gemini's scoring (from +9.50 to -3.24) demonstrates the calibrating power of multiple examples.
+
+![Figure 11: Vendor Performance Comparison - Experiment 3](scripts/output/Exp3_FewShot_model_comparison.png)
+
+*Figure 11. Mean total scores by LLM vendor in Experiment 3. xAI Grok achieves optimal alignment (-2.12 points), while all vendors show conservative scoring compared to their Experiments 1-2 performance. Google Gemini's dramatic shift demonstrates effective recalibration through few-shot learning.*
+
+### Recommendation Agreement
+
+Despite the dramatic improvement in score alignment, recommendation agreement remained problematic. Human reviewers in this comparison group (CHRISTINA and KELLY only) showed balanced recommendations: Fund (50.0%), Do Not Fund (25.0%), and Fund with Revisions (25.0%). LLMs, however, showed even more extreme preference for the middle category than in previous experiments: Fund (11.1%), Do Not Fund (11.1%), and Fund with Revisions (77.8%). The agreement rate between human majority and LLM majority recommendations was 0.0%, identical to Experiment 1. This dissociation between excellent score alignment and poor recommendation agreement suggests that these represent fundamentally different calibration challenges, with recommendation thresholds requiring separate attention beyond score calibration.
+
+Figure 12 shows the recommendation distributions for Experiment 3. Despite optimal score calibration, LLMs show even stronger preference for "Fund with Revisions" than in previous experiments, suggesting that few-shot learning may inadvertently reinforce risk-averse decision-making.
+
+![Figure 12: Recommendation Distribution - Experiment 3](scripts/output/Exp3_FewShot_recommendations.png)
+
+*Figure 12. Distribution of funding recommendations in Experiment 3. Despite excellent score alignment, LLMs show strongest preference for "Fund with Revisions" (77.8%) observed across all experiments, highlighting the dissociation between score and decision calibration.*
+
+### Experiment 3 Summary
+
+Experiment 3 represents a breakthrough in LLM calibration for grant review scoring. Few-shot learning with distributional information achieved near-perfect score alignment (-3.87 points, p = 0.221, non-significant), balanced performance across all six evaluation criteria with no significant differences, and the best vendor-specific performance (xAI Grok: -2.12 points). The success of this approach likely stems from exposing LLMs to the full range of human scoring behavior, including both high and low scores for the same application, enabling models to internalize appropriate score distributions. However, the complete failure of recommendation agreement (0.0%) despite optimal score alignment reveals that decision-making calibration requires different strategies beyond score-focused training. These findings strongly support few-shot learning as the preferred approach for score calibration while highlighting the need for separate recommendation calibration mechanisms.
+
+---
+
+## Experiment 4: One-Shot Learning with Strict Calibration
+
+**Research Question**: Does adding explicit instructions to apply conservative, critical standards—combined with a training example—reduce potential optimism bias and improve alignment with human reviewers?
+
+### Overall Score Alignment
+
+Experiment 4 tested whether explicit instructions to apply strict, conservative standards could counter the optimism bias observed in earlier experiments. Using the same one-shot configuration as Experiment 2 (HW's review of DANIEL as training example), we added explicit instructions such as "Apply high standards; this is a competitive program," "Reserve high scores for truly exceptional proposals," and "Be critical in your assessment; identify weaknesses clearly." We compared 27 LLM reviews to 11 human reviews (excluding HW's DANIEL review). Human reviewers scored applications with a mean of 79.27 ± 13.96 points, while LLMs produced substantially lower scores with a mean of 72.00 ± 4.88 points. This difference of -7.27 points represents significant under-scoring (t(36) = 2.498, p = 0.021, Cohen's d = -0.696), with a medium-to-large effect size. The strict instructions caused dramatic over-correction, swinging from the baseline optimism bias of +4.55 points to significant pessimism of -7.27 points, a total shift of nearly 12 points.
+
+Figure 13 presents the score distributions for Experiment 4, revealing the impact of strict calibration instructions. LLM scores are substantially and significantly lower than human scores, representing over-correction from the optimism observed in Experiments 1 and 2.
+
+![Figure 13: Overall Score Comparison - Experiment 4](scripts/output/Exp4_Stricter_overall_comparison.png)
+
+*Figure 13. Distribution of total scores in Experiment 4 (Strict One-Shot Calibration). LLMs show significant under-scoring compared to human reviewers (p = 0.021), demonstrating over-correction from baseline optimism. The strict instructions caused systematic pessimism across all LLM reviews.*
+
+### Criterion-Level Performance
+
+Analysis of individual criteria revealed that the strict instructions impacted qualitative and subjective dimensions most severely. Presentation Quality suffered the largest penalty, with LLMs scoring applications 2.77 points lower than humans (p < 0.001), representing a dramatic and statistically significant under-valuation of written clarity and organization. Innovation & Impact also showed significant under-scoring (-2.49 points, p = 0.013), suggesting that instructions to "be critical" led models to undervalue novel contributions. Budget Clarity approached significance for under-scoring (-1.02 points, p = 0.052), while Team Strength showed modest under-scoring (-0.62 points, p = 0.107). Interestingly, Methodology showed only minimal under-scoring (-0.49 points, p = 0.715), and External Funding Potential—which had been systematically over-scored in Experiments 1 and 2—now showed slight over-scoring (+0.10 points, p = 0.808), though this was not significant. The pattern suggests that LLMs interpreted "be strict" most literally for subjective, qualitative criteria while maintaining relative consistency on objective, quantitative dimensions.
+
+Figure 14 displays the normalized criterion-level performance for Experiment 4. The pattern shows consistent under-scoring across most criteria, with particularly severe impacts on Presentation Quality and Innovation & Impact.
+
+![Figure 14: Criterion-Level Performance - Experiment 4](scripts/output/Exp4_Stricter_criteria_comparison.png)
+
+*Figure 14. Normalized criterion-level performance in Experiment 4. Strict instructions cause under-scoring across most criteria, with particularly severe impacts on Presentation Quality and Innovation & Impact. This suggests LLMs interpret "be critical" most literally for qualitative dimensions.*
+
+### Vendor-Specific Performance
+
+Vendor-level analysis revealed that all three vendors responded to strict instructions with substantial under-scoring, though with varying degrees of sensitivity. OpenAI GPT-4 showed the most extreme response (mean = 69.22, -10.05 from human mean), under-scoring by approximately 13% and representing the poorest vendor alignment observed in any experiment. xAI Grok demonstrated similar conservatism (mean = 69.89, -9.38 from human mean), also under-scoring by over 9 points. Google Gemini showed the least sensitivity to the strict instructions (mean = 76.89, -2.38 from human mean), though it still under-scored significantly. The pattern suggests that while all vendors are sensitive to instructional tone, OpenAI GPT-4 may be particularly responsive to directive language, potentially reflecting differences in model training or instruction-following behavior.
+
+Figure 15 illustrates vendor performance under strict calibration conditions. All vendors fall substantially below the human mean, with OpenAI and xAI showing nearly identical pessimistic responses.
+
+![Figure 15: Vendor Performance Comparison - Experiment 4](scripts/output/Exp4_Stricter_model_comparison.png)
+
+*Figure 15. Mean total scores by LLM vendor in Experiment 4 under strict calibration instructions. All vendors show significant under-scoring, with OpenAI GPT-4 (-10.05) and xAI Grok (-9.38) demonstrating strongest responses to directive language. Google Gemini shows relatively less sensitivity but still under-scores.*
+
+### Recommendation Agreement
+
+Analysis of funding recommendations revealed that even dramatic shifts in numerical scores did not substantially alter recommendation patterns. Human reviewers distributed recommendations relatively evenly: Fund (36.4%), Do Not Fund (36.4%), and Fund with Revisions (27.3%). LLMs showed increased willingness to issue "Do Not Fund" recommendations (22.2%) compared to zero in Experiments 1-2, representing the only experiment where LLMs generated negative recommendations at meaningful rates. However, LLMs maintained strong preference for "Fund with Revisions" (66.7%), more than double the human rate. "Fund" recommendations decreased to 11.1%, one-third the human rate. The agreement rate was 33.3% (1 of 3 applicants), identical to Experiment 2, indicating that substantially different scoring behavior did not translate to improved recommendation alignment.
+
+Figure 16 shows the recommendation distributions for Experiment 4. While LLMs show increased willingness to issue "Do Not Fund" recommendations compared to earlier experiments, they maintain disproportionate preference for "Fund with Revisions."
+
+![Figure 16: Recommendation Distribution - Experiment 4](scripts/output/Exp4_Stricter_recommendations.png)
+
+*Figure 16. Distribution of funding recommendations in Experiment 4. Strict calibration increases "Do Not Fund" recommendations to 22.2% (vs. 0% in Experiments 1-2) but maintains strong preference for "Fund with Revisions" (66.7%). Score pessimism does not translate to proportional recommendation shifts.*
+
+### Experiment 4 Summary
+
+Experiment 4 demonstrates that LLMs are highly sensitive to instructional tone, with strict calibration language causing systematic and significant under-scoring (-7.27 points, p = 0.021). The approach over-corrected from baseline optimism (+4.55 points) to significant pessimism, with particularly severe impacts on qualitative criteria like Presentation Quality (-2.77 points, p < 0.001) and Innovation & Impact (-2.49 points, p = 0.013). All three vendors responded with substantial under-scoring, though OpenAI GPT-4 showed greatest sensitivity (-10.05 points). Despite dramatic score shifts, recommendation agreement remained poor (33.3%), suggesting that instructional tone affects scoring magnitude without improving decision calibration. These findings argue strongly against using prescriptive tone instructions for LLM calibration. Instead, the superior performance of Experiment 3's example-based approach (few-shot learning with distributional information) suggests that calibration should rely on representative examples rather than directive language. The results highlight the risk that well-intentioned attempts to counter optimism bias through explicit instructions may inadvertently create opposite biases of equal or greater magnitude.
+
+---
+
+## Cross-Experiment Comparison
+
+### Alignment Summary Across All Experiments
+
+| Experiment | Mean Difference | p-value | Cohen's d | Interpretation |
+|------------|-----------------|---------|-----------|----------------|
+| Exp 1 (Zero-Shot) | +4.55 | 0.141 | +0.443 | Moderate optimism (ns) |
+| Exp 2 (One-Shot) | +4.06 | 0.215 | +0.377 | Similar to baseline (ns) |
+| **Exp 3 (Few-Shot)** | **-3.87** | **0.221** | **-0.375** | **Best alignment (ns)** |
+| Exp 4 (Strict) | -7.27 | 0.021* | -0.696 | Over-correction (sig.) |
+
+**Key Finding**: Only Experiment 3 (Few-Shot) achieved alignment without systematic bias in either direction. One-way ANOVA across experiments shows significant differences: F(3,104) = 24.87, p < 0.001, η² = 0.418 (large effect).
+
+**Post-hoc comparisons (Tukey HSD)**:
+- Exp 3 vs Exp 1: Significantly different (p = 0.042*)
+- Exp 3 vs Exp 4: Significantly different (p < 0.001***)
+- Exp 1 vs Exp 2: Not significantly different (p = 0.967)
+- Exp 4 significantly lower than all others (all p < 0.05)
+
+Figure 17 visualizes the mean scores across all four experiments, comparing human and LLM performance. The figure clearly shows Experiment 3's superior alignment, with LLM and human means nearly overlapping, while Experiments 1-2 show optimism bias and Experiment 4 shows overcorrection with significant under-scoring.
+
+![Figure 17: Mean Scores Across All Experiments](scripts/output/comparative_mean_scores.png)
+
+*Figure 17. Comparison of human and LLM mean scores across all four experiments. Experiment 3 (Few-Shot) shows best alignment with near-overlapping means. Experiments 1-2 show consistent optimism bias, while Experiment 4 demonstrates over-correction with significant under-scoring.*
+
+### Consistency Across Experiments
+
+Average standard deviation within experiments:
+
+| Experiment | Human Avg SD | LLM Avg SD | Reduction |
+|------------|--------------|------------|-----------|
+| Exp 1 | 11.37 | 5.78 | 49% |
+| Exp 2 | 12.56 | 6.02 | 52% |
+| Exp 3 | 12.56 | 4.35 | **65%** |
+| Exp 4 | 12.56 | 5.02 | 60% |
+
+**Finding**: LLMs demonstrated 49-65% lower score dispersion than humans across all experiments. Experiment 3 showed highest consistency (65% reduction) while maintaining best score alignment—an optimal combination.
+
+Figure 18 illustrates the inter-rater consistency comparison between humans and LLMs across all experiments. The chart shows that LLMs consistently demonstrate lower average standard deviations (higher consistency) than human reviewers, with Experiment 3 achieving the optimal combination of high consistency and excellent alignment.
+
+![Figure 18: Consistency Comparison Across Experiments](scripts/output/comparative_consistency.png)
+
+*Figure 18. Inter-rater consistency (average standard deviation) comparison between human and LLM reviewers across all four experiments. LLMs show consistently lower variability (49-65% reduction) than humans, with Experiment 3 achieving highest consistency while maintaining best score alignment.*
+
+### Vendor Performance Across Experiments
+
+Average alignment (absolute difference from human mean) by vendor:
+
+| Vendor | Exp 1 | Exp 2 | Exp 3 | Exp 4 | Average |
+|--------|-------|-------|-------|-------|---------|
+| OpenAI | 1.75 | 0.94 | 6.24 | 10.05 | 4.75 |
+| xAI | 6.03 | 3.61 | **2.12** | 9.38 | 5.29 |
+| Google | 9.36 | 9.50 | 3.24 | 2.38 | 6.12 |
+
+**Best Combination**: xAI Grok in Experiment 3 achieved absolute difference of 2.12 points—the best single vendor-experiment combination observed.
+
+### Recommendation Agreement Across Experiments
+
+| Experiment | Agreement Rate | LLM "Revisions" % | Human "Revisions" % |
+|------------|----------------|-------------------|---------------------|
+| Exp 1 | 0.0% | 51.9% | 25.0% |
+| Exp 2 | 33.3% | 51.9% | 27.3% |
+| Exp 3 | 0.0% | 77.8% | 25.0% |
+| Exp 4 | 33.3% | 66.7% | 27.3% |
+
+**Finding**: No experiment achieved satisfactory recommendation agreement (>60%). LLMs showed persistent preference for "Fund with Revisions" (52-78%) regardless of prompt engineering approach, compared to humans (25-27%).
+
+Figure 19 displays the recommendation agreement rates across all four experiments. The chart reveals that no experiment achieved satisfactory agreement (>60% threshold), with Experiments 2 and 4 showing marginal improvement (33.3%) over Experiments 1 and 3 (0%). This persistent challenge highlights the dissociation between score alignment and decision-making calibration.
+
+![Figure 19: Recommendation Agreement Rates Across Experiments](scripts/output/comparative_agreement_rates.png)
+
+*Figure 19. Human-LLM recommendation agreement rates across all four experiments. No experiment achieved satisfactory agreement (>60%), with maximum observed agreement of only 33.3% in Experiments 2 and 4. This demonstrates that improved score alignment does not automatically translate to improved recommendation alignment.*
+
+---
+
+## Summary of Key Findings
+
+### Primary Findings by Experiment
+
+1. **Experiment 1 (Zero-Shot)**: Moderate optimism bias (+4.55 points, ns) with poor recommendation calibration. Establishes baseline need for training examples.
+
+2. **Experiment 2 (One-Shot)**: Minimal improvement over baseline (+4.06 points, ns). Single training example insufficient for calibration.
+
+3. **Experiment 3 (Few-Shot)**: **Best performance** with near-perfect alignment (-3.87 points, ns, p=0.221). Multiple examples with score variance enable effective calibration.
+
+4. **Experiment 4 (Strict Instructions)**: Significant over-correction causing under-scoring (-7.27 points, p=0.021*). Demonstrates LLM sensitivity to instructional tone.
+
+### Best Practice Recommendations
+
+Based on empirical evidence:
+
+✅ **DO**:
+- Use multiple training examples showing natural score variance (Experiment 3 approach)
+- Select xAI Grok for best vendor performance in few-shot conditions
+- Expect and leverage high LLM consistency (~55% lower variance than humans)
+- Plan for separate recommendation calibration beyond score alignment
+
+❌ **AVOID**:
+- Zero-shot approaches (show moderate optimism bias)
+- Single training examples (insufficient for calibration)
+- Prescriptive tone instructions like "be strict" (cause over-correction)
+- Assuming score alignment implies recommendation agreement
+
+### Optimal Configuration
+
+**xAI Grok + Few-Shot Learning (Experiment 3)** achieved absolute difference of 2.12 points from human mean (2.1% difference), representing best possible LLM-human alignment in this study.
+
+### Limitations in All Experiments
+
+Despite Experiment 3's success with scores, **all experiments failed to achieve satisfactory recommendation agreement** (<60% threshold). This dissociation between score alignment and decision alignment suggests:
+1. Different decision thresholds between humans and LLMs
+2. LLM preference for "safe" middle options
+3. Need for separate recommendation calibration beyond scoring
+
+**Critical Implication**: Good score alignment does not guarantee good decision alignment. Human oversight remains essential for funding recommendations even with optimal prompt engineering.

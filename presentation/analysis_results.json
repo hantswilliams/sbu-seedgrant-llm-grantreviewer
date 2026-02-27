@@ -170,5 +170,276 @@
       "Do Not Fund": 16
     },
     "agreement_rate": 0.0
+  },
+  "experiment_detailed": {
+    "baseline_v1": {
+      "overall": {
+        "human_mean": 7.416666666666667,
+        "llm_mean": 7.407407407407407,
+        "difference": -0.009259259259259522
+      },
+      "criteria": {
+        "innovation_impact": {
+          "human_mean": 25.416666666666668,
+          "llm_mean": 26.11111111111111,
+          "difference": 0.6944444444444429
+        },
+        "methodological_approach": {
+          "human_mean": 21.666666666666668,
+          "llm_mean": 24.48148148148148,
+          "difference": 2.814814814814813
+        },
+        "research_team_strength": {
+          "human_mean": 8.583333333333334,
+          "llm_mean": 8.481481481481481,
+          "difference": -0.10185185185185297
+        },
+        "external_funding_potential": {
+          "human_mean": 7.666666666666667,
+          "llm_mean": 8.777777777777779,
+          "difference": 1.1111111111111116
+        },
+        "budget_clarity": {
+          "human_mean": 8.333333333333334,
+          "llm_mean": 8.37037037037037,
+          "difference": 0.03703703703703631
+        },
+        "presentation_quality": {
+          "human_mean": 7.416666666666667,
+          "llm_mean": 7.407407407407407,
+          "difference": -0.009259259259259522
+        }
+      },
+      "models": {
+        "Google": {
+          "mean": 88.44444444444444,
+          "std": 4.585605497399202,
+          "n": 9
+        },
+        "OpenAI": {
+          "mean": 77.33333333333333,
+          "std": 2.7386127875258306,
+          "n": 9
+        },
+        "xAI": {
+          "mean": 85.11111111111111,
+          "std": 2.3687784005919825,
+          "n": 9
+        }
+      },
+      "recommendations": {
+        "human": {
+          "Do Not Fund": 5,
+          "Fund": 4,
+          "Fund with Revisions": 3
+        },
+        "llm": {
+          "Fund with Revisions": 14,
+          "Fund": 13
+        }
+      }
+    },
+    "with_training_data_v1": {
+      "overall": {
+        "human_mean": 7.416666666666667,
+        "llm_mean": 7.944444444444445,
+        "difference": 0.5277777777777777
+      },
+      "criteria": {
+        "innovation_impact": {
+          "human_mean": 25.416666666666668,
+          "llm_mean": 25.944444444444443,
+          "difference": 0.527777777777775
+        },
+        "methodological_approach": {
+          "human_mean": 21.666666666666668,
+          "llm_mean": 25.444444444444443,
+          "difference": 3.777777777777775
+        },
+        "research_team_strength": {
+          "human_mean": 8.583333333333334,
+          "llm_mean": 8.666666666666666,
+          "difference": 0.08333333333333215
+        },
+        "external_funding_potential": {
+          "human_mean": 7.666666666666667,
+          "llm_mean": 8.944444444444445,
+          "difference": 1.2777777777777777
+        },
+        "budget_clarity": {
+          "human_mean": 8.333333333333334,
+          "llm_mean": 8.0,
+          "difference": -0.3333333333333339
+        },
+        "presentation_quality": {
+          "human_mean": 7.416666666666667,
+          "llm_mean": 7.944444444444445,
+          "difference": 0.5277777777777777
+        }
+      },
+      "models": {
+        "Google": {
+          "mean": 92.0,
+          "std": 3.22490309931942,
+          "n": 6
+        },
+        "OpenAI": {
+          "mean": 79.33333333333333,
+          "std": 3.5023801430836525,
+          "n": 6
+        },
+        "xAI": {
+          "mean": 83.5,
+          "std": 2.7386127875258306,
+          "n": 6
+        }
+      },
+      "recommendations": {
+        "human": {
+          "Do Not Fund": 5,
+          "Fund": 4,
+          "Fund with Revisions": 3
+        },
+        "llm": {
+          "Fund": 10,
+          "Fund with Revisions": 8
+        }
+      }
+    },
+    "multi_examples_v1": {
+      "overall": {
+        "human_mean": 7.416666666666667,
+        "llm_mean": 7.611111111111111,
+        "difference": 0.19444444444444375
+      },
+      "criteria": {
+        "innovation_impact": {
+          "human_mean": 25.416666666666668,
+          "llm_mean": 25.055555555555557,
+          "difference": -0.3611111111111107
+        },
+        "methodological_approach": {
+          "human_mean": 21.666666666666668,
+          "llm_mean": 23.166666666666668,
+          "difference": 1.5
+        },
+        "research_team_strength": {
+          "human_mean": 8.583333333333334,
+          "llm_mean": 8.38888888888889,
+          "difference": -0.19444444444444464
+        },
+        "external_funding_potential": {
+          "human_mean": 7.666666666666667,
+          "llm_mean": 8.444444444444445,
+          "difference": 0.7777777777777777
+        },
+        "budget_clarity": {
+          "human_mean": 8.333333333333334,
+          "llm_mean": 7.888888888888889,
+          "difference": -0.44444444444444464
+        },
+        "presentation_quality": {
+          "human_mean": 7.416666666666667,
+          "llm_mean": 7.611111111111111,
+          "difference": 0.19444444444444375
+        }
+      },
+      "models": {
+        "Google": {
+          "mean": 82.33333333333333,
+          "std": 6.831300510639733,
+          "n": 6
+        },
+        "OpenAI": {
+          "mean": 76.0,
+          "std": 3.40587727318528,
+          "n": 6
+        },
+        "xAI": {
+          "mean": 83.33333333333333,
+          "std": 1.2110601416389968,
+          "n": 6
+        }
+      },
+      "recommendations": {
+        "human": {
+          "Do Not Fund": 5,
+          "Fund": 4,
+          "Fund with Revisions": 3
+        },
+        "llm": {
+          "Fund with Revisions": 14,
+          "Fund": 3,
+          "Do Not Fund": 1
+        }
+      }
+    },
+    "strict_scoring_v1": {
+      "overall": {
+        "human_mean": 7.416666666666667,
+        "llm_mean": 7.055555555555555,
+        "difference": -0.3611111111111116
+      },
+      "criteria": {
+        "innovation_impact": {
+          "human_mean": 25.416666666666668,
+          "llm_mean": 23.38888888888889,
+          "difference": -2.0277777777777786
+        },
+        "methodological_approach": {
+          "human_mean": 21.666666666666668,
+          "llm_mean": 19.27777777777778,
+          "difference": -2.3888888888888893
+        },
+        "research_team_strength": {
+          "human_mean": 8.583333333333334,
+          "llm_mean": 7.647058823529412,
+          "difference": -0.9362745098039218
+        },
+        "external_funding_potential": {
+          "human_mean": 7.666666666666667,
+          "llm_mean": 7.777777777777778,
+          "difference": 0.11111111111111072
+        },
+        "budget_clarity": {
+          "human_mean": 8.333333333333334,
+          "llm_mean": 7.722222222222222,
+          "difference": -0.6111111111111116
+        },
+        "presentation_quality": {
+          "human_mean": 7.416666666666667,
+          "llm_mean": 7.055555555555555,
+          "difference": -0.3611111111111116
+        }
+      },
+      "models": {
+        "Google": {
+          "mean": 78.0,
+          "std": 3.286335345030997,
+          "n": 6
+        },
+        "OpenAI": {
+          "mean": 69.83333333333333,
+          "std": 4.9966655548141965,
+          "n": 6
+        },
+        "xAI": {
+          "mean": 69.5,
+          "std": 2.345207879911715,
+          "n": 6
+        }
+      },
+      "recommendations": {
+        "human": {
+          "Do Not Fund": 5,
+          "Fund": 4,
+          "Fund with Revisions": 3
+        },
+        "llm": {
+          "Fund with Revisions": 13,
+          "Do Not Fund": 5
+        }
+      }
+    }
   }
 }

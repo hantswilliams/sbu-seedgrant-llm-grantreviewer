@@ -1,0 +1,1 @@
+https://www.frontiersin.org/guidelines/author-guidelines 

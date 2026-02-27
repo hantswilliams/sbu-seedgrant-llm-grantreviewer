@@ -1,0 +1,57 @@
+{
+  "baseline_v1": {
+    "aggregated": {
+      "human_n": 12,
+      "llm_n_raw": 27,
+      "llm_n_aggregated": 9,
+      "human_mean": 79.08333333333333,
+      "human_std": 13.324334084218947,
+      "llm_mean_aggregated": 83.62962962962963,
+      "llm_std_aggregated": 5.237271459995083,
+      "llm_mean_raw": 83.62962962962963,
+      "llm_std_raw": 5.745554456394614,
+      "difference": 4.546296296296305,
+      "t_stat": -0.9642108002394081,
+      "p_value": 0.3470529823478633,
+      "glass_delta": 0.3412025147043438,
+      "cohens_d_pooled": 0.42517699814600873
+    },
+    "application_level": {
+      "CHRISTINA": {
+        "human_mean": 77.0,
+        "human_std": 16.020819787597222,
+        "human_n": 4,
+        "llm_mean": 84.55555555555556,
+        "llm_std": 5.101742621671322,
+        "llm_n": 9,
+        "diff": 7.555555555555557
+      },
+      "DANIEL": {
+        "human_mean": 71.0,
+        "human_std": 8.981462390204987,
+        "human_n": 4,
+        "llm_mean": 82.11111111111111,
+        "llm_std": 5.035981643246043,
+        "llm_n": 9,
+        "diff": 11.111111111111114
+      },
+      "KELLY": {
+        "human_mean": 89.25,
+        "human_std": 9.105858919765158,
+        "human_n": 4,
+        "llm_mean": 84.22222222222223,
+        "llm_std": 7.207249436813217,
+        "llm_n": 9,
+        "diff": -5.0277777777777715
+      }
+    },
+    "criteria_holm": {
+      "innovation_impact": {
+        "label": "Innovation & Impact",
+        "human_mean": 25.416666666666668,
+        "llm_mean": 26.11111111111111,
+        "difference": 0.6944444444444429,
+        "t_stat": -0.7079269612052845,
+        "p_value_uncorrected": 0.48758492119739005,
+        "p_value_holm": 1.0,
+        "significant_uncorrected": 
