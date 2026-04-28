@@ -29,6 +29,29 @@ This system uses Large Language Models (LLMs) to automatically review grant appl
 ## 🚀 Quick Start
 
 ### 1. Setup Environment
+
+**Option A: 1Password (recommended for team members)**
+
+Prerequisites:
+- [1Password CLI](https://developer.1password.com/docs/cli/get-started/) installed (`brew install --cask 1password-cli`)
+- 1Password desktop app unlocked (enables biometric auth for CLI)
+- Access to the "Developer Projects" vault
+
+```bash
+# Generate .env from 1Password
+./scripts/generate-env.sh
+
+# Print to stdout (for piping or inspection)
+./scripts/generate-env.sh --stdout
+
+# Diff current .env against 1Password (dry-run)
+./scripts/generate-env.sh --check
+```
+
+The script pulls all values from the `sbu-seedgrant-llm-grantreviewer-env` secure note in 1Password and writes `.env` with `chmod 600`.
+
+**Option B: Manual setup**
+
 ```bash
 # Copy the example configuration
 cp .env.example .env
