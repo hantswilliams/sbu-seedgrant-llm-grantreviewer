@@ -1,15 +1,24 @@
-# secret / env files
+# secrets
 .env
 
-# virtual environment
+# virtual environments
 venv/
 .venv/
 
-# dummy folder
-llm/toremove
+# python
+__pycache__/
+*.pyc
 
-# excluded experiment prompt
-llm/prompts/with_training_data_v1.md
+# raw study data and application documents are never committed (see README)
+data_private/
+llm/scenarios/
+outputs/
+*.db
 
-# database backup
-data/results_full_backup.db
+# large figure exports
+*.tiff
+
+# editor / OS
+.vscode/
+.DS_Store
+~$*

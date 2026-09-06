@@ -1,0 +1,554 @@
+{
+  "exp1_zero_shot": {
+    "label": "Exp 1: Zero-shot",
+    "overall": {
+      "human_n": 12,
+      "llm_n_raw": 27,
+      "llm_n_cells": 9,
+      "human_mean": 79.08333333333333,
+      "human_sd": 13.324334084218949,
+      "llm_mean": 83.62962962962963,
+      "llm_sd": 5.237271459995083,
+      "llm_mean_raw": 83.62962962962963,
+      "llm_sd_raw": 5.745554456394614,
+      "mean_difference": 4.546296296296305,
+      "diff_ci_low": -3.371296296296292,
+      "diff_ci_high": 12.222685185185185,
+      "diff_ci_bc": [
+        -3.4283324333146172,
+        12.138888888888886
+      ],
+      "t": 0.9642108002394081,
+      "p_value": 0.3470529823478632,
+      "glass_delta": 0.34120251470434376,
+      "glass_ci_low": -0.28063887569843915,
+      "glass_ci_high": 1.1607135529765156,
+      "glass_ci_bc": [
+        -0.3270310452453814,
+        1.08687090705494
+      ],
+      "mixed_model": {
+        "estimate": 4.546296296296265,
+        "ci_low": -9.22748315643966,
+        "ci_high": 18.320075749032192,
+        "p_value": 0.5176816722337434
+      }
+    },
+    "criteria": [
+      {
+        "criterion": "Innovation & Impact",
+        "human_mean": 25.416666666666668,
+        "llm_mean": 26.11111111111111,
+        "difference": 0.6944444444444429,
+        "p_uncorrected": 0.48758492119738983,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Methodology & Feasibility",
+        "human_mean": 21.666666666666668,
+        "llm_mean": 24.48148148148148,
+        "difference": 2.814814814814813,
+        "p_uncorrected": 0.26430423598501207,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Team Strength",
+        "human_mean": 8.583333333333334,
+        "llm_mean": 8.481481481481481,
+        "difference": -0.10185185185185297,
+        "p_uncorrected": 0.8535274660439215,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "External Funding Potential",
+        "human_mean": 7.666666666666667,
+        "llm_mean": 8.777777777777779,
+        "difference": 1.1111111111111116,
+        "p_uncorrected": 0.06369526690450315,
+        "p_holm": 0.3821716014270189
+      },
+      {
+        "criterion": "Budget Clarity",
+        "human_mean": 8.333333333333334,
+        "llm_mean": 8.37037037037037,
+        "difference": 0.03703703703703631,
+        "p_uncorrected": 0.9564994592291203,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Presentation Quality",
+        "human_mean": 7.416666666666667,
+        "llm_mean": 7.407407407407407,
+        "difference": -0.009259259259259522,
+        "p_uncorrected": 0.9871656424891524,
+        "p_holm": 1.0
+      }
+    ],
+    "agreement": {
+      "primary": {
+        "n_pairs": 36,
+        "exact_agreement": 0.3333333333333333,
+        "kappa_exact": 0.052631578947368474,
+        "broad_agreement": 0.5833333333333334,
+        "kappa_broad": 0.0
+      },
+      "sensitivity_raw_pairs": {
+        "n_pairs": 108,
+        "kappa_exact": 0.0608695652173914,
+        "kappa_broad": 0.0
+      },
+      "distribution": {
+        "llm": {
+          "Fund": 0.48148148148148145,
+          "Fund with Revisions": 0.5185185185185185,
+          "Do Not Fund": 0.0
+        },
+        "human": {
+          "Fund": 0.3333333333333333,
+          "Fund with Revisions": 0.25,
+          "Do Not Fund": 0.4166666666666667
+        }
+      }
+    },
+    "vendors": {
+      "Gemini 2.5 Flash": {
+        "mean": 88.44444444444444,
+        "deviation_from_human": 9.361111111111114
+      },
+      "GPT-5 Nano": {
+        "mean": 77.33333333333333,
+        "deviation_from_human": -1.75
+      },
+      "Grok 4 Fast": {
+        "mean": 85.11111111111111,
+        "deviation_from_human": 6.027777777777786
+      }
+    },
+    "dispersion": {
+      "human_within_app_sd_mean": 11.369380365855784,
+      "llm_within_app_sd_mean": 5.781657900576863,
+      "reduction": 0.49147115194244173
+    },
+    "application_means": {
+      "human": {
+        "FC1": 77.0,
+        "FC2": 89.25,
+        "FC3": 71.0
+      },
+      "llm": {
+        "FC1": 84.56,
+        "FC2": 84.22,
+        "FC3": 82.11
+      }
+    },
+    "vendor_cell_means": [
+      {
+        "vendor": "Google",
+        "application": "FC1",
+        "total_score": 89.66666666666667
+      },
+      {
+        "vendor": "Google",
+        "application": "FC2",
+        "total_score": 90.66666666666667
+      },
+      {
+        "vendor": "Google",
+        "application": "FC3",
+        "total_score": 85.0
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC1",
+        "total_score": 79.0
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC2",
+        "total_score": 76.0
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC3",
+        "total_score": 77.0
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC1",
+        "total_score": 85.0
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC2",
+        "total_score": 86.0
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC3",
+        "total_score": 84.33333333333333
+      }
+    ]
+  },
+  "exp2_few_shot": {
+    "label": "Exp 2: Few-shot",
+    "overall": {
+      "human_n": 8,
+      "llm_n_raw": 18,
+      "llm_n_cells": 6,
+      "human_mean": 83.125,
+      "human_sd": 13.726278238681973,
+      "llm_mean": 80.55555555555556,
+      "llm_sd": 4.8058606197325675,
+      "llm_mean_raw": 80.55555555555556,
+      "llm_sd_raw": 5.360226314605649,
+      "mean_difference": -2.569444444444443,
+      "diff_ci_low": -11.791666666666671,
+      "diff_ci_high": 7.180902777777774,
+      "diff_ci_bc": [
+        -11.736111111111114,
+        7.291666666666671
+      ],
+      "t": -0.4351689555570384,
+      "p_value": 0.6711635572402701,
+      "glass_delta": -0.18719163343225123,
+      "glass_ci_low": -1.427066281392037,
+      "glass_ci_high": 0.5803568419597802,
+      "glass_ci_bc": [
+        -1.3165332496392963,
+        0.656372428289694
+      ],
+      "mixed_model": {
+        "estimate": -2.569444444444469,
+        "ci_low": -17.041404451147557,
+        "ci_high": 11.90251556225862,
+        "p_value": 0.7278517823533792
+      }
+    },
+    "criteria": [
+      {
+        "criterion": "Innovation & Impact",
+        "human_mean": 26.0,
+        "llm_mean": 25.055555555555557,
+        "difference": -0.9444444444444429,
+        "p_uncorrected": 0.41180961009448874,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Methodology & Feasibility",
+        "human_mean": 23.125,
+        "llm_mean": 23.166666666666668,
+        "difference": 0.04166666666666785,
+        "p_uncorrected": 0.9901492787623124,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Team Strength",
+        "human_mean": 8.75,
+        "llm_mean": 8.38888888888889,
+        "difference": -0.3611111111111107,
+        "p_uncorrected": 0.6253992954185085,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "External Funding Potential",
+        "human_mean": 8.375,
+        "llm_mean": 8.444444444444445,
+        "difference": 0.06944444444444464,
+        "p_uncorrected": 0.9094014015880548,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Budget Clarity",
+        "human_mean": 8.875,
+        "llm_mean": 7.888888888888889,
+        "difference": -0.9861111111111107,
+        "p_uncorrected": 0.20154498038718036,
+        "p_holm": 1.0
+      },
+      {
+        "criterion": "Presentation Quality",
+        "human_mean": 8.0,
+        "llm_mean": 7.611111111111111,
+        "difference": -0.3888888888888893,
+        "p_uncorrected": 0.5684487674046229,
+        "p_holm": 1.0
+      }
+    ],
+    "agreement": {
+      "primary": {
+        "n_pairs": 24,
+        "exact_agreement": 0.25,
+        "kappa_exact": 0.0,
+        "broad_agreement": 0.75,
+        "kappa_broad": 0.0
+      },
+      "sensitivity_raw_pairs": {
+        "n_pairs": 72,
+        "kappa_exact": 0.019607843137254943,
+        "kappa_broad": 0.09999999999999998
+      },
+      "distribution": {
+        "llm": {
+          "Fund": 0.16666666666666666,
+          "Fund with Revisions": 0.7777777777777778,
+          "Do Not Fund": 0.05555555555555555
+        },
+        "human": {
+          "Fund": 0.5,
+          "Fund with Revisions": 0.25,
+          "Do Not Fund": 0.25
+        }
+      }
+    },
+    "vendors": {
+      "Gemini 2.5 Flash": {
+        "mean": 82.33333333333333,
+        "deviation_from_human": -0.7916666666666714
+      },
+      "GPT-5 Nano": {
+        "mean": 76.0,
+        "deviation_from_human": -7.125
+      },
+      "Grok 4 Fast": {
+        "mean": 83.33333333333333,
+        "deviation_from_human": 0.2083333333333286
+      }
+    },
+    "dispersion": {
+      "human_within_app_sd_mean": 12.563339353681187,
+      "llm_within_app_sd_mean": 5.179076814911095,
+      "reduction": 0.5877627222261116
+    },
+    "application_means": {
+      "human": {
+        "FC1": 77.0,
+        "FC2": 89.25
+      },
+      "llm": {
+        "FC1": 79.11,
+        "FC2": 82.0
+      }
+    },
+    "vendor_cell_means": [
+      {
+        "vendor": "Google",
+        "application": "FC1",
+        "total_score": 77.33333333333333
+      },
+      {
+        "vendor": "Google",
+        "application": "FC2",
+        "total_score": 87.33333333333333
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC1",
+        "total_score": 77.0
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC2",
+        "total_score": 75.0
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC1",
+        "total_score": 83.0
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC2",
+        "total_score": 83.66666666666667
+      }
+    ]
+  },
+  "exp3_few_shot_strict": {
+    "label": "Exp 3: Few-shot + strict",
+    "overall": {
+      "human_n": 8,
+      "llm_n_raw": 18,
+      "llm_n_cells": 6,
+      "human_mean": 83.125,
+      "human_sd": 13.726278238681973,
+      "llm_mean": 72.44444444444444,
+      "llm_sd": 4.982933837572966,
+      "llm_mean_raw": 72.44444444444444,
+      "llm_sd_raw": 5.338233043446473,
+      "mean_difference": -10.680555555555557,
+      "diff_ci_low": -20.000347222222235,
+      "diff_ci_high": -0.8746527777777833,
+      "diff_ci_bc": [
+        -19.550294079731753,
+        -0.3888888888888876
+      ],
+      "t": -1.8034512962464888,
+      "p_value": 0.09646381182234667,
+      "glass_delta": -0.7781100870778449,
+      "glass_ci_low": -2.5640760109666756,
+      "glass_ci_high": -0.06383100983107971,
+      "glass_ci_bc": [
+        -2.30082041348412,
+        0.004244254738590484
+      ],
+      "mixed_model": {
+        "estimate": -10.680555555555511,
+        "ci_low": -25.378670993604043,
+        "ci_high": 4.017559882493021,
+        "p_value": 0.15437976005419216
+      }
+    },
+    "criteria": [
+      {
+        "criterion": "Innovation & Impact",
+        "human_mean": 26.0,
+        "llm_mean": 23.38888888888889,
+        "difference": -2.6111111111111107,
+        "p_uncorrected": 0.03096006700038802,
+        "p_holm": 0.18576040200232813
+      },
+      {
+        "criterion": "Methodology & Feasibility",
+        "human_mean": 23.125,
+        "llm_mean": 19.27777777777778,
+        "difference": -3.8472222222222214,
+        "p_uncorrected": 0.27411145738901427,
+        "p_holm": 0.7391497434379108
+      },
+      {
+        "criterion": "Team Strength",
+        "human_mean": 8.75,
+        "llm_mean": 7.647058823529412,
+        "difference": -1.1029411764705879,
+        "p_uncorrected": 0.20940685751102414,
+        "p_holm": 0.7391497434379108
+      },
+      {
+        "criterion": "External Funding Potential",
+        "human_mean": 8.375,
+        "llm_mean": 7.777777777777778,
+        "difference": -0.5972222222222223,
+        "p_uncorrected": 0.37297160597520235,
+        "p_holm": 0.7391497434379108
+      },
+      {
+        "criterion": "Budget Clarity",
+        "human_mean": 8.875,
+        "llm_mean": 7.722222222222222,
+        "difference": -1.1527777777777777,
+        "p_uncorrected": 0.13603646189905963,
+        "p_holm": 0.6801823094952981
+      },
+      {
+        "criterion": "Presentation Quality",
+        "human_mean": 8.0,
+        "llm_mean": 7.055555555555555,
+        "difference": -0.9444444444444446,
+        "p_uncorrected": 0.1847874358594777,
+        "p_holm": 0.7391497434379108
+      }
+    ],
+    "agreement": {
+      "primary": {
+        "n_pairs": 24,
+        "exact_agreement": 0.16666666666666666,
+        "kappa_exact": -0.11111111111111116,
+        "broad_agreement": 0.5833333333333334,
+        "kappa_broad": -0.25
+      },
+      "sensitivity_raw_pairs": {
+        "n_pairs": 72,
+        "kappa_exact": -0.03703703703703698,
+        "kappa_broad": -0.0714285714285714
+      },
+      "distribution": {
+        "llm": {
+          "Fund": 0.0,
+          "Fund with Revisions": 0.7222222222222222,
+          "Do Not Fund": 0.2777777777777778
+        },
+        "human": {
+          "Fund": 0.5,
+          "Fund with Revisions": 0.25,
+          "Do Not Fund": 0.25
+        }
+      }
+    },
+    "vendors": {
+      "Gemini 2.5 Flash": {
+        "mean": 78.0,
+        "deviation_from_human": -5.125
+      },
+      "GPT-5 Nano": {
+        "mean": 69.83333333333333,
+        "deviation_from_human": -13.291666666666671
+      },
+      "Grok 4 Fast": {
+        "mean": 69.5,
+        "deviation_from_human": -13.625
+      }
+    },
+    "dispersion": {
+      "human_within_app_sd_mean": 12.563339353681187,
+      "llm_within_app_sd_mean": 5.185739492762734,
+      "reduction": 0.5872323952434462
+    },
+    "application_means": {
+      "human": {
+        "FC1": 77.0,
+        "FC2": 89.25
+      },
+      "llm": {
+        "FC1": 73.33,
+        "FC2": 71.56
+      }
+    },
+    "vendor_cell_means": [
+      {
+        "vendor": "Google",
+        "application": "FC1",
+        "total_score": 76.33333333333333
+      },
+      {
+        "vendor": "Google",
+        "application": "FC2",
+        "total_score": 79.66666666666667
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC1",
+        "total_score": 73.33333333333333
+      },
+      {
+        "vendor": "OpenAI",
+        "application": "FC2",
+        "total_score": 66.33333333333333
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC1",
+        "total_score": 70.33333333333333
+      },
+      {
+        "vendor": "xAI",
+        "application": "FC2",
+        "total_score": 68.66666666666667
+      }
+    ]
+  },
+  "anova_fc1_fc2": {
+    "F": 8.178589204108413,
+    "df_between": 2,
+    "df_within": 15,
+    "p_value": 0.003964214227214968,
+    "eta_squared": 0.5216406334547823,
+    "group_sizes": [
+      6,
+      6,
+      6
+    ]
+  },
+  "settings": {
+    "seed": 20251007,
+    "n_boot": 10000
+  }
+}

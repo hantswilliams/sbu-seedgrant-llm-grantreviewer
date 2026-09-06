@@ -1,13 +1,16 @@
+# analysis (analysis/reproduce_results.py, analysis/make_figures.py)
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.2
+statsmodels>=0.14
+matplotlib>=3.7
+
+# review-generation pipeline (scripts/grant_review_processor.py)
 python-dotenv
-pandas
-flask
-flask_sqlalchemy
-psycopg2-binary
-sqlalchemy
 openai
-anthropic
-supabase
 google-generativeai
 anthropic
-markitdown[pdf, docx, doc, pptx, xlsx]
 requests
+sqlalchemy
+markitdown[pdf,docx,doc,pptx,xlsx]
