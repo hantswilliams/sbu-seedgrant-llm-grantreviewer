@@ -1,0 +1,13 @@
+application,reviewer,innovation_impact,methodological_approach,research_team_strength,external_funding_potential,budget_clarity,presentation_quality,total_score,recommendation
+FC1,R1,25,14,6,6,8,6,65,Do Not Fund
+FC1,R2,28,30,10,10,10,10,98,Fund
+FC1,R3,25,25,8,8,8,7,81,Do Not Fund
+FC1,R4,25,8,9,8,7,7,64,Fund
+FC2,R1,27,26,10,9,10,8,90,Fund with Revisions
+FC2,R2,29,30,10,10,10,10,99,Fund
+FC2,R3,27,27,10,9,9,9,91,Fund
+FC2,R4,22,25,7,7,9,7,77,Fund with Revisions
+FC3,R1,27,14,8,6,6,5,66,Do Not Fund
+FC3,R2,25,24,9,7,9,6,80,Fund with Revisions
+FC3,R3,25,20,10,7,8,7,77,Do Not Fund
+FC3,R4,20,17,6,5,6,7,61,Do Not Fund

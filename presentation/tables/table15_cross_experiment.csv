@@ -1,5 +1,0 @@
-Experiment,LLM Mean,Diff from Human,p-value
-Exp 1: Baseline,83.63,+4.55,0.141
-Exp 2: Single Example,84.94,+5.86,0.114
-Exp 3: Multiple Examples,80.56,+1.47,0.675
-Exp 4: Strict Scoring,72.44,-6.64,0.067

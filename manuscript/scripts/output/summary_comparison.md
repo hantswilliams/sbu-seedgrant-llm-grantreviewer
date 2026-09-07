@@ -1,8 +1,0 @@
-# Summary Comparison Across All Experiments
-
-| Experiment    | Description                                    |   Human n |   LLM n |   Human Mean |   Human SD |   LLM Mean |   LLM SD |   Difference |   p-value |   Cohen's d |   Agreement Rate |   Google Mean |   OpenAI Mean |   xAI Mean |
-|:--------------|:-----------------------------------------------|----------:|--------:|-------------:|-----------:|-----------:|---------:|-------------:|----------:|------------:|-----------------:|--------------:|--------------:|-----------:|
-| Exp1_ZeroShot | Baseline performance with no training examples |        12 |      27 |      79.0833 |    13.3243 |    83.6296 |  5.74555 |      4.5463  | 0.141244  |    0.443094 |           0      |       88.4444 |       77.3333 |    85.1111 |
-| Exp2_OneShot  | Single training example added                  |        11 |      27 |      79.2727 |    13.9577 |    83.3333 |  6.08908 |      4.06061 | 0.215002  |    0.377103 |          33.3333 |       88.7778 |       78.3333 |    82.8889 |
-| Exp3_FewShot  | Multiple training examples with variance       |         8 |      27 |      83.125  |    13.7263 |    79.2593 |  4.95047 |     -3.86574 | 0.221046  |   -0.374664 |           0      |       79.8889 |       76.8889 |    81      |
-| Exp4_Stricter | Stricter prompt with one shot example          |        11 |      27 |      79.2727 |    13.9577 |    72      |  4.88325 |     -7.27273 | 0.0213254 |   -0.695542 |          33.3333 |       76.8889 |       69.2222 |    69.8889 |
